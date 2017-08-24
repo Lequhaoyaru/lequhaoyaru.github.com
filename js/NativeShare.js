@@ -27,8 +27,7 @@
                     t.n = function(e) {
                         var n = e && e.__esModule ?
                             function() {
-                                return e.
-                                    default
+                                return e.default
                             }:
                             function() {
                                 return e
@@ -48,7 +47,7 @@
                     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
                         n = document.getElementsByTagName("script")[0],
                         o = document.createElement("script");
-                    o.src = e,
+                        o.src = e,
                         o.async = !0,
                         n.parentNode.insertBefore(o, n),
                         o.onload = t
@@ -66,12 +65,11 @@
                     else {
                         var t = document.createElement("iframe");
                         t.style.display = "none",
-                            t.src = e,
-                            document.body.appendChild(t),
-                            setTimeout(function() {
-                                    t && t.parentNode && t.parentNode.removeChild(t)
-                                },
-                                2e3)
+                        t.src = e,
+                        document.body.appendChild(t),
+                        setTimeout(function() {
+                            t && t.parentNode && t.parentNode.removeChild(t)
+                        },2e3)
                     }
                 }
                 function c(e) {
@@ -439,8 +437,7 @@
                         },
                         _utf8_encode: function(e) {
                             e = e.replace(/\r\n/g, "\n");
-                            for (var t = "",
-                                     n = 0; n < e.length; n++) {
+                            for (var t = "",n = 0; n < e.length; n++) {
                                 var r = e.charCodeAt(n);
                                 r < 128 ? t += String.fromCharCode(r) : r > 127 && r < 2048 ? (t += String.fromCharCode(r >> 6 | 192), t += String.fromCharCode(63 & r | 128)) : (t += String.fromCharCode(r >> 12 | 224), t += String.fromCharCode(r >> 6 & 63 | 128), t += String.fromCharCode(63 & r | 128))
                             }
@@ -484,21 +481,22 @@
                     Pe = function() {
                         function e(t) {
                             w(this, e),
-                                this._shareData = Se,
-                                this._config = {
-                                    syncDescToTag: !1,
-                                    syncIconToTag: !1,
-                                    syncTitleToTag: !1
-                                },
-                                this.setConfig(t)
+                            this._shareData = Se,
+                            this._config = {
+                                syncDescToTag: !1,
+                                syncIconToTag: !1,
+                                syncTitleToTag: !1
+                            },
+                            this.setConfig(t)
                         }
-                        return ke(e, [{
-                            key: "getShareData",
-                            value: function() {
-                                return i({},
+                        return ke(e, [
+                            {
+                                key: "getShareData",
+                                value: function() {
+                                    return i({},
                                     this._shareData)
-                            }
-                        },
+                                }
+                            },
                             {
                                 key: "setShareData",
                                 value: function() {
@@ -570,8 +568,7 @@
                             }]),
                             t
                     } (Ce);
-                Te.commamdMap = (ae = {},
-                    v(ae, "wechattimeline", 8), v(ae, "wechatfriend", 1), v(ae, "qqfriend", 4), v(ae, "qzone", 3), v(ae, "weibo", 11), v(ae, "copyurl", 10), v(ae, "more", 5), v(ae, "generateqrcode", 7), v(ae, "default", void 0), ae);
+                Te.commamdMap = (ae = {},v(ae, "wechattimeline", 8), v(ae, "wechatfriend", 1), v(ae, "qqfriend", 4), v(ae, "qzone", 3), v(ae, "weibo", 11), v(ae, "copyurl", 10), v(ae, "more", 5), v(ae, "generateqrcode", 7), v(ae, "default", void 0), ae);
                 var Ee, De = Te,
                     xe = function() {
                         function e(e, t) {
@@ -1132,15 +1129,15 @@
                                     this.setShareData(t);
                                     var n = this.getShareData();
                                     window.NativeShareFailCallback = n.fail,
-                                        window.NativeShareSuccessCallback = n.success,
-                                        location.href = "baiduboxapp://callShare?" + ["options=" + encodeURIComponent(JSON.stringify({
-                                                title: n.title,
-                                                imageUrl: "",
-                                                mediaType: "all",
-                                                content: n.desc,
-                                                linkUrl: n.link,
-                                                iconUrl: n.icon
-                                            })), "errorcallback=window.NativeShareFailCallback", "successcallback=window.NativeShareSuccessCallback"].join("&")
+                                    window.NativeShareSuccessCallback = n.success,
+                                    location.href = "baiduboxapp://callShare?" + ["options=" + encodeURIComponent(JSON.stringify({
+                                        title: n.title,
+                                        imageUrl: "",
+                                        mediaType: "all",
+                                        content: n.desc,
+                                        linkUrl: n.link,
+                                        iconUrl: n.icon
+                                    })), "errorcallback=window.NativeShareFailCallback", "successcallback=window.NativeShareSuccessCallback"].join("&")
                                 }
                             }]),
                             t
@@ -1174,12 +1171,12 @@
                                     this.setShareData(t);
                                     var n = this.getShareData();
                                     window.NativeShareFailCallback = n.fail,
-                                        window.NativeShareSuccessCallback = n.success,
-                                        prompt("BdboxApp:" + JSON.stringify({
-                                                obj: "Bdbox_android_utils",
-                                                func: "callShare",
-                                                args: ['{\n                            imageUrl: "",\n                            mediaType: "all",\n                            title: "' + n.title + '",\n                            content: "' + n.desc + '",\n                            linkUrl: "' + n.link + '",\n                            iconUrl: "' + n.icon + '"\n                        }', "window.NativeShareSuccessCallback", "window.NativeShareFailCallback"]
-                                            }))
+                                    window.NativeShareSuccessCallback = n.success,
+                                    prompt("BdboxApp:" + JSON.stringify({
+                                        obj: "Bdbox_android_utils",
+                                        func: "callShare",
+                                        args: ['{\nimageUrl: "",\nmediaType: "all",\ntitle: "' + n.title + '",\ncontent: "' + n.desc + '",\nlinkUrl: "' + n.link + '",\niconUrl: "' + n.icon + '"\n}', "window.NativeShareSuccessCallback", "window.NativeShareFailCallback"]
+                                    }))
                                 }
                             }]),
                             t
@@ -1259,8 +1256,7 @@
                         });
                 var wt = void 0;
                 wt = he ? Ve: be && se ? rt: be && pe ? ct: ye ? ft: de ? De: we && se ? Ne: we && pe ? Be: ve && pe ? Ie: ve && se ? Le: ge && se ? He: me && se ? ht: me && pe ? dt: et,
-                    window.NativeShare = wt,
-                    t.
-                        default = wt
+                window.NativeShare = wt,
+                t.default = wt
             }])
         });
