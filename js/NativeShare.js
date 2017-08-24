@@ -458,9 +458,9 @@
                             return Object(je).href || location.protocol + "//" + location.hostname + "/favicon.ico"
                         } (),
                         from: "",
-                        success: r,
-                        fail: r,
-                        trigger: r
+                        success: r(),
+                        fail: r(),
+                        trigger: r()
                     },
                     ke = function() {
                         function e(e, t) {
@@ -925,14 +925,15 @@
                                 n
                         }
                         return H(t, e),
-                            tt(t, [{
-                                key: "call",
-                                value: function() {
-                                    var e = (arguments.length > 0 && void 0 !== arguments[0] && arguments[0], arguments[1]);
-                                    this.setShareData(e),
-                                        mqq.ui.showShareMenu()
-                                }
-                            },
+                            tt(t, [
+                                {
+                                    key: "call",
+                                    value: function() {
+                                        var e = (arguments.length > 0 && void 0 !== arguments[0] && arguments[0], arguments[1]);
+                                        this.setShareData(e),
+                                            mqq.ui.showShareMenu()
+                                    }
+                                },
                                 {
                                     key: "init",
                                     value: function() {
@@ -942,17 +943,17 @@
                                                 var t = e._shareData;
                                                 mqq.ui.setOnShareHandler(function(e) {
                                                     mqq.ui.shareMessage({
-                                                            back: !0,
-                                                            share_type: e,
-                                                            title: t.title,
-                                                            desc: t.desc,
-                                                            share_url: t.link,
-                                                            image_url: t.icon,
-                                                            sourceName: t.from
-                                                        },
-                                                        function(e) {
-                                                            0 === e.retCode ? t.success(e) : t.fail(e)
-                                                        })
+                                                        back: !0,
+                                                        share_type: e,
+                                                        title: t.title,
+                                                        desc: t.desc,
+                                                        share_url: t.link,
+                                                        image_url: t.icon,
+                                                        sourceName: t.from
+                                                    },
+                                                    function(e) {
+                                                        0 === e.retCode ? t.success(e) : t.fail(e)
+                                                    })
                                                 })
                                             })
                                     }
