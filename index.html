@@ -170,7 +170,7 @@
             icon: 'http://m.mlequ.net/img/icon.png',
             // 不要过于依赖以下两个回调，很多浏览器是不支持的
             success: function() {
-                alert('success')
+                $(".share-container").css({"display":"none"});
             },
             fail: function() {
                 alert('fail')
