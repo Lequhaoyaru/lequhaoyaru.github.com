@@ -168,12 +168,13 @@
             // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
             link: 'http://m.mlequ.net/m/picture',
             icon: 'http://m.mlequ.net/img/icon.png',
+
             // 不要过于依赖以下两个回调，很多浏览器是不支持的
             success: function() {
-                $(".share-container").css({"display":"none"});
+                console.log("Success!");
             },
             fail: function() {
-                $(".share-container").css({"display":"none"});
+                console.log("Fail!");
             }
         };
         nativeShare.setShareData(shareData);
@@ -186,9 +187,13 @@
                 alert(err.message)
             }
         }
+        $(".share-container ul li>a").unbind("click");
         $(".share-container ul li>a").click(function(){
             var appName = $(this).data("app");
             call(appName);
+            setTimeout(function(){
+                $(".share-container").css({"display":"none"});
+            },2000);
         })
     </script>
 </div>

@@ -458,9 +458,9 @@
                             return Object(je).href || location.protocol + "//" + location.hostname + "/favicon.ico"
                         } (),
                         from: "",
-                        success: r(),
-                        fail: r(),
-                        trigger: r()
+                        success: r,
+                        fail: r,
+                        trigger: r
                     },
                     ke = function() {
                         function e(e, t) {
@@ -1004,13 +1004,13 @@
                                     u(n.link) !== location.hostname && (n.link = location.href, console.warn("安卓的QQ自带浏览器分享url必须跟页面url同一个域名，已自动为你设置为当前页面的url"));
                                     try {
                                         mqq.data.setShareInfo({
-                                                share_url: n.link,
-                                                title: n.title,
-                                                desc: n.desc,
-                                                image_url: n.icon
-                                            },
-                                            function(e) { ! 0 !== e && console.warn(e)
-                                            })
+                                            share_url: n.link,
+                                            title: n.title,
+                                            desc: n.desc,
+                                            image_url: n.icon
+                                        },
+                                        function(e) { ! 0 !== e && console.warn(e)
+                                        })
                                     } catch(e) {}
                                 }
                             },
