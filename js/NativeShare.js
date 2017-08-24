@@ -897,7 +897,7 @@
                                     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "default",
                                         t = arguments[1];
                                     if (this.setShareData(t), "weibo" !== (e = String(e).toLowerCase())) throw "qqfriend" === e ? h() : "qzone" === e && b(),
-                                        new Error("the browser may not support command " + e + "!");
+                                        new Error("请使用浏览器内置分享功能！");
                                     d()
                                 }
                             }]),
