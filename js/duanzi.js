@@ -557,7 +557,7 @@ function parseitem(){
                 // 如果不支持，你可以在这里做降级处理
                 alert(err.message)
             }
-        }
+        }$(".share-container ul li>a").unbind("click");
         $(".share-container ul li>a").click(function(){
             var appName = $(this).data("app");
             call(appName);
