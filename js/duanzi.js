@@ -552,7 +552,8 @@ function parseitem(){
 
         function call(command) {
             try {
-                nativeShare.call(command)
+                nativeShare.call(command);
+                $(".share-container").css("display","none");
             } catch (err) {
                 // 如果不支持，你可以在这里做降级处理
                 alert(err.message)
