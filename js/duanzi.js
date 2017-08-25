@@ -535,11 +535,11 @@ function parseitem(){
 
         var nativeShare = new NativeShare();
         var shareData = {
-            title: '',
+            title: '段子手',
             desc: desc,
             // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
             link: url,
-            icon: '',
+            icon: 'http://m.mlequ.net/img/icon.png',
             // 不要过于依赖以下两个回调，很多浏览器是不支持的
             success: function() {
                 alert('success')
@@ -556,7 +556,8 @@ function parseitem(){
                 $(".share-container").css("display","none");
             } catch (err) {
                 // 如果不支持，你可以在这里做降级处理
-                alert(err.message)
+                alert(err.message);
+                $(".share-container").css("display","none");
             }
         }$(".share-container ul li>a").unbind("click");
         $(".share-container ul li>a").click(function(){
