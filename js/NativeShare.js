@@ -48,7 +48,7 @@
                     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
                         n = document.getElementsByTagName("script")[0],
                         o = document.createElement("script");
-                    o.src = e,
+                        o.src = e,
                         o.async = !0,
                         n.parentNode.insertBefore(o, n),
                         o.onload = t
@@ -69,9 +69,8 @@
                             t.src = e,
                             document.body.appendChild(t),
                             setTimeout(function() {
-                                    t && t.parentNode && t.parentNode.removeChild(t)
-                                },
-                                2e3)
+                                t && t.parentNode && t.parentNode.removeChild(t)
+                            },2e3)
                     }
                 }
                 function c(e) {
@@ -117,6 +116,7 @@
                         pic: Se.icon,
                         desc: Se.desc
                     };
+                    //分享至QQ空间
                     location.href = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?" + c(e, !0)
                 }
                 function d() {
@@ -492,13 +492,13 @@
                                 },
                                 this.setConfig(t)
                         }
-                        return ke(e, [{
-                            key: "getShareData",
-                            value: function() {
-                                return i({},
-                                    this._shareData)
-                            }
-                        },
+                        return ke(e, [
+                            {
+                                key: "getShareData",
+                                value: function() {
+                                    return i({},this._shareData)
+                                }
+                            },
                             {
                                 key: "setShareData",
                                 value: function() {
