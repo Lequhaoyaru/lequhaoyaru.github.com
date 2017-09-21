@@ -802,6 +802,10 @@ function parseitem(){
         var pic_src = $(this).parents(".footer").siblings(".content").find(".img-wrapper").find("img").attr("src");
         var url = $(this).parents(".footer").siblings(".content").find("a").attr("href");
 
+        if(typeof(pic_src)=='undefined') {
+            //img =  window.location.host +('/img/'+from['app']+'/icon.png');
+            pic_src = 'http://m.mlequ.cn/img/duanzishou/icon.png';
+        }
         var nativeShare = new NativeShare();
         var shareData = {
             title: '段子手',
@@ -824,6 +828,7 @@ function parseitem(){
             try {
                 nativeShare.call(command);
                 $(".share-container").css("display","none");
+                alert(shareData.icon);
             } catch (err) {
                 // 如果不支持，你可以在这里做降级处理
                 alert(err.message);
