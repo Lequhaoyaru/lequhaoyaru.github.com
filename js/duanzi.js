@@ -1,17 +1,263 @@
 $(function() {
-    //	顶部固定定位
-    $(".close").click(function(){
 
-        $(".app").css("display","none");
-        $(".list-container").css("margin-top","3.5rem");
+    //评论审核
+    function ajax(url,params,success){
+        var url = url || '';
+        var params = params || {};
+
+        var options = {
+            type:"POST",
+            url: url,
+            data: params,
+            dataType: 'json',
+            success: success,
+            error: function (request, status, error) {
+                console.log(request.status + ", " + status + ", " + error);
+            }
+        };
+        jQuery.ajax(options);
+    }
+
+    function cancelEvent(){
+        $(".cover-wrap").addClass("show-msg");
+
+        $(".msg-close").unbind("click");
+        $(".msg-close").on("click",function(){
+            $(".cover-wrap").removeClass("show-msg");
+        });
+
+        $(".del-cancle").unbind("click");
+        $(".del-cancle").on("click",function(){
+            $(".cover-wrap").removeClass("show-msg");
+        });
+    };
+
+    $(".agreeBtn").unbind("click");
+    $(".agreeBtn").on("click",function(){
+        console.log("同意");
+        /*ajax();*/
+
+        $(this).parent().parent(".review-content").remove();
+
     });
 
-    // 菜单栏选择
-    $("#page li").click(function(){
+    $(".denyBtn").unbind("click");
+    $(".denyBtn").on("click",function(){
+        console.log("禁言");
+        var $_this = $(this);
+        $(".message-container .message").html("是否要禁止此账号发言？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+            /*ajax();*/
+            $(".cover-wrap").removeClass("show-msg");
+            $_this.parent().parent(".review-content").remove();
+        });
+
+    });
+
+    $(".forbidBtn").unbind("click");
+    $(".forbidBtn").on("click",function(){
+        console.log("封号");
+        var $_this = $(this);
+        $(".message-container .message").html("是否要封闭此账号？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+            /*ajax();*/
+            $(".cover-wrap").removeClass("show-msg");
+            $_this.parent().parent(".review-content").remove();
+        });
+
+
+    });
+
+    $(".delBtn").unbind("click");
+    $(".delBtn").on("click",function(){
+        console.log("删除");
+        var $_this = $(this);
+        $(".message-container .message").html("是否要删除此条评论？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+
+            /*ajax();*/
+            $(".cover-wrap").removeClass("show-msg");
+            $_this.parent().parent(".review-content").remove();
+        });
+    });
+
+    //个人所有评论内容
+    //删除单条评论
+    $(".delete-review").unbind("click");
+    $(".delete-review").on("click",function(){
+        var $_this = $(this);
+        var $_url = $(this).data("url");
+        var $_params = {};
+        $_params.ch = "渠道";
+        $_params.cid = "评论id";
+        $_params.uuid = "用户id";
+
+        $(".message-container .message").html("是否要删除此评论？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+
+            var $_value = $(".reason-content input").val();
+
+            console.log($_value);
+            ajax($_url,$_params,function () {
+                $_this.parent("li").remove();
+                $(".cover-wrap").removeClass("show-msg");
+                if ($('.all-reviews-wrap').children().length==0) {
+                    $(".no-review").css({"display":"block"});
+                }
+            });
+        });
+    });
+
+    //删除所有评论
+    $("#del-all").unbind("click");
+    $("#del-all").on("click",function(){
+        $(".message-container .message").html("是否要删除所有评论？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+            /*ajax();*/
+            $(".all-reviews-wrap").empty();
+            $(".cover-wrap").removeClass("show-msg");
+            if ($('.all-reviews-wrap').children().length==0) {
+                $(".no-review").css({"display":"block"});
+            }
+        });
+    });
+
+    //禁言
+    $("#forbid-speak").unbind("click");
+    $("#forbid-speak").on("click",function(){
+        console.log("禁言");
+        $(".message-container .message").html("是否要禁止此账号发言？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+            /*ajax();*/
+            $(".all-reviews-wrap").empty();
+            $(".cover-wrap").removeClass("show-msg");
+            $(".no-review").css({"display":"block"});
+            $(".no-review>span").html("已禁言");
+        });
+
+
+    });
+
+    //封号
+    $("#forbid-account").unbind("click");
+    $("#forbid-account").on("click",function(){
+        console.log("封号");
+        $(".message-container .message").html("是否要封闭此账号？");
+
+        cancelEvent();
+
+        $(".del-confirm").unbind("click");
+        $(".del-confirm").on("click",function(){
+            /*ajax();*/
+            $(".all-reviews-wrap").empty();
+            $(".cover-wrap").removeClass("show-msg");
+            $(".no-review").css({"display":"block"});
+            $(".no-review>span").html("已封号");
+        });
+
+    });
+
+
+    //删除评论原因
+    var $_lock = false;
+    $(".reason-content span").unbind("click");
+    $(".reason-content span").on("click",function(){
+        if(!$_lock){
+            $(".reason").addClass("open");
+        }else{
+            $(".reason").removeClass("open");
+        }
+        $_lock = !$_lock;
+
+    });
+
+    $(".reason ul li").unbind("click");
+    $(".reason ul li").on("click",function(){
+        $(".reason-content input").val($(this).html());
+        $(".reason").removeClass("open");
+        $_lock = false;
+    });
+
+    $(".reason-content input").on("keydown",function(){
+        $(".reason").removeClass("open");
+        $_lock = false;
+    });
+
+    //评论
+    $(".review-wrap h3 a").unbind("click");
+    $(".review-wrap h3 a").on("click",function(){
+        $(this).addClass("selected").siblings().removeClass("selected");
+    });
+
+    //登录操作
+    $(".loginBtn").unbind("click");
+    $(".loginBtn").on("click",function(){
+        //用户名和密码的值
+        var $_username = $(".form-group .username").val();
+        var $_password = $(".form-group .password").val();
+
+        //信息提示
+        $(".error-msg").html("登录成功").addClass("show-msg");
+
+        //接口url
+        var $_url = $(this).data("url");
+
+        //参数
+        var $_params = {};
+        $_params.user = "";
+        $_params.pwd = "";
+        ajax($_url,$_params,function () {
+            //登录成功之后的操作
+
+        });
+
+    });
+    //重置
+    $(".resetBtn").unbind("click");
+    $(".resetBtn").on("click",function(){
+        $(".form-group .username").val('');
+        $(".form-group .password").val('');
+    });
+
+
+
+	//	顶部固定定位
+	$(".close").click(function(){
+
+		$(".app").css("display","none");
+		$(".list-container").css("margin-top","3.5rem");
+	});
+	
+	// 菜单栏选择
+	$("#page li").click(function(){
         $("#page li").removeClass("active");
         $(this).addClass("active");
 
-    });
+   });
 	
 	//	固定定位滑入滑出
 //	$(function() {
@@ -27,20 +273,20 @@ $(function() {
 	
 	var a=0,b= 0,c=0;
     $(window).scroll(function(e){
-        if(c==0){
-            c=1;
-            b = $(this).scrollTop();
-            if(b<100) {
-                $("nav").slideDown(400);
+            if(c==0){
+                c=1;
+                b = $(this).scrollTop();
+                if(b<100) {
+                    $("nav").slideDown(400);
+                }
+                else if(a<=b){
+                   $("nav").slideUp(400);
+                }
+                else{
+                     $("nav").slideDown(400);
+                }
+                setTimeout(function(){a = b;c=0;},100);
             }
-            else if(a<=b){
-               $("nav").slideUp(400);
-            }
-            else{
-                 $("nav").slideDown(400);
-            }
-            setTimeout(function(){a = b;c=0;},100);
-        }
     });
 //	点击换一换更新
 
@@ -72,59 +318,59 @@ $(function() {
 
             var url = $('.list-container').data('url');
             $.ajax({
-                type: 'POST',
-                url: url,
-                dataType: 'json',
-                success: function(data){
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            success: function(data){
 
-                    maxtime = data['info']['maxtime'];
-                    var result = '';
-                    //获取item的id的值  放到数组中
-                    var ids = [];
-                    $(".item").each(function(){
-                        ids.push($(this).attr("id"));
-                    });
-                    for(var i = 0; i < data['list'].length; i++){
-                        if($.inArray(data['list'][i]['id'].toString(), ids) == -1 ){
-                            result +=  makeitem(data['list'][i]);
-                        }
+                maxtime = data['info']['maxtime'];
+                var result = '';
+                //获取item的id的值  放到数组中
+                var ids = [];
+                $(".item").each(function(){
+                    ids.push($(this).attr("id"));
+                });
+                for(var i = 0; i < data['list'].length; i++){
+                    if($.inArray(data['list'][i]['id'].toString(), ids) == -1 ){
+                        result +=  makeitem(data['list'][i]);
                     }
-                    if(result!==""){
-                        $('.drop-ul').html(result);
-                    }
-                    // 为了测试，延迟1秒加载
-                    setTimeout(function(){
-                        // 每次数据加载完，必须重置
-                        me.resetload();
-                        // 解锁loadDownFn里锁定的情况
-                        me.unlock();
-                        if(result!=="") {
-                            me.noData(false);
-
-                            var data = $('.drop-ul').html();
-
-                            sessionStorage.setItem(location.href,data);
-                            sessionStorage.setItem(location.href+"_max",maxtime);
-                            parseitem();
-                        }
-                        else {
-                            me.noData(true);
-                        }
-                    },300);
-                },
-                error: function(xhr, type){
-                  //  alert('Ajax error!');
-                    // 即使加载出错，也得重置
-                    me.resetload();
                 }
-            });
+                if(result!==""){
+                    $('.drop-ul').html(result);
+                }
+                // 为了测试，延迟1秒加载
+                setTimeout(function(){
+                    // 每次数据加载完，必须重置
+                    me.resetload();
+                    // 解锁loadDownFn里锁定的情况
+                    me.unlock();
+                    if(result!=="") {
+                        me.noData(false);
+
+                        var data = $('.drop-ul').html();
+
+                        sessionStorage.setItem(location.href,data);
+                        sessionStorage.setItem(location.href+"_max",maxtime);
+                        parseitem();
+                    }
+                    else {
+                        me.noData(true);
+                    }
+                },300);
+            },
+            error: function(xhr, type){
+              //  alert('Ajax error!');
+                // 即使加载出错，也得重置
+                me.resetload();
+            }
+        });
         },
         loadDownFn : function(me){
             console.log("down fn");
 
             var load = false;
 
-            if(pagetype != "content" && maxtime == 0) {
+            if(pagetype == "list" && maxtime == 0) {
                 var list = sessionStorage.getItem(location.href);
                 if(list) {
                     $('.drop-ul').html(list);
@@ -143,10 +389,13 @@ $(function() {
                         url = url + '&lastcid=' + lastcid;
                     }
                 }
-                else {
+                else if(pagetype=='list'){
                    if(maxtime !== 0) {
                         url = url + '?maxtime='+maxtime;
                    }
+                }
+                else {
+                    return;
                 }
                 // 拼接HTML
                 $.ajax({
@@ -214,6 +463,10 @@ $(function() {
         threshold : 100
     });
 
+    //点击取消转发
+    $("#cancel").click(function(){
+        $(".share-container").css("display","none");
+    });
 
     //点击回到顶部
     $(".gotop").click(function () {
@@ -224,7 +477,7 @@ $(function() {
 
     parseitem();
 
-    if(pagetype !="content"){
+    if(pagetype =="list"){
         sessionStorage.setItem("prevpage",window.location.href);
     }
 });
@@ -467,6 +720,22 @@ function parseitem(){
         }
     });
 
+    //语音播放
+    $(".comment-voice").unbind('click');
+    $(".comment-voice").click(function(){
+        var audio = $(this).children("audio")[0];
+        if(audio.paused){
+            audio.play();//audio.play();// 播放
+            $(this).children(".voice-icon").css("background","url(/img/bofang.gif)no-repeat");
+            $(this).children(".voice-icon").css("background-size","1rem 1rem");
+        }
+        else{
+            audio.pause();// 暂停
+            $(this).children(".voice-icon").css("background","url(/img/bofang.png)no-repeat");
+            $(this).children(".voice-icon").css("background-size","1rem 1rem");
+        }
+    })
+
     //  点赞
     $(".digg span").unbind("click");
     $(".digg span").click(function(){
@@ -527,19 +796,26 @@ function parseitem(){
     //分享
     $(".share-item").unbind("click");
     $(".share-item").click(function(){
-        console.log("share-item click");
         $(".share-container").css("display","block");
         var desc = $(this).parents(".footer").siblings(".content").find(".J-keyword").html();
-        var pic_src = $(this).parents(".footer").siblings(".content").find(".img-wrapper").find("img").attr("src");
+        //var pic_src = $(this).parents(".footer").siblings(".content").find(".img-wrapper").find("img").attr("src");
         var url = $(this).parents(".footer").siblings(".content").find("a").attr("href");
+        var img = $(this).parents(".footer").siblings(".content").find(".poster").attr("src");
+        if(typeof(img)=='undefined') {
+            img = $(this).parents(".footer").siblings(".content").find(".upload-img").attr("src");
+        }
+        if(typeof(img)=='undefined') {
+            img =  window.location.host +('/img/'+from['app']+'/icon.png');
+        }
+        var title = from['appname'];
 
         var nativeShare = new NativeShare();
         var shareData = {
-            title: '段子手',
+            title: title,
             desc: desc,
             // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
             link: url,
-            icon: pic_src,
+            icon:img,
             // 不要过于依赖以下两个回调，很多浏览器是不支持的
             success: function() {
                 alert('success')
@@ -548,6 +824,7 @@ function parseitem(){
                 alert('fail')
             }
         };
+
         nativeShare.setShareData(shareData);
 
         function call(command) {
@@ -622,9 +899,9 @@ function makeitem(item){
    }
    ret = '<li class="item" id="'+ item['id'] + '">'+hot +'<div class="header"><a class="users">' +
                 '<img  class="avatar fl"  src="'+ item['profile_image']+'" alt="" onerror="this.style.display=\'none\';this.src=\'/img/head.jpg\';this.onload=function(){this.style.display=\'\';}">'+
-                    '<span class="author-name fl">'+ (item['name']?item['name']:'匿名用户')+'</span></a></div><div class="content">' +
-                '<div class="text-wrapper"><a href="'+home+'/content/'+item['src_ch']+'/'+item['id']+'">' +
-                       '<p class="J-keyword">'+item['text']+'</p></a></div>';
+                    '<span class="author-name fl">'+ (item['name']?(item['name']):'匿名用户')+'</span></a></div><div class="content">' +
+                '<div class="text-wrapper"><a href="'+home+'/content/'+item['src_ch']+'/'+item['id']+'?app='+from['app']+'">' +
+                       '<p class="J-keyword">'+(item['text'])+'</p></a></div>';
 
             if(  item['videouri'] !== null && item['videouri'] !== undefined && item['videouri'] !== '' ) {
                 ret = ret +'<div class="video-container">' +
@@ -632,8 +909,14 @@ function makeitem(item){
                         '<a class="poster-link" ><div class="wrapper img-wrapper">' +
                                 '<img class="lazy poster" alt="视频展示图片"  src="'+item['image2']+'" >'+
                                     '<div class="play-btn"></div><div class="desc ">' +
-                                        '<p class="play-count fl"><span>'+item['playcount']+'</span>次播放</p>' +
-                                        '<p class="duration fr">'+item['videotime']+'秒</p></div><div class="replay-mask"><p class="video-mask"></p>' +
+                                        '<p class="play-count fl"><span>'+item['playcount']+'</span>次播放</p><p class="duration fr">';
+                if(item['videotime']>0) {
+                    ret = ret + item['videotime']+'秒';
+                } 
+                else {
+                    ret = ret +'未知';
+                }
+                ret = ret +'</p></div><div class="replay-mask"><p class="video-mask"></p>' +
                                         '<div class="replay-box"><span class="replay-btn">重播</span><span class="replay-download">更多精彩视频</span>' +
                         '</div></div></div></a></div><div class="video-loading"></div><div class="player-container" ></div></div>';
             }
@@ -657,15 +940,15 @@ function makeitem(item){
             }
             else if(item['image2'] !== null && item['image2'] !== undefined && item['image2'] !== '') {
                 ret = ret + '<div class="img-wrapper-outer "><div class="img-wrapper">' + (item['is_gif']==1?'<div class="gif_logo"><img src="/img/gif.png"/></div>':'')+
-                    '<a href="/m/content/'+item['src_ch']+'/'+item['id']+'">' +
+                    '<a href="/m/content/'+item['src_ch']+'/'+item['id']+'?app='+from['app']+'">' +
                 '<img class="upload-img if-long lazy" data-original="'+item['image2']+'" alt="" ></a>' +
-                '<div class="long-img-bg"><a href="/m/content/'+item['src_ch']+'/'+item['id']+'"><span>点击查看长图</span></a>' +
+                '<div class="long-img-bg"><a href="/m/content/'+item['src_ch']+'/'+item['id']+'?app='+from['app']+'"><span>点击查看长图</span></a>' +
                 '</div></div></div>';
             }
             ret = ret + '</div>';
 
             if(item['top_cmt'] !== null && item['top_cmt'] !== undefined && item['top_cmt'] !== '' && item['top_cmt'].length >0) {
-                ret = ret + '<div class="best-comments"><div class="header"><span>神评论</span></div>' +
+                ret = ret + '<div class="best-comments '+ from['app'] +'"><div class="header"><span>神评论</span></div>' +
                         '<ul>';
                 $.each(item['top_cmt'], function(index, top_cmt, array) {
                     //console.log(arr[index]==val);  // ==> true
@@ -680,7 +963,7 @@ function makeitem(item){
             ret = ret + '<div class="footer"><ul class="act-list "><li class="digg-item"><a  class="action-btn digg  ">' +
                   '<span  class="action-count">'+(item['ding']<=10000?item['ding']:((item['ding']/10000).toFixed(1)+'万'))+'</span></a></li><li class="bury-item"><a  class="action-btn bury">' +
                   '<span class="action-count">'+item['cai']+'</span></a></li><li class="comment-item">' +
-                  '<a  class="action-btn  comment " href="/m/content/'+item['src_ch']+'/'+item['id']+'">' +
+                  '<a  class="action-btn  comment " href="/m/content/'+item['src_ch']+'/'+item['id']+'?app='+from['app']+'">' +
                   '<span  class="J-comments-count action-count">'+item['comment']+'</span></a></li>' +
                   '<li class="share-item"><a  class="action-btn "><span class="share action-count">'+item['repost']+
                   '</span></a></li></ul></div></li>';
@@ -697,14 +980,14 @@ function makeitem(item){
 
 function openapp(){
     if(ua.bIsIpad || ua.bIsIphoneOs) {
-        window.location = "duanzishouapp:open";
+        window.location = from['appopen'];
         setTimeout(
             function(){
-                window.location="itms-apps://itunes.apple.com/cn/app/qq-2011/id1264501441?mt=8";
-            }, 30);
+                window.location=from['appurl'];
+            }, 500);
     }
     else {
-        window.location = home;
+        window.location=home+"?app="+from['app'];
     }
 }
 
