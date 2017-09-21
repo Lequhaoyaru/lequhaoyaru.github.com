@@ -808,7 +808,7 @@ function parseitem(){
             //img =  window.location.host +('/img/'+from['app']+'/icon.png');
             img = 'http://m.mlequ.cn/img/duanzishou/icon.png';
         }
-        var title = from['appname'];
+        var title = '段子手';
 
         var nativeShare = new NativeShare();
         var shareData = {
