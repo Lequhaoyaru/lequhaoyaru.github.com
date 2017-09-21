@@ -805,7 +805,8 @@ function parseitem(){
             img = $(this).parents(".footer").siblings(".content").find(".upload-img").attr("src");
         }
         if(typeof(img)=='undefined') {
-            img =  window.location.host +('/img/'+from['app']+'/icon.png');
+            //img =  window.location.host +('/img/'+from['app']+'/icon.png');
+            img = 'http://m.mlequ.cn/img/duanzishou/icon.png';
         }
         var title = from['appname'];
 
