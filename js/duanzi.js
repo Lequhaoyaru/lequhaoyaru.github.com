@@ -796,27 +796,19 @@ function parseitem(){
     //分享
     $(".share-item").unbind("click");
     $(".share-item").click(function(){
+
         $(".share-container").css("display","block");
         var desc = $(this).parents(".footer").siblings(".content").find(".J-keyword").html();
-        //var pic_src = $(this).parents(".footer").siblings(".content").find(".img-wrapper").find("img").attr("src");
+        var pic_src = $(this).parents(".footer").siblings(".content").find(".img-wrapper").find("img").attr("src");
         var url = $(this).parents(".footer").siblings(".content").find("a").attr("href");
-        var img = $(this).parents(".footer").siblings(".content").find(".poster").attr("src");
-        if(typeof(img)=='undefined') {
-            img = $(this).parents(".footer").siblings(".content").find(".upload-img").attr("src");
-        }
-        if(typeof(img)=='undefined') {
-            //img =  window.location.host +('/img/'+from['app']+'/icon.png');
-            img = 'http://m.mlequ.cn/img/duanzishou/icon.png';
-        }
-        var title = '段子手';
 
         var nativeShare = new NativeShare();
         var shareData = {
-            title: title,
+            title: '段子手',
             desc: desc,
             // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
             link: url,
-            icon:img,
+            icon: pic_src,
             // 不要过于依赖以下两个回调，很多浏览器是不支持的
             success: function() {
                 alert('success')
@@ -837,7 +829,8 @@ function parseitem(){
                 alert(err.message);
                 $(".share-container").css("display","none");
             }
-        }
+        };
+
         $(".share-container ul li>a").unbind("click");
         $(".share-container ul li>a").click(function(){
             var appName = $(this).data("app");
