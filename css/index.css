@@ -145,6 +145,7 @@
     }
     .opinion-content p{
         height:1.25rem;
+        line-height:1.25rem;
         padding-left:1rem;
         font-size:0.7rem;
         color:#666;
