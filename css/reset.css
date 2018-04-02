@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+/*！--CSS重置和样式初始化(参考Normalize.css) ~ v1.0--*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0
+}
+html{
+	font-size: 12px;
+	font-family: "Microsoft YaHei";
+}
+
+body {
+    font-size: 12px;
+    font-style: normal;
+    font-family: "Microsoft YaHei";
+}
+ul, ol {
+    list-style: none
+}
+a,a:hover,a:focus{
+	text-decoration:none;
+}
+i,em{
+    font-style: normal;
+}
+input{
+    outline: none;
+    border:0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear:after {
+    display: block;
+    content: "";
+    clear: both;
+
+}
+.clear{*zoom:1;}
+.text-l{
+    text-align: left;
+}
+.text-r{
+    text-align: right;
+}
+.text-c{
+    text-align:center;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>乐趣头条</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+
+<div class="container">
+
+    <!--头部-->
+    <div class="header-wrap">
+        <div class="title text-c clear">
+            <a href="#" class="go-back fl"></a>
+            收入明细
+        </div>
+        <div class="income">
+            <div class="all-ledou">总乐豆(个)</div>
+            <div class="number">7.514.20<a class="exchange"><span class="icon_1 fl"></span><span>去兑换</span><span class="icon_2 fr"></span></a></div>
+            <div class="new-get">最新获得0.98个 &gt;</div>
+        </div>
+        <div class="tab-wrap clear">
+            <div class="fri_tab fl cur">
+                <div class="part">我的好友</div>
+                <div class="part_num">16</div>
+            </div>
+            <div class="fri_tab fl">
+                <div class="part">好友贡献的乐豆(个)</div>
+                <div class="part_num">128.98</div>
+            </div>
+        </div>
+    </div>
+    <div class="content-warp">
+        <div class="rate text-c">单位说明: 1000乐豆=1元</div>
+        <div class="tab-content">
+            <ul>
+                <li class="sign-wrap clear">
+                    <span class="sign fl">每日签到</span>
+                    <div class="fr">
+                        <div class="ledou">+4乐豆</div>
+                        <div class="time">2018.03.23</div>
+                    </div>
+                </li>
+                <li class="sign-wrap clear">
+                    <span class="sign fl">每日签到</span>
+                    <div class="fr">
+                        <div class="ledou">+4乐豆</div>
+                        <div class="time">2018.03.23</div>
+                    </div>
+                </li>
+                <li class="sign-wrap clear">
+                    <span class="sign fl">每日签到</span>
+                    <div class="fr">
+                        <div class="ledou">+4乐豆</div>
+                        <div class="time">2018.03.23</div>
+                    </div>
+                </li>
+                <li class="sign-wrap clear">
+                    <span class="sign fl">每日签到</span>
+                    <div class="fr">
+                        <div class="ledou">+4乐豆</div>
+                        <div class="time">2018.03.23</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
