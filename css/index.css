@@ -1,4 +1,4 @@
-/*收入明细*/
+
 @media screen and (max-width: 768px){
     .container{
         width:100%;
@@ -7,7 +7,7 @@
         bottom:0;
         background:#f9f9f9;
     }
-
+    /*收入明细*/
     .income-wrap{
         padding:0 0.75rem;
         background: url("../img/bg.png");
