@@ -15,8 +15,7 @@
     }
     .title{
         font-size:0.9rem;
-        padding-top:1rem;
-        padding-bottom:1.1rem;
+        padding:1rem 0.75rem 1.1rem;
     }
     .go-back{
         display: inline-block;
@@ -313,6 +312,9 @@
         padding:0.75rem 1rem 1rem;
         margin-top:0.5rem;
         background: #fff;
+    }
+    .invite-good .title{
+        padding:0.75rem 0;
     }
     .invite-good .title>span{
         display: inline-block;
