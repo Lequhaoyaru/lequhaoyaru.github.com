@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>乐趣头条</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+
+<div class="container">
+    <!--我的好友-->
+    <div class="title text-c p-l-30 opi"><a href="#" class="go-back fl"></a>我的好友</div>
+    <div class="myFri-wrap">
+        <div class="info-wrap">
+            <div class="user-info clear">
+                <div class="head-img fl"><img src="../img/yq_img.png" alt=""></div>
+                <div class="info fl">
+                    <div class="name">乐趣头条</div>
+                    <div class="time"><span>注册时间</span><span>2018-03-07 10:00</span></div>
+                </div>
+            </div>
+            <div class="my-friend clear">
+                <div class="friend-item">
+                    <span class="num">16</span>
+                    <span class="txt">今日贡献</span>
+                </div>
+                <div class="friend-item">
+                    <span class="num">16</span>
+                    <span class="txt">昨日贡献</span>
+                </div>
+                <div class="friend-item">
+                    <span class="num">3000</span>
+                    <span class="txt">累计贡献</span>
+                </div>
+            </div>
+        </div>
+        <div class="awards">
+            <div class="row title clear">
+                <div class="col col-1">邀请奖励</div>
+                <div class="col col-2">金额(元)</div>
+                <div class="col col-3">状态</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">好友首次提现成功</div>
+                <div class="col col-2 money">+1</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第一次奖励</div>
+                <div class="col col-2 money">+1</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第二次奖励</div>
+                <div class="col col-2 money">+0.8</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第三次奖励</div>
+                <div class="col col-2 money">+0.8</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第四次奖励</div>
+                <div class="col col-2 money">+0.8</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第五次奖励</div>
+                <div class="col col-2 money">+0.8</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第六次奖励</div>
+                <div class="col col-2 money">+0.5</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+            <div class="row clear">
+                <div class="col col-1">第七次奖励</div>
+                <div class="col col-2 money">+0.3</div>
+                <div class="col col-3 status">未获得</div>
+            </div>
+        </div>
+        <div class="prompt">提示:好友贡献20乐豆时，即可获得一次奖励，每位好友每天限一次。</div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

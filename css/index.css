@@ -8,7 +8,7 @@
         background:#f9f9f9;
     }
 
-    .header-wrap{
+    .income-wrap{
         padding:0 0.75rem;
         background: url("../img/bg.png");
         color:#fff;
@@ -26,7 +26,10 @@
         background-size: 140%;
         margin-top:0.1rem;
     }
-
+    .go-back.white{
+        background: url(../img/back.png) no-repeat;
+        background-size: 84%;
+    }
     .income .all-ledou{
         font-size:0.65rem;
         margin-bottom:0.6rem;
@@ -347,6 +350,7 @@
         font-size:0.85rem;
         margin-top:0.8rem;
         margin-bottom:0.5rem;
+        font-weight:bold;
     }
     .friend-item .txt{
         font-size:0.6rem;
@@ -471,6 +475,86 @@
         width:2.5rem;
         height:1px;
         background:#dcdcdc;
+    }
+    /*我的好友*/
+    .info-wrap{
+        background:#fff;
+        height:6.75rem;
+        padding:0.75rem 0.75rem 0;
+    }
+    .myFri-wrap .my-friend{
+        background:#fff;
+    }
+    .myFri-wrap .friend-item{
+        color:#555;
+    }
+    .myFri-wrap .head-img{
+        width:2.575rem;
+        height:2.575rem;
+        margin-right:0.75rem;
+    }
+    .myFri-wrap .head-img>img{
+        width:100%;
+    }
+    .myFri-wrap .info .name{
+        font-size:0.75rem;
+        color:#333;
+        margin-bottom: 0.35rem;
+        padding-top: 0.2rem;
+    }
+    .myFri-wrap .info .time{
+        font-size:0.65rem;
+        color:#666;
+    }
+    .myFri-wrap .info .time>span:first-child{
+        margin-right:0.25rem;
+    }
+    .awards{
+        margin-top:0.5rem;
+        padding:0 0.75rem;
+        background:#fff;
+        font-size:0.7rem;
+    }
+    .awards .col{
+        float: left;
+    }
+    .awards .row{
+        width:100%;
+        height:1.725rem;
+        line-height:1.725rem;
+        border-bottom:1px solid #ccc;
+    }
+    .awards .row.title{
+        height:2.2rem;
+        line-height:2.2rem;
+        padding:0;
+        font-weight:bold;
+    }
+    .awards .col-1{
+        width:8rem;
+        text-align: left;
+    }
+    .awards .col-2{
+        width:4.95rem;
+        text-align: center;
+    }
+    .awards .col-3{
+        width:4.3rem;
+        text-align: right;
+
+    }
+    .awards .col.money{
+        color:#ff3030;
+    }
+    .awards .col.status{
+        color:#999;
+    }
+    .prompt{
+        font-size:0.7rem;
+        color:#ff3030;
+        line-height:0.95rem;
+        padding:0.5rem 0.75rem;
+        background:#fff;
     }
 
 }
