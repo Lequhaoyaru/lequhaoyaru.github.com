@@ -227,7 +227,12 @@
     .invite-tab>a.cur>i{
         background:#ff3030;
     }
-
+    .invite{
+        display: none;
+    }
+    .invite.show{
+        display: block;
+    }
     .invite>p{
         height:1rem;
         line-height: 1rem;
@@ -321,4 +326,150 @@
         font-size:0.55rem;
         color:#ff3030;
     }
+    .my-friend{
+        width:100%;
+        height:3.8rem;
+        background: url("../img/mx_dh.png") repeat-y;
+        border-top:1px solid #fff;
+    }
+    .friend-item{
+        float: left;
+        width:33.33%;
+        text-align: center;
+        color:#fff;
+    }
+    .friend-item>span{
+        display: block;
+    }
+    .friend-item .num{
+        font-size:0.85rem;
+        margin-top:0.8rem;
+        margin-bottom:0.5rem;
+    }
+    .friend-item .txt{
+        font-size:0.6rem;
+    }
+    .fir-situation .title{
+        height:2.175rem;
+        line-height:2.175rem;
+        padding:0 1rem 0 0.6rem;
+        border-bottom: 1px solid #eee;
+        background:#fff;
+    }
+    .fir-situation .fri-num{
+        font-size:0.75rem;
+        color:#333;
+    }
+    .fir-situation .what-contribute{
+        font-size:0.75rem;
+        color:#ff3030;
+    }
+    .contribute-tab .tab-item{
+        float:left;
+        width:33.33%;
+        height:1.9rem;
+        line-height:1.9rem;
+        text-align: center;
+        font-size:0.7rem;
+        color:#999;
+        background:#fff;
+    }
+    .contribute-tab .tab-item>div{
+        display: inline-block;
+    }
+    .contribute-tab .tab-item .icon-wrap{
+        width:0.5rem;
+    }
+    .contribute-tab .tab-item .icon-wrap .icon{
+        width:100%;
+        height:0.25rem;
+    }
+    .contribute-tab .tab-item .icon-wrap .up{
+        background: url("../img/yq_on_unselected.png");
+        background-size: cover;
+        margin-bottom:0.1rem;
+    }
+    .contribute-tab .tab-item .icon-wrap .up.selected{
+        background: url("../img/yq_on_selected.png");
+        background-size: cover;
+    }
+    .contribute-tab .tab-item .icon-wrap .down{
+        background: url("../img/yq_under_unselected.png");
+        background-size: cover;
+    }
+    .contribute-tab .tab-item .icon-wrap .down.selected{
+        background: url("../img/yq_under_selected.png");
+        background-size: cover;
+    }
+    .contri-cont{
+        padding:0.25rem;
+    }
+    .contri-item{
+        height:3.9rem;
+        background:#fff;
+        border-radius: 0.25rem;
+        margin-bottom:0.25rem;
+    }
+    .contri-item>a{
+        display:block;
+        padding:0 0.5rem;
+        height:100%;
+    }
+    .contri-item .head-img{
+        width:2.4rem;
+        height:2.4rem;
+        margin-top:0.6rem;
+        margin-right:0.5rem;
+    }
+    .contri-item .head-img img{
+        width:100%;
+    }
+    .contri-item .info .name{
+        font-size:0.7rem;
+        color:#666;
+        margin-top:0.6rem;
+    }
+    .contri-item .info .time{
+        font-size:0.5rem;
+        color:#999;
+    }
+    .contri-item .info .time>span:first-child{
+        margin-right:0.25rem;
+    }
+    .contri-item .more{
+        width:0.325rem;
+        height:0.6rem;
+        background:url("../img/more.png");
+        background-size: cover;
+        margin-top:1.65rem;
+    }
+    .contri-item .devote{
+        margin-right:0.75rem;
+    }
+    .contri-item .devote>span{
+        display: block;
+        font-size:0.7rem;
+        color:#ff3030;
+        margin-top:1.1rem;
+    }
+    .contri-item .devote>p{
+        font-size:0.65rem;
+        color:#999;
+    }
+    .last>span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .last .txt{
+        font-size:0.6rem;
+        color:#999;
+        padding:0 0.5rem;
+        background:#f9f9f9;
+    }
+    .last .line{
+        width:2.5rem;
+        height:1px;
+        background:#dcdcdc;
+    }
+
 }
