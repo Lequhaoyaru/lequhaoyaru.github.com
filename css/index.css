@@ -16,9 +16,11 @@
     .title{
         font-size:0.9rem;
         padding:1rem 0.75rem 1.1rem;
+        color:#333;
     }
     .income-wrap .title{
         padding:1rem 0 1.1rem;
+        color:#fff;
     }
     .go-back{
         display: inline-block;
@@ -112,7 +114,7 @@
     }
     .tab-content ul li{
         height:2.65rem;
-        border-bottom:0.025rem solid #e5e5e5;
+        border-bottom:0.025rem solid #ccc;
         padding-left:1rem;
         padding-right:0.675rem;
         font-size:0.75rem;
@@ -143,7 +145,7 @@
     }
     .opi{
         background:#fff;
-        border-bottom:1px solid #e5e5e5;
+        border-bottom:1px solid #ccc;
     }
     .txt-warp{
         position: relative;
@@ -170,7 +172,7 @@
         bottom:0.5rem;
         right:0.5rem;
         font-size:0.65rem;
-        color:#555;
+        color:#666;
     }
     .add-photo{
         padding:0.75rem 0.75rem 0.8rem;
@@ -195,8 +197,8 @@
         color:#ff3030;
         background:#fff;
         line-height:2.65rem;
-        border-top:1px solid #e5e5e5;
-        border-bottom:1px solid #e5e5e5;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
         box-sizing: border-box;
     }
 
@@ -329,7 +331,6 @@
     .invite-good p{
         font-size:0.55rem;
         color:#333;
-        line-height:0.675rem;
         margin-bottom:0.8rem;
     }
     .invite-good .rule{
@@ -479,7 +480,7 @@
     .last .line{
         width:2.5rem;
         height:1px;
-        background:#dcdcdc;
+        background:#ccc;
     }
     /*我的好友*/
     .info-wrap{
@@ -491,7 +492,10 @@
         background:#fff;
     }
     .myFri-wrap .friend-item{
-        color:#555;
+        color:#666;
+    }
+    .myFri-wrap .friend-item .num{
+        color:#333;
     }
     .myFri-wrap .head-img{
         width:2.575rem;
@@ -522,6 +526,7 @@
     }
     .awards .col{
         float: left;
+        color:#333;
     }
     .awards .row{
         width:100%;
