@@ -143,14 +143,14 @@
     .txt-warp{
         position: relative;
     }
-    .opinion-content p{
+    .opinion-wrap p{
         height:1.25rem;
         line-height:1.25rem;
         padding-left:1rem;
         font-size:0.7rem;
         color:#666;
     }
-    .opinion-content .txt{
+    .opinion-wrap .txt{
         height:9.25rem;
         width:17.75rem;
         resize: none;
@@ -160,7 +160,7 @@
         padding-left:1rem;
         padding-top:0.75rem;
     }
-    .opinion-content .limit{
+    .opinion-wrap .limit{
         position: absolute;
         bottom:0.5rem;
         right:0.5rem;
@@ -195,4 +195,130 @@
         box-sizing: border-box;
     }
 
+    /*邀请好友*/
+    .invite-tab{
+        width:100%;
+        height:2.3rem;
+        line-height:2.3rem;
+        font-size:0.85rem;
+        color:#333;
+        background:#fff;
+    }
+    .invite-tab>a{
+        display: inline-block;
+        width:50%;
+        height:100%;
+        color:#333;
+        position: relative;
+    }
+    .invite-tab>a>i{
+        position: absolute;
+        width:1.9rem;
+        height:0.15rem;
+        border-radius: 0.075rem;
+        background:transparent;
+        bottom:0;
+        left:50%;
+        margin-left:-0.95rem;
+    }
+    .invite-tab>a.cur{
+        color:#ff3030;
+    }
+    .invite-tab>a.cur>i{
+        background:#ff3030;
+    }
+
+    .invite>p{
+        height:1rem;
+        line-height: 1rem;
+        font-size:0.5rem;
+        color:#666;
+    }
+    .invite p>span{
+        color:#ff3030;
+    }
+    .invite-method{
+        background:#fff;
+        padding-bottom:1rem;
+    }
+    .share-container{
+        padding-top:1rem;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+    }
+    .share-container li{
+        float: left;
+        width:33.33%;
+        font-size:0.7rem;
+        color:#333;
+        margin-bottom:0.95rem;
+        text-align: center;
+    }
+    .share-container .share-item{
+        display: inline-block;
+    }
+    .share-container .share-item .icon{
+        display: block;
+        width:2.625rem;
+        height:2.6rem;
+    }
+    .share-container .share-item .txt{
+        margin-top:0.5rem;
+    }
+    .weixin .icon{
+        background: url("../img/ya_weixin.png");
+        background-size: cover;
+    }
+    .qq .icon{
+        background: url("../img/ya_qq.png");
+        background-size: cover;
+    }
+    .link .icon{
+        background: url("../img/ya_lianjie.png");
+        background-size: cover;
+    }
+    .qunfa .icon{
+        background: url("../img/ya_qunfa.png");
+        background-size: cover;
+    }
+    .qrcode .icon{
+        background: url("../img/ya_erweima.png");
+        background-size: cover;
+    }
+    .duanxin .icon{
+        background: url("../img/ya_duanxin.png");
+        background-size: cover;
+    }
+    .invite-code{
+        width:11.6rem;
+        height:1.7rem;
+        line-height:1.7rem;
+        border: 1px solid #ff3030;
+        font-size:0.65rem;
+        color:#ff3030;
+        border-radius: 0.85rem;
+        margin:0 auto 1rem;
+    }
+    .invite-good{
+        padding:0.75rem 1rem 1rem;
+        margin-top:0.5rem;
+        background: #fff;
+    }
+    .invite-good .title>span{
+        display: inline-block;
+        width:5.075rem;
+        height:0.95rem;
+        background: url("../img/yq_yqdhc.png") no-repeat;
+        background-size: cover;
+    }
+    .invite-good p{
+        font-size:0.55rem;
+        color:#333;
+        line-height:0.675rem;
+        margin-bottom:0.8rem;
+    }
+    .invite-good .rule{
+        font-size:0.55rem;
+        color:#ff3030;
+    }
 }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>乐趣头条</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+
+<div class="container">
+    <!--意见反馈-->
+    <div class="title text-c p-l-30 opi"><a href="#" class="go-back fl"></a>邀请好友</div>
+    <div class="invite-wrap">
+        <div class="invite-tab clear">
+            <a href="#" class="tab cur fl text-c">邀请好友<i></i></a>
+            <a href="#" class="tab fl text-c">我的好友<i></i></a>
+        </div>
+        <div class="invite-content">
+            <div class="invite">
+                <p class="text-c">邀请好友，送好友<span>1</span>元红包</p>
+                <div class="invite-method">
+                    <ul class="share-container clear">
+                        <li class="">
+                            <a href="#" class="share-item weixin">
+                                <span class="icon"></span>
+                                <p class="txt">微信邀请</p>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="share-item qq">
+                                <span class="icon"></span>
+                                <p class="txt">QQ邀请</p>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="share-item link">
+                                <span class="icon"></span>
+                                <p class="txt">邀请链接</p>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="share-item qunfa">
+                                <span class="icon"></span>
+                                <p class="txt">群发邀请</p>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="share-item qrcode">
+                                <span class="icon"></span>
+                                <p class="txt">二维码邀请</p>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="share-item duanxin">
+                                <span class="icon"></span>
+                                <p class="txt">短信邀请</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="invite-code text-c">您的邀请码9638527(点击复制)</div>
+                </div>
+                <div class="invite-good">
+                    <h2 class="title text-c"><span></span></h2>
+                    <p>终身受益。邀请链接发出后，好友登录一次邀请，提现、分享被阅读等均将向您贡献乐豆，让您的乐豆暴涨，邀请越多收益越高，奖励无上限!</p>
+                    <p>每邀请一名好友奖励现金4元(即4000乐豆)好友将永久为您贡献收益，邀请越多，奖励越丰富。</p>
+                    <a href="#" class="rule">查看奖励规则</a>
+                </div>
+            </div>
+            <div class=""></div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
