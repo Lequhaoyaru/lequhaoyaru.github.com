@@ -573,10 +573,10 @@
     .qrcode-wrap{
         width:100%;
         background: url("../img/QRcode_back.png") no-repeat;
-        background-size: 100%;
+        background-size: cover;
         padding:17.6rem 0 0.85rem;
     }
-    .qrcode{
+    .qrcode-wrap .qrcode{
         width:8.5rem;
         height:8.5rem;
         margin:0 auto 1.5rem;
@@ -587,6 +587,68 @@
     }
     .htxt{
         color:#fdff01;
+    }
+
+    /*分享链接跳转页面*/
+    .share-wrap{
+        width:100%;
+        height:100%;
+        background: url("../img/share_bg.png") no-repeat;
+        background-size: 100%;
+    }
+    .logo-wrap{
+        padding-top:0.75rem;
+    }
+    .logo-wrap>div{
+        display: inline-block;
+    }
+    .logo-wrap .logo{
+        width:1.75rem;
+        height:1.75rem;
+        background:#fff;
+        border-radius: 0.35rem;
+        overflow: hidden;
+    }
+    .logo-wrap .txt{
+        margin-left:0.5rem;
+        color:#fff;
+    }
+    .logo-wrap .txt>h3{
+        text-align: left;
+        font-size:0.75rem;
+    }
+    .logo-wrap .txt>p{
+        font-size:0.7rem;
+    }
+    .userInfo-wrap{
+        margin-top:8.75rem;
+    }
+    .user-headImg{
+        width:3.15rem;
+        height:3.15rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin:0 auto 1rem;
+    }
+    .user-headImg img{
+        width:100%;
+        height:100%;
+    }
+    .userInfo{
+        font-size:0.8rem;
+        color:#fff;
+    }
+    .userInfo .txt{
+        padding:0 1.9rem;
+        margin-top:0.5rem;
+    }
+    .receive-btn{
+        display: inline-block;
+        width:13.8rem;
+        height:2.5rem;
+        background:url("../img/share_btn_receive.png") no-repeat;
+        background-size: 100%;
+        margin:7rem auto 2rem;
     }
 
 }
