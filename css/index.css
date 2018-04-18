@@ -572,7 +572,7 @@
     /*二维码邀请*/
     .qrcode-wrap{
         width:100%;
-        background: url("../img/QRcode_back.png");
+        background: url("../img/QRcode_back.png") no-repeat;
         background-size: 100%;
         padding:17.6rem 0 0.85rem;
     }
