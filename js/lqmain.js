@@ -8,4 +8,22 @@ lequ.control = function (){
         $(this).addClass('cur').siblings().removeClass('cur');
         $(".invite-content .invite").eq(_this).addClass('show').siblings().removeClass('show');
     });
+
+    $(".problem-content li").on('click',function(){
+        if($(this).hasClass('show')){
+            $(this).removeClass('show');
+        }else{
+            $(this).addClass('show');
+        }
+    });
+
+    $(".problems>a").on('click',function(){
+        var index = $(this).index();
+        $(this).addClass("cur").siblings().removeClass("cur");
+        //$(this).offset().top - $(document).scrollTop();
+        //console.log($(".title").outerHeight()+$(".problems").outerHeight());
+        var scrollTop = $(".problem-title").eq(index).offset().top - ($(".title").outerHeight()+$(".problems").outerHeight());
+        /*$(document).scroll(scrollTop);*/
+        $("body,html").stop().animate({scrollTop:scrollTop},200);
+    });
 }();

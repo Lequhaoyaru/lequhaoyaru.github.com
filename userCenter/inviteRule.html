@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>邀请奖励规则</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+
+<div class="">
+    <!--邀请规则-->
+    <div class="title text-c">
+        <a href="#" class="go-back fl"></a>
+        <span>邀请奖励规则</span>
+    </div>
+    <div class="invite-rule-wrap">
+        <div class="txt text-c">
+            <p>千万人都在玩</p>
+            <h3>邀请奖励发放规则</h3>
+        </div>
+        <div class="rules-wrap">
+            <h2 class="clear"><i class="icon fl"></i><span class="fl">一次邀请，一劳永逸</span></h2>
+            <p>邀请成功后，好友每次分享文章被有效阅读向您<span class="rtxt">「贡献10乐豆」</span>奖励。每成功邀请一个好友，您将获得<span class="rtxt">「4元现金」</span>奖励。好友1元提现成功，您将直接获得1元奖励。剩余的<span class="rtxt">3元</span>分7次发放，当您的好友获得<span class="rtxt">30乐豆</span>阅读收益时，您即可获得一次邀请奖励，每位好友每天限发一次。</p>
+            <div class="hongbao-wrap text-c">
+                <div style="display: inline-block" class="clear">
+                    <span class="hongbao-icon fl"></span>
+                    <span class="fl">好友1元提现成功，您即可获得<span class="rtxt">「1元」</span>奖励</span>
+                </div>
+            </div>
+            <div class="seven-invite text-c">
+                <div class="item-wrap">
+                    <div class="text-c">0.8元</div>
+                    <div class="item first"></div>
+                    <div>第一次</div>
+                </div>
+                <div class="item-wrap">
+                    <div class="text-c">0.5元</div>
+                    <div class="item second"></div>
+                    <div>第二次</div>
+                </div>
+                <div class="item-wrap">
+                    <div class="text-c">0.3元</div>
+                    <div class="item third"></div>
+                    <div>第三次</div>
+                </div>
+                <div class="item-wrap">
+                    <div class="text-c">0.3元</div>
+                    <div class="item third"></div>
+                    <div>第四次</div>
+                </div>
+                <div class="item-wrap">
+                    <div class="text-c">0.3元</div>
+                    <div class="item third"></div>
+                    <div>第五次</div>
+                </div>
+                <div class="item-wrap">
+                    <div class="text-c">0.3元</div>
+                    <div class="item third"></div>
+                    <div>第六次</div>
+                </div>
+                <div class="item-wrap">
+                    <div class="text-c">0.5元</div>
+                    <div class="item second"></div>
+                    <div>第七次</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

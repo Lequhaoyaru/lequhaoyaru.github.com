@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>常见问题</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+
+<div class="container">
+    <!--常见问题-->
+    <div class="title text-c opi fixed">
+        <a href="#" class="go-back fl"></a>
+        <span>常见问题</span>
+    </div>
+    <div class="common-problem-wrap">
+        <div class="problems">
+            <a href="#">新手问题</a>
+            <a href="#">乐豆问题</a>
+            <a href="#">邀请问题</a>
+            <a href="#">提现问题</a>
+            <a href="#">账号问题</a>
+        </div>
+        <div class="problems-wrap">
+            <div class="problems-item">
+                <h3 class="problem-title">新手问题</h3>
+                <ul class="problem-content">
+                    <li>
+                        <div class="question clear"><span class="txt fl">乐趣头条是什么?</span><span class="icon fr"></span></div>
+                        <div class="answer">乐趣头条是由乐趣无限科技有限公司打造的一款新形式的惠民阅读软件，以移动应用为载体进行内容创造、资讯阅读，提供更多、有趣、有益的内容给大家</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">乐趣头条为什么会给您奖励?</span><span class="icon fr"></span></div>
+                        <div class="answer">为了引领全民阅读，帮助大家养成良好的阅读习惯，在阅读文章的过程中，平台将给予一定的乐豆奖励！而奖励的乐豆可以当做零钱用来兑换，让您在阅读过程中不仅增长见识，而且还能有所收益！</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">邀请好友有什么好处?</span><span class="icon fr"></span></div>
+                        <div class="answer">邀请好友即为收徒，能让您的收益迅速增加，现在每邀请一位有效好友奖励4元(即4000乐豆)，分7次发放(每次好友的当日阅读获得30乐豆，您即可获得一次奖励，每位好友每天限一次)而且好友分享文章被有效阅读会贡献给您更多乐豆!</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">什么任务赚钱快?</span><span class="icon fr"></span></div>
+                        <div class="answer">【邀请好友】赚钱快！您可通过微信、QQ等方式邀请您的亲朋好友，每成功邀请一位好友最高可获得4元奖励。邀请无上限，好友越多，奖励越多。好友每日分享被阅读还会向您贡献乐豆，只要好友足够多，您躺着也能赚钱!</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="problems-item">
+                <h3 class="problem-title">乐豆问题</h3>
+                <ul class="problem-content">
+                    <li>
+                        <div class="question clear"><span class="txt fl">乐豆是什么?</span><span class="icon fr"></span></div>
+                        <div class="answer">乐豆是乐趣头条里面的货币单位。可以用来归还商品、话费，支付宝提现以及微信红包等</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">一乐豆等于多少人民币?</span><span class="icon fr"></span></div>
+                        <div class="answer">乐豆与人民币比率1000比1，即1000乐豆等于1元钱</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">为什么看了文章没有乐豆?</span><span class="icon fr"></span></div>
+                        <div class="answer">为了鼓励大家认真阅读，阅读文章会有一定机率获得乐豆奖励，但并不是每次阅读都有奖励哦！这与您平时的阅读习惯有关，例如短时间内快速频繁浏览咨询、文章没看完、随意滚屏等，获得乐豆的机率就很低，请以平常心去阅读您感兴趣的内容</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">如何快速获得分享被阅读的乐豆?</span><span class="icon fr"></span></div>
+                        <div class="answer">
+                            <p>1.尽量多加QQ及微信好友</p>
+                            <p>2.分享的文章要少而精，针对感兴趣的人群进行分享</p>
+                            <p>3.官方不鼓励互阅互刷行为，建议大家通过分享好友等正常行为获取奖励</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">签到奖励/拆红包奖励</span><span class="icon fr"></span></div>
+                        <div class="answer">
+                            <p>签到奖励---每日签到是给新老用户的福利！新用户前7天连续签到可获得1350乐豆，后续连续签到规则：第一天4乐豆、第二天6乐豆、……第七天30乐豆。最高奖励30乐豆，后续连续不间断签到皆为30乐豆。若中断则将从第一天开始重新计算</p>
+                            <p>拆红包奖励---拆红包也是一项福利任务！同样在任务中心，会显示拆红包的时间。每天早6:00~8:00、中午11:00~13:00、晚20:00~22:00均会有一次拆红包的机会，近期分享被阅读越多，获得乐豆就越多</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="problems-item">
+                <h3 class="problem-title">邀请问题</h3>
+                <ul class="problem-content">
+                    <li>
+                        <div class="question clear"><span class="txt fl">邀请码是什么?怎么用?</span><span class="icon fr"></span></div>
+                        <div class="answer">
+                            <p>邀请码是乐趣头条为每一位用户设计的独立id号。邀请码只在邀请好友时使用。</p>
+                            <p>使用邀请码的两种情况：</p>
+                            <p>a.分享邀请链接给朋友在线安装登录，链接中已带有您的邀请码，因此不需要在手填写</p>
+                            <p>b.如果朋友是从手机应用商店搜索“乐趣头条”先安装登录的，您需要让朋友登录后填写您的邀请码进行绑定，这样才能成为您的好友哦</p>
+                            填写邀请码位置：“我的”->“任务中心”->“填写邀请码”</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">邀请奖励的4000乐豆如何获得?</span><span class="icon fr"></span></div>
+                        <div class="answer">
+                            <div class="get-ledou">
+                                <h2 class="text-c">奖励发放规则</h2>
+                                <p>每邀请一位好友奖励4元(即4000乐豆)分7次发放，发放条件：当好友个人阅读获得30乐豆时，您即可获得一次奖励，每好友每天限发一次</p>
+                                <div class="release-wrap">
+                                    <h3 class="text-c"><span>七次奖励发放如下</span></h3>
+                                    <div class="hongbao-wrap text-c cash">
+                                        <div style="display: inline-block" class="clear">
+                                            <span class="hongbao-icon fl"></span>
+                                            <span class="fl">好友1元提现成功，您即可获得<span class="rtxt">「1元」</span>奖励</span>
+                                        </div>
+                                    </div>
+                                    <div class="release clear text-c">
+                                        <div class="detail">
+                                            <p>第一次奖励<span class="rtxt">【0.8元】</span></p>
+                                            <p>第二次奖励<span class="rtxt">【0.5元】</span></p>
+                                            <p>第三次奖励<span class="rtxt">【0.3元】</span></p>
+                                            <p>第四次奖励<span class="rtxt">【0.3元】</span></p>
+                                            <p>第五次奖励<span class="rtxt">【0.3元】</span></p>
+                                            <p>第六次奖励<span class="rtxt">【0.3元】</span></p>
+                                            <p>第七次奖励<span class="rtxt">【0.5元】</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">如何得到好友的贡献?</span><span class="icon fr"></span></div>
+                        <div class="answer">好友分享文章，每次被有效阅读后，您都将获得10乐豆贡献奖励，无上限！好友得到越多，您的贡献也就越多。贡献可以在我的好友里查看。</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="problems-item">
+                <h3 class="problem-title">提现问题</h3>
+                <ul class="problem-content">
+                    <li>
+                        <div class="question clear"><span class="txt fl">如何兑换?</span><span class="icon fr"></span></div>
+                        <div class="answer">当乐豆达到一定额度，您可进入“我的”页面->“兑换提现”一栏，选择您想要兑换的品类，填写相关信息提交兑换即可。新人福利：首次一元即可微信提现哦~）</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">提现多久到账?</span><span class="icon fr"></span></div>
+                        <div class="answer">提现申请提交后，次日开始计算1~2个工作日内处理完成（双休日、节假日顺延）</div>
+                    </li>
+                    <li>
+                        <div class="question clear"><span class="txt fl">微信如何实名认证?</span><span class="icon fr"></span></div>
+                        <div class="answer">
+                            <p>方法一：通过验证身份证</p>
+                            <p>方法二：通过添加银行卡</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="problems-item">
+                <h3 class="problem-title">账号问题</h3>
+                <ul class="problem-content">
+                    <li>
+                        <div class="question clear"><span class="txt fl">乐趣头条的短信提醒如何退订?</span><span class="icon fr"></span></div>
+                        <div class="answer">乐趣头条可能会向您发送一些活动相关的短信，如果打扰到您了，可直接在短信中回复“T”退订。取消退订后，您将无法收到乐趣头条的任何活动和奖励通知哦～若退订后仍收到短信，您可联系乐趣头条官方客服处理</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/lqmain.js"></script>
+</body>
+</html>
