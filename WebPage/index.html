@@ -42,10 +42,11 @@
             margin:4px 0;
         }
     </style>
+    <script src="jquery-1.11.3.min.js"></script>
 </head>
 <body>
     <div class="wrap" id="LandingPage">
-        <a href="javascript:gourl();" class="section">
+        <a href="" class="section">
             <img alt="" src="./img/download_bg.jpg" />
         </a>
         <div class="footer">
@@ -72,7 +73,11 @@
     </script>
 </body>
 <script type="text/javascript">
+    $(function(){
+        $(".wrap a").attr("href", "javascript:gourl();").children('img').attr("style","");
+        $("img").attr('style','');
 
+    });
     function gourl(){
         var LandingPage = document.getElementById("#LandingPage");
         var WeiXinPage = document.getElementById("#WeiXinPage");
