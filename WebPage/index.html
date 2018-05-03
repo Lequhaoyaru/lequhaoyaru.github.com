@@ -23,7 +23,7 @@
             overflow: hidden;
             position: relative;
         }
-        .wrap img,.WeiXinPage img {
+        .wrap img,.WeiXinPage img ,.footer img{
             width: 100%;
             border:0;
             margin:0;
@@ -32,30 +32,29 @@
         .section img{
             width:100%;
         }
-        .footer {
-            padding: 10px 6px;
-            color: #646464;
-            text-align: center;
-            font-size:70%;
-        }
-        .footer>p{
-            margin:4px 0;
-        }
         .WeiXinPage{
             display: none;
+        }
+        .bottom{
+            position: fixed;
+            bottom:0;
+            width:100%;
         }
 
     </style>
 </head>
 <body>
 <div class="wrap" id="LandingPage">
-    <a href="#" class="section" id="goUrl">
+    <a href="javascript:gourl();" class="section">
         <img alt="" src="http://dl.ilequ.net/pic/01/daqin/download_bg.jpg">
     </a>
 </div>
 
 <div id="WeiXinPage" class="WeiXinPage">
     <img alt="" src="http://dl.ilequ.net/pic/01/weixin.png" style="">
+</div>
+<div class="footer bottom">
+    <a href="javascript:gourl();"><img src="./img/download_btn.png" alt=""></a>
 </div>
 <script src="http://pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="500603712"></script><script>
     var _mtac = {"senseQuery":1};
@@ -72,8 +71,7 @@
 
 <script>
 
-    var goUrl = document.getElementById("goUrl");
-    goUrl.onclick = function(){
+    function gourl(){
         var LandingPage = document.getElementById("LandingPage");
         var WeiXinPage = document.getElementById("WeiXinPage");
         if(isWeiXin()){
