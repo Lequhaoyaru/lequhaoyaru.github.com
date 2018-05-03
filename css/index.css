@@ -888,7 +888,25 @@
         color:#ff3030;
     }
 
-    
+    /*关于我们*/
+    .aboutUs-wrap .logo-wrap{
+        text-align: center;
+        padding-top:1rem;
+    }
+    .aboutUs-wrap .logo-wrap>img{
+        width:5rem;
+        height:5rem;
+    }
+    .aboutUs-wrap>p.txt{
+        padding: 1rem 1.5rem;
+        line-height: 1.4rem;
+        font-size: 0.75rem;
+    }
+    .aboutUs-wrap>ul li{
+        font-size: 0.75rem;
+        margin-bottom:0.4rem;
+        padding-left:1.5rem;
+    }
     @keyframes load {
         0% {
             -webkit-transform: rotate(0deg);
