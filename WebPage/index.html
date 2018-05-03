@@ -54,8 +54,6 @@
             <img alt="" src="./img/download_bg.jpg" />
         </a>
         <div class="footer">
-            <p>北京乐趣无限网络科技有限公司 </p>
-            <p>地址：北京市朝阳区高碑店八里庄陈家林九号院 华腾世纪总部公园E1座1302室</p>
             <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。 </p>
         </div>
     </div>
@@ -81,6 +79,7 @@
         var LandingPage = document.getElementById("#LandingPage");
         var WeiXinPage = document.getElementById("#WeiXinPage");
         if(isWeiXin()){
+            alert(1);
             LandingPage.style.display = 'none';
             WeiXinPage.style.display = 'block';
             return false;
