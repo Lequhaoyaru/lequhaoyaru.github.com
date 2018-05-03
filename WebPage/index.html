@@ -41,12 +41,16 @@
         .footer>p{
             margin:4px 0;
         }
+        .WeiXinPage{
+            display: none;
+        }
+
     </style>
     <script src="jquery-1.11.3.min.js"></script>
 </head>
 <body>
     <div class="wrap" id="LandingPage">
-        <a href="" class="section">
+        <a href="javascript:gourl();" class="section">
             <img alt="" src="./img/download_bg.jpg" />
         </a>
         <div class="footer">
@@ -56,7 +60,7 @@
         </div>
     </div>
 
-    <div id="WeiXinPage" class="WeiXinPage" style=" display:none; ">
+    <div id="WeiXinPage" class="WeiXinPage">
         <img alt="" src="http://image.6kw.com/ad/images/h002/h59/img201609281100440.png" style="">
     </div>
     <script>
@@ -73,11 +77,6 @@
     </script>
 </body>
 <script type="text/javascript">
-    $(function(){
-        $(".wrap a").attr("href", "javascript:gourl();").children('img').attr("style","");
-        $("img").attr('style','');
-
-    });
     function gourl(){
         var LandingPage = document.getElementById("#LandingPage");
         var WeiXinPage = document.getElementById("#WeiXinPage");
