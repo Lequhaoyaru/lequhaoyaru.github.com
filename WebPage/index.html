@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="wrap" id="LandingPage">
-        <a href="javascript:gourl();" class="section">
+        <a href="javascript:gourl();" class="section" id="goUrl">
             <img alt="" src="./img/download_bg.jpg" />
         </a>
         <div class="footer">
@@ -76,7 +76,8 @@
 </body>
 <script>
     window.onload = function(){
-        function gourl(){
+        var goUrl = document.getElementById("#goUrl");
+        goUrl.onclick = function(){
             var LandingPage = document.getElementById("#LandingPage");
             var WeiXinPage = document.getElementById("#WeiXinPage");
             if(isWeiXin()){
@@ -86,7 +87,7 @@
                 return false;
             }
             document.location="https://b.6kw.com/dlsg/14473/13917/0839c1b97c649f30143499660506da70.apk";
-        }
+        };
         function isWeiXin(){
             var ua = window.navigator.userAgent.toLowerCase();
             if(ua.match(/MicroMessenger/i) == 'micromessenger'){
