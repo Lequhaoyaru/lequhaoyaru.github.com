@@ -193,7 +193,14 @@
                 };
                 return false;
             }
-            document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
+            var system = getsystem();
+            if (system=='iphone'){
+                document.location="https://itunes.apple.com/cn/app/id1328767441?mt=8";
+            }
+            if (system=='Android'){
+                document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
+            }
+
         };
         function isWeiXin(){
             var ua = window.navigator.userAgent.toLowerCase();
@@ -203,6 +210,17 @@
                 return false;
             }
         };
+        function getsystem() {
+            if(navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPad") != -1 ){
+                return 'iphone';
+            }
+            else if( navigator.userAgent.indexOf("Android") != -1){
+                return 'Android';
+            }
+            else{
+                return 'windows';
+            }
+        }；
     </script>
     <script src="http://pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="500603712"></script>
 
