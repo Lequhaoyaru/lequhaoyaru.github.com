@@ -183,25 +183,30 @@
         $('#banner').swipeslider({
             transitionDuration: 1200
         });
+
         function gourl(){
             if(isWeiXin()){
                 $("#LandingPage").css({'display':'none'});
-                $("#WeiXinPage").css({'display':'block'}).on('click',function(){
+                $("#WeiXinPage").css({'display':'block'});
+
+                $("#WeiXinPage").on('click',function(){
                     $("#LandingPage").css({'display':'block'});
-                    $(this).css({'display':'none'});
+                    $("this").css({'display':'none'});
                 });
                 return false;
+            }else{
+                var system = getsystem();
+                if (system=='iphone'){
+                    document.location="https://itunes.apple.com/cn/app/id1328767441?mt=8";
+                }
+                if (system=='Android'){
+                    document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
+                }
+                if (system=='windows'){
+                    return false;
+                }
             }
-            var system = getsystem();
-            if (system=='iphone'){
-                document.location="https://itunes.apple.com/cn/app/id1328767441?mt=8";
-            }
-            if (system=='Android'){
-                document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
-            }
-            if (system=='windows'){
-                return false;
-            }
+
 
         };
         function isWeiXin(){
