@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>大秦之帝国崛起</title>
+    <meta name="viewport" content="width=750,target-densitydpi=320,user-scalable=no">
+    <title>大秦帝国</title>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/swipeslider.js"></script>
     <style>
@@ -18,21 +18,18 @@
         img { border: 0; vertical-align: top}
         body{
             color: rgb(0, 27, 37);
+            background: rgb(0, 0, 0);
         }
         .wrap{
             width: 100%;
             overflow: hidden;
             position: relative;
-            padding-bottom:60px;
         }
         .wrap img,.WeiXinPage img ,.footer img{
             width: 100%;
             border:0;
             margin:0;
             padding:0;
-        }
-        .section img{
-            width:100%;
         }
         .WeiXinPage{
             display: none;
@@ -64,8 +61,6 @@
             font-size: 0;
             -webkit-transform: translateX(0);
             transform: translateX(0);
-            /*position: absolute;
-            bottom: 0;*/
         }
         .swipe-slider .sw-slide {
             width: 100%;
@@ -115,56 +110,71 @@
         .sw-bullet li:not(:last-child){
             margin-right: 5px;
         }
-        .title-wrap{
-            padding:0 4%;
+        .nav{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background:#000;
         }
-        .title{
-            height:2.55rem;
-            overflow: hidden;
-            margin:0 auto;
-            line-height:2.334rem;
-            border-bottom:1px solid #e3e3e3;
-        }
-        .title>h3{
-            font-weight: normal;
-            width: 6.55172rem;
-            border-bottom: 0.2069rem solid #a7804c;
+        .btn-wrap{
             text-align: center;
-            position: relative;
-            z-index: 2;
+            margin-top:30px;
+        }
+        .download-btn{
+            width: 46%;
+            height: 96px;
+            display: inline-block;
+            background: url(./img/btn_down.png) no-repeat center center;
+            background-size: auto 100%;
+            margin-bottom:30px;
+        }
+        .imgBox{
+            padding:20px 4%;
+        }
+        .commet{
+            padding:40px 8%;
         }
     </style>
 </head>
 <body>
     <div class="wrap" id="LandingPage">
-        <a href="javascript:gourl();"><img src="./img/img1-1.jpg" alt=""></a>
-        <div class="title-wrap">
-            <div class="title"><h3>武将简介</h3></div>
-        </div>
+        <div class="top-bg"><img src="./img/top_bg.png" alt=""></div>
         <section class="banner-wrap">
             <div id="banner" class="swipe-slider">
                 <ul class="sw-slides">
                     <li class="sw-slide">
                         <a href="javascript:gourl();">
-                            <img src="./img/b-banner-1.jpg" alt="">
+                            <img src="./img/banner1.jpg" alt="">
                         </a>
                     </li>
                     <li class="sw-slide">
                         <a href="javascript:gourl();">
-                            <img src="./img/b-banner-2.jpg" alt="">
+                            <img src="./img/banner2.jpg" alt="">
                         </a>
                     </li>
                     <li class="sw-slide">
                         <a href="javascript:gourl();">
-                            <img src="./img/b-banner-3.jpg" alt="">
+                            <img src="./img/banner3.jpg" alt="">
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
-        <div class="footer bottom">
-            <a href="javascript:gourl();"><img src="./img/download_btn.png" alt=""></a>
-        </div>
+        <section class="section">
+            <div class="btn-wrap"><a href="javascript:gourl();" class="download-btn"></a></div>
+            <div class="title"><img src="./img/title01.png" alt=""></div>
+            <div class="imgBox"><div><img src="./img/lunbo01.png" alt=""></div></div>
+            <div class="imgBox"><div><img src="./img/lunbo02.png" alt=""></div></div>
+            <div class="imgBox"><div><img src="./img/lunbo03.png" alt=""></div></div>
+            <div class="btn-wrap"><a href="javascript:gourl();" class="download-btn"></a></div>
+            <div class="title"><img src="./img/title02.png" alt=""></div>
+            <div class="commet"><img src="./img/commet.png" alt=""></div>
+            <div class="btn-wrap"><a href="javascript:gourl();" class="download-btn"></a></div>
+        </section>
+        <div class="nav"><img src="./img/top_text.png" alt=""></div>
+        <div class="footer"></div>
     </div>
     <div id="WeiXinPage" class="WeiXinPage">
         <img alt="" src="http://dl.ilequ.net/pic/01/weixin.png" style="">
@@ -175,7 +185,6 @@
         });
         function gourl(){
             if(isWeiXin()){
-
                 $("#LandingPage").css({'display':'none'});
                 $("#WeiXinPage").css({'display':'block'});
                 $("#WeiXinPage").onclick = function(){
@@ -184,7 +193,7 @@
                 };
                 return false;
             }
-            document.location="http://dl.ilequ.net/mob/d/g/o/alin01.apk";
+            document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
         };
         function isWeiXin(){
             var ua = window.navigator.userAgent.toLowerCase();
