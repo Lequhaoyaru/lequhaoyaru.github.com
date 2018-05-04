@@ -186,11 +186,10 @@
         function gourl(){
             if(isWeiXin()){
                 $("#LandingPage").css({'display':'none'});
-                $("#WeiXinPage").css({'display':'block'});
-                $("#WeiXinPage").onclick = function(){
+                $("#WeiXinPage").css({'display':'block'}).on('click',function(){
                     $("#LandingPage").css({'display':'block'});
-                    $("#WeiXinPage").css({'display':'none'});
-                };
+                    $(this).css({'display':'none'});
+                });
                 return false;
             }
             var system = getsystem();
