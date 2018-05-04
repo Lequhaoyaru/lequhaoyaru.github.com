@@ -137,7 +137,7 @@
 </head>
 <body>
     <div class="wrap" id="LandingPage">
-        <img src="./img/img1-1.jpg" alt="">
+        <a href="javascript:gourl();"><img src="./img/img1-1.jpg" alt=""></a>
         <div class="title-wrap">
             <div class="title"><h3>武将简介</h3></div>
         </div>
@@ -145,17 +145,17 @@
             <div id="banner" class="swipe-slider">
                 <ul class="sw-slides">
                     <li class="sw-slide">
-                        <a href="#">
+                        <a href="javascript:gourl();">
                             <img src="./img/b-banner-1.jpg" alt="">
                         </a>
                     </li>
                     <li class="sw-slide">
-                        <a href="#">
+                        <a href="javascript:gourl();">
                             <img src="./img/b-banner-2.jpg" alt="">
                         </a>
                     </li>
                     <li class="sw-slide">
-                        <a href="#">
+                        <a href="javascript:gourl();">
                             <img src="./img/b-banner-3.jpg" alt="">
                         </a>
                     </li>
@@ -174,14 +174,18 @@
             transitionDuration: 1200
         });
         function gourl(){
-            var LandingPage = document.getElementById("LandingPage");
-            var WeiXinPage = document.getElementById("WeiXinPage");
+            /*var LandingPage = document.getElementById("LandingPage");
+            var WeiXinPage = document.getElementById("WeiXinPage");*/
             if(isWeiXin()){
-                LandingPage.style.display = 'none';
-                WeiXinPage.style.display = 'block';
+                /*LandingPage.style.display = 'none';
+                WeiXinPage.style.display = 'block';*/
+                $("#LandingPage").css({'display':'none'});
+                $("#WeiXinPage").css({'display':'block'});
                 WeiXinPage.onclick = function(){
-                    LandingPage.style.display = 'block';
-                    WeiXinPage.style.display = 'none';
+                    /*LandingPage.style.display = 'block';
+                    WeiXinPage.style.display = 'none';*/
+                    $("#LandingPage").css({'display':'block'});
+                    $("#WeiXinPage").css({'display':'none'});
                 };
                 return false;
             }
