@@ -179,6 +179,20 @@
     <div id="WeiXinPage" class="WeiXinPage">
         <img alt="" src="http://dl.ilequ.net/pic/01/weixin.png" style="">
     </div>
+    <script src="//pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="500603712"></script>
+    <script src="http://pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="500603712"></script>
+    <script>
+        var _mtac = {"senseQuery":1};
+        (function() {
+            var mta = document.createElement("script");
+            mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
+            mta.setAttribute("name", "MTAH5");
+            mta.setAttribute("sid", "500603712");
+
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(mta, s);
+        })();
+    </script>
     <script>
         $('#banner').swipeslider({
             transitionDuration: 1200
@@ -191,7 +205,7 @@
 
                 $("#WeiXinPage").on('click',function(){
                     $("#LandingPage").css({'display':'block'});
-                    $("this").css({'display':'none'});
+                    $(this).css({'display':'none'});
                 });
                 return false;
             }else{
@@ -228,20 +242,6 @@
                 return 'windows';
             }
         };
-    </script>
-    <script src="http://pingjs.qq.com/h5/stats.js?v2.0.4" name="MTAH5" sid="500603712"></script>
-
-    <script>
-        var _mtac = {"senseQuery":1};
-        (function() {
-            var mta = document.createElement("script");
-            mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
-            mta.setAttribute("name", "MTAH5");
-            mta.setAttribute("sid", "500603712");
-
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(mta, s);
-        })();
     </script>
 </body>
 </html>
