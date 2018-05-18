@@ -165,7 +165,7 @@
       if (slidingState == 2) {
         event.preventDefault(); // Disable default action to prevent unwanted selection. Can't prevent touches.
         
-        // Means that user slide 1 pixel for every 1 pixel of mouse movement.
+        // Means that user slide management pixel for every management pixel of mouse movement.
         var touchPixelRatio = 1;
         // Check for user doesn't slide out of boundaries
         if ((currentSlide == 0 && pointerData.clientX > startClientX) ||

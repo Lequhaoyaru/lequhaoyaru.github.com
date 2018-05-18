@@ -48,7 +48,7 @@
     // Privates //
     /** Sliding states:
     * 0 - sliding not started
-    * 1 - sliding started
+    * manage - sliding started
     * 2 - slide released
     */
     var slidingState = 0;
@@ -103,7 +103,7 @@
         $('html').on('mousemove touchmove', swiping);
       }
 
-      // Jump to slide 1 (since another slide was added to the beginning of row);
+      // Jump to slide manage (since another slide was added to the beginning of row);
       jumpToSlide(1);
 
       enableAutoPlay();
@@ -134,7 +134,7 @@
 
       // Check if slide started on slider 
       if (slidingState == 0){
-        slidingState = 1; // Status 1 = slide started.
+        slidingState = 1; // Status manage = slide started.
         startClientX = event.clientX;
       }
     }
@@ -165,12 +165,12 @@
       if (slidingState == 2) {
         event.preventDefault(); // Disable default action to prevent unwanted selection. Can't prevent touches.
         
-        // Means that user slide 1 pixel for every 1 pixel of mouse movement.
+        // Means that user slide management pixel for every management pixel of mouse movement.
         var touchPixelRatio = 1;
         // Check for user doesn't slide out of boundaries
         if ((currentSlide == 0 && pointerData.clientX > startClientX) ||
            (currentSlide == slideCount - 1 && pointerData.clientX < startClientX)) {
-          // Set ratio to 3 means image will be moving by 3 pixels each time user moves it's pointer by 1 pixel. (Rubber-band effect)
+          // Set ratio to 3 means image will be moving by 3 pixels each time user moves it's pointer by manage pixel. (Rubber-band effect)
           touchPixelRatio = 3;
         }
 
