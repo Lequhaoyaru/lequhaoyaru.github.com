@@ -17,7 +17,7 @@
     <link href="http://139.196.188.229:8044/administrator/css/pe-icon-7-stroke.css" rel="stylesheet">
 
 
-    <link href="./app.css" media="all" type="text/css" rel="stylesheet">
+    <link href="app.css" media="all" type="text/css" rel="stylesheet">
     <link href="http://139.196.188.229:8044/css/social.css" rel="stylesheet">
     <!--[if lte IE 9]>
     <link href="http://139.196.188.229:8044/packages/summerblue/administrator/css/browsers/lte-ie9.css" media="all" type="text/css" rel="stylesheet">
@@ -26,7 +26,7 @@
 
 
     <!--  app css     -->
-    <link href="http://139.196.188.229:8044/administrator/css/app.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
 </head>
 <body class="">
 <div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
@@ -94,9 +94,10 @@
                     </li>
                     <li class="separator hidden-lg"></li>
                 </ul>
-            </ul><ul class="metismenu nav" id="side-menu" data-url="http://139.196.188.229:8044/monitor/sidebar">
+            </ul>
+            <ul class="metismenu nav" id="side-menu" data-url="http://139.196.188.229:8044/monitor/sidebar">
             <li class="" id="dashboard">
-                <a href="#dashboard" onclick="lequ.admin.getData('dashboard')">
+                <a href="#dashboard" onclick="lequ.admin.getData('http://139.196.188.229:8044/test/android/16')">
                     <i class="fa fa-dashboard"></i>
                     <span>概览</span>
                 </a>
@@ -178,29 +179,7 @@
         </div>
     </nav>
     <div class="content pt-70">
-        <div class="container-fluid">
-            <div class="row" id="charts-content">
-                <div class="col-md-4 col-xs-12">
-                    <a href="#">
-                        <div class="card" style="padding:20px;">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="card-block">
-                                        <h4 class="card-title" style="font-size:18px;color:#222;margin:0;">两大左派政党合并 尼泊尔共产党成立</h4>
-                                        <p class="card-text"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div style="">
-                                        <img src="https://publish-pic-cpu.baidu.com/272359fb-7db6-4a19-a580-0c585bdb9606.jpeg@w_228,h_152" alt="" width="100%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div class="container-fluid" id="fluid"></div>
     </div>
     <script type="text/javascript">
         var adminData = {
@@ -215,12 +194,13 @@
 </div>
 
 <script src="http://139.196.188.229:8044/packages/summerblue/administrator/js/base.js"></script>
-<script src="http://139.196.188.229:8044/packages/summerblue/administrator/js/app.js"></script>
+<script src="app.js"></script>
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 <!--  Charts Plugin -->
 <script src="http://139.196.188.229:8044/administrator/js/chartist.min.js"></script>
 <script src="http://139.196.188.229:8044/administrator/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-<script src="./app.js"></script>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="app.js"></script>
 <script>
     var baseurl="http://139.196.188.229:8044/monitor";
     lequ.admin.initSidebar();
