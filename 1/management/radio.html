@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="radio" name="one" >
+        <input type="radio" name="two" >
+        <input type="radio" name="three" >
+    </div>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $('input').click(function(){
+                if(!$(this).attr('checked')){
+                    $(this).attr('checked',true);
+                }else{
+                    $(this).attr('checked',false);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

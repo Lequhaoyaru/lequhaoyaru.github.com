@@ -1,0 +1,1082 @@
+
+@media screen and (max-width: 768px){
+    body{
+        background:#f9f9f9;
+    }
+    .container{
+        width:100%;
+        position:absolute;
+        top:0;
+        /*bottom:0;*/
+        background:#fff;
+    }
+    .bottom-0{
+        bottom:0;
+    }
+    .loading-wrap{
+        width:100%;
+        padding:0.8rem 0;
+        display: none;
+    }
+    .loading-wrap.show{
+        display: block;
+    }
+    .loading-wrap .loading {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        background: url(../img/loading.png) no-repeat;
+        background-size: cover;
+        animation: load .8s linear infinite;
+        -moz-animation: load .8s linear infinite;
+        -webkit-animation: load .8s linear infinite;
+        -o-animation: load .8s linear infinite;
+    }
+    .nomore{
+        padding:0.8rem;
+        display: none;
+    }
+    .nomore.show{
+        display: block;
+    }
+    /*收入明细*/
+    .income-wrap{
+        padding:0 0.75rem;
+        background: url("../lequhaoyaru.github.com/img/bg.png");
+        color:#fff;
+    }
+    .title{
+        font-size:0.9rem;
+        padding:1rem 0.75rem 1.1rem;
+        color:#333;
+    }
+    .income-wrap .title{
+        padding:1rem 0 1.1rem;
+        color:#fff;
+    }
+    .go-back{
+        display: inline-block;
+        width: 0.75rem;
+        height: 1.1rem;
+        background: url(../lequhaoyaru.github.com/img/return.png) no-repeat;
+        background-size: 140%;
+        margin-top:0.1rem;
+    }
+    .go-back.white{
+        background: url(../lequhaoyaru.github.com/img/back.png) no-repeat;
+        background-size: 84%;
+    }
+    .income-wrap .income{
+        padding-top:0.4rem;
+    }
+    .income .all-ledou{
+        font-size:0.65rem;
+        margin-bottom:0.6rem;
+    }
+    .income .number{
+        position: relative;
+        font-size:1.65rem;
+        margin-bottom:0.9rem;
+    }
+    .income .new-get{
+        font-size:0.65rem;
+        padding-bottom:1.25rem;
+    }
+    .income .exchange{
+        width:4.675rem;
+        height:1.475rem;
+        line-height:1.475rem;
+        background:#fff;
+        position: absolute;
+        right:-0.75rem;
+        top:0.34rem;
+        font-size:0.6rem;
+        color:#ff3030;
+        border-radius: 0.7375rem 0 0 0.7375rem;
+    }
+    .income .exchange .icon_1{
+        width: 0.75rem;
+        height:0.55rem;
+        background:url("../lequhaoyaru.github.com/img/mx_duihuan.png");
+        background-size:cover;
+        margin-left:0.475rem;
+        margin-right:0.375rem;
+        margin-top:0.5rem
+    }
+    .income .exchange .icon_2{
+        width: 0.325rem;
+        height:0.6rem;
+        background:url("../lequhaoyaru.github.com/img/mx_more.png");
+        background-size:cover;
+        margin-right:0.6rem;
+        margin-top:0.44rem
+    }
+    .tab-wrap{
+        width:100%;
+        color:#ff3030;
+        border-radius: 0.2rem 0.2rem 0 0;
+        overflow: hidden;
+    }
+    .tab-wrap .fri_tab{
+        width:7.775rem;
+        height:2.9rem;
+        background:#fff;
+        opacity: 0.5;
+        padding-top:1.075rem;
+        padding-left:0.85rem;
+    }
+    .tab-wrap .fri_tab.cur{
+        opacity: 1;
+    }
+    .fri_tab .part{
+        font-size:0.675rem;
+    }
+    .fri_tab .part_num{
+        font-size:1rem;
+        font-weight:600;
+    }
+    .rate{
+        height:1.5rem;
+        color:#666;
+        font-size:0.6rem;
+        line-height:1.5rem;
+        background:#f9f9f9;
+    }
+    .tab-content{
+        display: none;
+    }
+    .tab-content.show{
+        display: block;
+    }
+    .tab-content ul li{
+        height:2.65rem;
+        border-bottom:0.025rem solid #ccc;
+        padding-left:1rem;
+        padding-right:0.675rem;
+        font-size:0.75rem;
+        color:#333;
+        background:#fff;
+    }
+    .sign-wrap .sign{
+        margin-top:0.85rem;
+    }
+    .sign-wrap .ledou{
+        font-size:0.65rem;
+        margin-top: 0.5rem;
+        margin-bottom:0.1rem;
+    }
+    .sign-wrap .ledou.red{
+        color:#ff3030;
+    }
+    .sign-wrap .ledou.green{
+        color:#45c91c;
+    }
+    .sign-wrap .time{
+        font-size:0.4rem;
+        color:#999;
+
+    }
+
+    /*意见反馈*/
+    .p-l-r-30{
+        padding:0 0.75rem;
+    }
+    .p-l-30{
+        padding-left:0.75rem;
+    }
+    .opi{
+        background:#fff;
+        border-bottom:1px solid #ccc;
+    }
+    .txt-warp{
+        position: relative;
+    }
+    .opinion-wrap p{
+        height:1.25rem;
+        line-height:1.25rem;
+        padding-left:1rem;
+        font-size:0.7rem;
+        color:#666;
+    }
+    .opinion-wrap .txt{
+        height:9.25rem;
+        width:17.75rem;
+        resize: none;
+        border:none;
+        font-size:0.8rem;
+        color:#999;
+        padding-left:1rem;
+        padding-top:0.75rem;
+    }
+    .opinion-wrap .limit{
+        position: absolute;
+        bottom:0.5rem;
+        right:0.5rem;
+        font-size:0.65rem;
+        color:#666;
+    }
+    .add-photo{
+        padding:0.75rem 0.75rem 0.8rem;
+    }
+    .add-photo .add{
+        display: inline-block;
+        width:3.4rem;
+        height:3.4rem;
+        background: url("../lequhaoyaru.github.com/img/yj_add.png") no-repeat;
+        background-size: cover;
+        margin-right:1.02rem;
+        margin-bottom:0.7rem;
+    }
+    .add-photo .add:nth-child(4n){
+        margin-right:0;
+    }
+    .btn{
+        display: inline-block;
+        width:100%;
+        height:2.65rem;
+        font-size:0.8rem;
+        color:#ff3030;
+        background:#fff;
+        line-height:2.65rem;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /*邀请好友*/
+    .invite-tab{
+        width:100%;
+        height:2.3rem;
+        line-height:2.3rem;
+        font-size:0.85rem;
+        color:#333;
+        background:#fff;
+    }
+    .invite-tab>a{
+        display: inline-block;
+        width:50%;
+        height:100%;
+        color:#333;
+        position: relative;
+    }
+    .invite-tab>a>i{
+        position: absolute;
+        width:1.9rem;
+        height:0.15rem;
+        border-radius: 0.075rem;
+        background:transparent;
+        bottom:0;
+        left:50%;
+        margin-left:-0.95rem;
+    }
+    .invite-tab>a.cur{
+        color:#ff3030;
+    }
+    .invite-tab>a.cur>i{
+        background:#ff3030;
+    }
+    .invite{
+        display: none;
+    }
+    .invite.show{
+        display: block;
+    }
+    .invite>p{
+        height:1.2rem;
+        line-height: 1.2rem;
+        font-size:0.5rem;
+        color:#666;
+    }
+    .invite p>span{
+        color:#ff3030;
+    }
+    .invite-method{
+        background:#fff;
+        padding-bottom:1rem;
+    }
+    .share-container{
+        padding-top:1rem;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+    }
+    .share-container li{
+        float: left;
+        width:4.65rem;
+        font-size:0.7rem;
+        color:#333;
+        margin-bottom:0.95rem;
+        text-align: center;
+    }
+    .share-container .share-item{
+        display: inline-block;
+    }
+    .share-container .share-item .icon{
+        display: inline-block;
+        width:2.625rem;
+        height:2.6rem;
+    }
+    .share-container .share-item .txt{
+        font-size:0.7rem;
+        color:#333;
+        margin-top:0.5rem;
+    }
+    .weixin .icon{
+        background: url("../lequhaoyaru.github.com/img/ya_weixin.png") no-repeat;
+        background-size: cover;
+    }
+    .share-container .qq .icon{
+        height:2.63rem;
+        background: url("../lequhaoyaru.github.com/img/ya_qq.png") no-repeat;
+        background-size: cover;
+    }
+    .link .icon{
+        background: url("../lequhaoyaru.github.com/img/ya_lianjie.png") no-repeat;
+        background-size: cover;
+    }
+    .pengyouquan .icon{
+        background: url("../img/ya_pengyouquan.png") no-repeat;
+        background-size: cover;
+    }
+    .qrcode .icon{
+        background: url("../lequhaoyaru.github.com/img/ya_erweima.png") no-repeat;
+        background-size: cover;
+    }
+    .duanxin .icon{
+        background: url("../lequhaoyaru.github.com/img/ya_duanxin.png") no-repeat;
+        background-size: cover;
+    }
+    .invite-code{
+        font-size:0.65rem;
+        color:#ff3030;
+        margin:0 auto 1rem;
+    }
+    .invite-code>span{
+        padding:0.3rem 0.5rem;
+        border: 1px solid #ff3030;
+        border-radius: 0.85rem;
+    }
+    .invite-good{
+        padding:0.75rem 1rem 1rem;
+        margin-top:0.5rem;
+        background: #fff;
+    }
+    .invite-good .title{
+        padding:0.75rem 0;
+    }
+    .invite-good .title>span{
+        display: inline-block;
+        width:5.075rem;
+        height:0.95rem;
+        background: url("../lequhaoyaru.github.com/img/yq_yqdhc.png") no-repeat;
+        background-size: cover;
+    }
+    .invite-good p{
+        font-size:0.55rem;
+        color:#333;
+        margin-bottom:0.8rem;
+    }
+    .invite-good .rule{
+        font-size:0.55rem;
+        color:#ff3030;
+    }
+    .my-friend{
+        width:100%;
+        height:3.8rem;
+        background: url("../lequhaoyaru.github.com/img/mx_dh.png") repeat-y;
+        border-top:1px solid #fff;
+    }
+    .friend-item{
+        float: left;
+        width:33.33%;
+        text-align: center;
+        color:#fff;
+    }
+    .friend-item>span{
+        display: block;
+    }
+    .friend-item .num{
+        font-size:0.85rem;
+        margin-top:0.8rem;
+        margin-bottom:0.5rem;
+        font-weight:bold;
+    }
+    .friend-item .txt{
+        font-size:0.6rem;
+    }
+    .fir-situation .title{
+        height:2.175rem;
+        line-height:2.175rem;
+        padding:0 1rem 0 0.6rem;
+        border-bottom: 1px solid #eee;
+        background:#fff;
+    }
+    .fir-situation .fri-num{
+        font-size:0.75rem;
+        color:#333;
+    }
+    .fir-situation .what-contribute{
+        font-size:0.75rem;
+        color:#ff3030;
+    }
+    .contribute-tab .tab-item{
+        float:left;
+        width:33.33%;
+        height:1.9rem;
+        line-height:1.9rem;
+        text-align: center;
+        font-size:0.7rem;
+        color:#999;
+        background:#fff;
+        padding:0;
+        border-bottom:0;
+    }
+    .contribute-tab .tab-item>div{
+        display: inline-block;
+    }
+    .contribute-tab .tab-item .icon-wrap{
+        width:0.5rem;
+    }
+    .contribute-tab .tab-item .icon-wrap .icon{
+        width:100%;
+        height:0.25rem;
+    }
+    .contribute-tab .tab-item .icon-wrap .up{
+        background: url("../lequhaoyaru.github.com/img/yq_on_unselected.png");
+        background-size: cover;
+        margin-bottom:0.1rem;
+    }
+    .contribute-tab .tab-item .icon-wrap .up.selected{
+        background: url("../lequhaoyaru.github.com/img/yq_on_selected.png");
+        background-size: cover;
+    }
+    .contribute-tab .tab-item .icon-wrap .down{
+        background: url("../lequhaoyaru.github.com/img/yq_under_unselected.png");
+        background-size: cover;
+    }
+    .contribute-tab .tab-item .icon-wrap .down.selected{
+        background: url("../lequhaoyaru.github.com/img/yq_under_selected.png");
+        background-size: cover;
+    }
+    .contri-cont{
+        padding:0.25rem;
+    }
+    .contri-item{
+        height:3.9rem;
+        background:#fff;
+        border-radius: 0.25rem;
+        margin-bottom:0.25rem;
+    }
+    .contri-item>a{
+        display:block;
+        padding:0 0.5rem;
+        height:100%;
+    }
+    .contri-item .head-img{
+        width:2.4rem;
+        height:2.4rem;
+        margin-top:0.6rem;
+        margin-right:0.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .contri-item .head-img img{
+        width:100%;
+    }
+    .contri-item .info .name{
+        font-size:0.7rem;
+        color:#666;
+        margin-top:0.6rem;
+    }
+    .contri-item .info .time{
+        font-size:0.5rem;
+        color:#999;
+    }
+    .contri-item .info .time>span:first-child{
+        margin-right:0.25rem;
+    }
+    .contri-item .more{
+        width:0.325rem;
+        height:0.6rem;
+        background:url("../lequhaoyaru.github.com/img/more.png");
+        background-size: cover;
+        margin-top:1.65rem;
+    }
+    .contri-item .devote{
+        margin-right:0.75rem;
+    }
+    .contri-item .devote>span{
+        display: block;
+        font-size:0.7rem;
+        color:#ff3030;
+        margin-top:1.1rem;
+    }
+    .contri-item .devote>p{
+        font-size:0.65rem;
+        color:#999;
+    }
+    .nomore>span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .nomore .txt{
+        font-size:0.6rem;
+        color:#999;
+        padding:0 0.5rem;
+    }
+    .nomore .line{
+        width:2.5rem;
+        height:1px;
+        background:#ccc;
+        bottom:0;
+        margin:0;
+    }
+    /*我的好友*/
+    .info-wrap{
+        background:#fff;
+        height:6.75rem;
+        padding:0.75rem 0.75rem 0;
+    }
+    .myFri-wrap .my-friend{
+        background:#fff;
+    }
+    .myFri-wrap .friend-item{
+        color:#666;
+    }
+    .myFri-wrap .friend-item .num{
+        color:#333;
+    }
+    .myFri-wrap .head-img{
+        width:2.575rem;
+        height:2.575rem;
+        margin-right:0.75rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .myFri-wrap .head-img>img{
+        width:100%;
+    }
+    .myFri-wrap .info .name{
+        font-size:0.75rem;
+        color:#333;
+        margin-bottom: 0.35rem;
+        padding-top: 0.2rem;
+    }
+    .myFri-wrap .info .time{
+        font-size:0.65rem;
+        color:#666;
+    }
+    .myFri-wrap .info .time>span:first-child{
+        margin-right:0.25rem;
+    }
+    .awards{
+        margin-top:0.5rem;
+        padding:0 0.75rem;
+        background:#fff;
+        font-size:0.7rem;
+    }
+    .awards .col{
+        float: left;
+        color:#333;
+    }
+    .awards .row{
+        width:100%;
+        height:1.725rem;
+        line-height:1.725rem;
+        border-bottom:1px solid #ccc;
+    }
+    .awards .row.title{
+        height:2.2rem;
+        line-height:2.2rem;
+        padding:0;
+        font-weight:bold;
+    }
+    .awards .col-1{
+        width:8rem;
+        text-align: left;
+    }
+    .awards .col-2{
+        width:4.95rem;
+        text-align: center;
+    }
+    .awards .col-3{
+        width:4.3rem;
+        text-align: right;
+
+    }
+    .awards .col.money{
+        color:#ff3030;
+    }
+    .awards .col.status{
+        color:#999;
+    }
+    .awards .col.got{
+        color:#ff3030;
+    }
+    .prompt{
+        font-size:0.7rem;
+        color:#ff3030;
+        line-height:0.95rem;
+        padding:0.5rem 0.75rem;
+        background:#fff;
+    }
+
+    /*二维码邀请*/
+    .qrcode-wrap{
+        width:100%;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        background: #e62319;
+    }
+    .qrcode-wrap .pos{
+        position:absolute;
+        width:100%;
+        top:17.6rem;
+    }
+    .qrcode-wrap .qrcode{
+        width:8.5rem;
+        height:8.5rem;
+        margin:0 auto 1.5rem;
+        text-align: center;
+    }
+    .qrcode-txt{
+        font-size:0.8rem;
+        color:#fef9f9;
+    }
+    .htxt{
+        color:#fdff01;
+    }
+
+    /*分享链接跳转页面*/
+    .share-wrap{
+        width:100%;
+        height:100%;
+        /*background: url("../img/share_bg.png") no-repeat;
+        background-size: 100%;*/
+        /*padding-bottom:2rem;*/
+        position: absolute;
+        top:0;
+    }
+    .logo-wrap{
+        padding-top:0.75rem;
+    }
+    .logo-wrap>div{
+        display: inline-block;
+    }
+    .logo-wrap .logo{
+        width:1.75rem;
+        height:1.75rem;
+        background:#fff;
+        border-radius: 0.35rem;
+        overflow: hidden;
+        background: url("../lequhaoyaru.github.com/img/logo.png") no-repeat;
+        background-size: 100%;
+    }
+    .logo-wrap .txt{
+        margin-left:0.5rem;
+        color:#fff;
+    }
+    .logo-wrap .txt>h3{
+        text-align: left;
+        font-size:0.75rem;
+    }
+    .logo-wrap .txt>p{
+        font-size:0.7rem;
+    }
+    .userInfo-wrap{
+        margin-top:9.75rem;
+    }
+    .user-headImg{
+        width:3.15rem;
+        height:3.15rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin:0 auto 1rem;
+    }
+    .user-headImg img{
+        width:100%;
+        height:100%;
+    }
+    .userInfo{
+        font-size:0.8rem;
+        color:#fff;
+    }
+    .userInfo .txt{
+        padding:0 1.9rem;
+        margin-top:0.5rem;
+    }
+    .btn-wrap.pos{
+        position: absolute;
+        width:100%;
+        bottom:15%;
+    }
+    .receive-btn{
+        display: inline-block;
+        width:13.8rem;
+        height:2.5rem;
+        background:url("../lequhaoyaru.github.com/img/share_btn_receive.png") no-repeat;
+        background-size: 100%;
+    }
+
+    /*什么是贡献*/
+    .what-invite-wrap{
+        padding:1.2rem;
+    }
+    .what-invite-wrap .txt{
+        font-size: 0.55rem;
+        color: #333;
+        margin-bottom: 0.8rem;
+        line-height:1rem;
+    }
+    .what-invite-wrap .txt>h2{
+        margin-bottom:.4rem;
+    }
+    .what-invite-wrap .txt>p{
+        margin-bottom:0.8rem;
+    }
+
+    /*邀请规则*/
+    .invite-rule-wrap .txt{
+        width:100%;
+        height:4.15rem;
+        padding-top:1rem;
+        color:#fff;
+        font-size:0.9rem;
+        background:url("../lequhaoyaru.github.com/img/invite_bj_1.png");
+    }
+    .invite-rule-wrap .txt>h3{
+        font-size:1.2rem;
+        margin-top:0.3rem;
+    }
+    .rules-wrap{
+        padding:1.3rem 0.7rem 3.3rem;
+    }
+    .rules-wrap .icon{
+        width:0.2rem;
+        height:1.1rem;
+        background:#ff3030;
+        margin-right:0.55rem;
+    }
+    .rules-wrap h2{
+        color:#4a5254;
+        font-size:0.9rem;
+    }
+    .rules-wrap p{
+        font-size:0.75rem;
+        line-height:1.25rem;
+        margin-top:0.65rem;
+        margin-bottom:1.25rem;
+        padding:0 0.25rem;
+    }
+    .rules-wrap .rtxt{
+        color:#ff3030;
+    }
+    .hongbao-wrap{
+        font-size:0.7rem;
+        margin-bottom:1.875rem;
+    }
+    .hongbao-wrap>span{
+        display: inline-block;
+    }
+    .hongbao-icon{
+        width:0.775rem;
+        height:0.925rem;
+        background: url("../lequhaoyaru.github.com/img/invite_icon_bag.png") no-repeat;
+        background-size: 100%;
+        margin-right:0.3rem;
+    }
+    .item-wrap{
+        display: inline-block;
+        width:2.2rem;
+        position:relative;
+        font-size:0.6rem;
+        color:#4a5254;
+    }
+    .item-wrap .item{
+        width:1.6rem;
+        margin:0.35rem auto;
+        background:url("../lequhaoyaru.github.com/img/invite_reward_bg.png") repeat-y;
+    }
+    .item-wrap .item00{
+        height:2.8rem;
+    }
+    .item-wrap .item01,.item-wrap .item02{
+        height:0.8rem;
+    }
+    .item-wrap .item03,.item-wrap .item04,.item-wrap .item05{
+        height:1.2rem;
+    }
+    .item-wrap .item06{
+        height:4rem;
+    }
+    /*常见问题*/
+    .title.fixed{
+        width:17.25rem;
+        position: fixed;
+        top:0;
+    }
+    .problems{
+        width:100%;
+        padding-top:0.6rem ;
+        background:#fff;
+        font-size:0.75rem;
+        position:fixed;
+        top:0;
+    }
+    .problems>.wrap{
+        display: inline-block;
+        width:32%;
+        text-align: center;
+        margin-bottom:0.6rem;
+    }
+    .problems>.wrap>a{
+        display: inline-block;
+        color:#555;
+        padding:0.2rem 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 0.7rem;
+    }
+    .problems>.wrap>a.cur{
+        background:#ff3030;
+        color:#fff;
+        border: 1px solid #ff3030;
+    }
+    .problems-wrap{
+        font-size:0.75rem;
+        padding-top: 4.85rem;
+    }
+    .problems-item .problem-title{
+        color:#ff3030;
+        line-height:2.4rem;
+        font-size:0.75rem;
+        font-weight:normal;
+        padding:0 0.6rem;
+        background:#f9f9f9;
+    }
+    .problem-content{
+        background: #fff;
+    }
+    .problem-content li{
+        border-top:1px solid #ddd;
+    }
+    .problem-content .question{
+        line-height: 2.4rem;
+    }
+    .problem-content .show .question{
+        border-bottom:1px solid #ddd;
+    }
+    .problem-content .txt{
+        margin-left:0.6rem;
+    }
+    .problem-content li .icon{
+        margin-right:1rem;
+        width:1rem;
+        height:0.8rem;
+        background: url("../lequhaoyaru.github.com/img/down.png");
+        background-size: 100%;
+        margin-top:0.5rem;
+    }
+    .problem-content li.show .icon{
+        background: url("../lequhaoyaru.github.com/img/up.png");
+        background-size: 100%;
+    }
+    .problem-content .answer{
+        padding: 0.6rem;
+        color: #999;
+        font-size: 0.65rem;
+        transition: all .5s ease-out .1s;
+        display: none;
+    }
+    .problem-content .show .answer{
+        display: block;
+    }
+    .get-ledou>h2{
+        color:#ff3030;
+    }
+    .get-ledou>p{
+        color:#333;
+        padding:0.2rem 1.2rem;
+    }
+    .release-wrap>h3{
+        margin:0.2rem 0 0.8rem;
+    }
+    .release-wrap>h3>span{
+        font-size:0.6rem;
+        padding:0.2rem 1rem;
+        color:#fff;
+        background: #ff3030;
+        border-radius: 0.5rem;
+        font-weight: normal;
+    }
+    .release-wrap .cash{
+        margin-top:0.4rem;
+        font-size:0.6rem;
+        color:#333;
+        margin-bottom:0.2rem;
+    }
+    .cash .hongbao-icon{
+        width:0.6rem;
+        height:0.7rem;
+    }
+    .release-wrap .detail{
+        display: inline-block;
+        color:#333;
+        font-size:0.6rem;
+        line-height:0.9rem;
+        text-align: left;
+    }
+    .release-wrap .detail .rtxt{
+        color:#ff3030;
+    }
+    /*关于我们*/
+    .aboutUs-wrap .logo-wrap{
+        text-align: center;
+        padding-top:1rem;
+    }
+    .aboutUs-wrap .logo-wrap .logo-bg{
+        display: inline-block;
+        width:5rem;
+        height:5rem;
+        background: url("../img/hl/logo.png");
+        background-size: 100%;
+    }
+    .aboutUs-wrap .logo-wrap .logo-bg.hl{
+        background: url("../img/hl/logo.png");
+        background-size: 100%;
+    }
+    .aboutUs-wrap .logo-wrap .logo-bg.wm{
+        background: url("../img/wm/logo.png");
+        background-size: 100%;
+    }
+    .aboutUs-wrap>p.txt{
+        padding: 1rem 1.5rem;
+        line-height: 1.4rem;
+        font-size: 0.75rem;
+    }
+    .aboutUs-wrap>ul li{
+        font-size: 0.75rem;
+        margin-bottom:0.4rem;
+        padding-left:1.5rem;
+    }
+    .WeiXinPage{
+        width:100%;
+        height:100%;
+        display: none;
+        position: absolute;
+    }
+    .WeiXinPage img{
+        width:100%;
+        height:100%;
+    }
+    /*用户协议*/
+    .agree-wrap>pre{
+        width: 80%;
+        white-space: pre-wrap;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        padding-top:1rem;
+    }
+
+    /*详情页*/
+    .header-shadow {
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px;
+    }
+    .header {
+        width: 100%;
+        padding: .58333333rem;
+        box-sizing: border-box;
+        margin-bottom: 2px;
+        background: #fff;
+        position: fixed;
+    }
+    .header .close {
+        display: inline-block;
+        float: left;
+        margin-top: 0.8rem;
+        margin-right: 0.5rem;
+    }
+    .header .close img {
+        width: 32px;
+        height: 32px;
+    }
+    .header .logo {
+        display: inline-block;
+        margin-right: 10px;
+        float: left;
+    }
+    .header .logo img {
+        width: 4rem;
+    }
+    .header .share-copywriting {
+        height: 4rem;
+        display: inline-block;
+        line-height: 1.5;
+        font-size: 1.08333333rem;
+        font-weight: 200;
+        font-family: PingFangSC-Regular,Sans-Serif;
+        margin-top: 5px;
+    }
+    .header .share-copywriting strong {
+        font-family: PingFangSC-Semibold,Sans-Serif;
+        font-size: 1.33333333rem;
+        line-height: 1.83333333rem;
+        font-weight: 500;
+    }
+    .header .share-copywriting p {
+        color: #666;
+    }
+    .open {
+        font-family: PingFangSC-Medium,Sans-Serif;
+        display: inline-block;
+        float: right;
+        text-align: center;
+        margin-right: 1.08333333rem;
+        width: 6.66666667rem;
+        height: 2.91666667rem;
+        line-height: 2.91666667rem;
+        font-size: 1.33333333rem;
+        font-weight: 500;
+        color: #fff;
+        border-radius: .25rem;
+        vertical-align: middle;
+        background-color: #f83030;
+        margin-top: 10px;
+    }
+    .tt-title{
+        font-size:21px;
+        color:#333;
+        font-weight: bold;
+    }
+    .source{
+        font-size:13px;
+        color:#999;
+        padding:10px 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .source>text{
+        margin-right:15px;
+    }
+    .article{
+        padding:15px 3%;
+        font-size:17px;
+        color:#333;
+        line-height:24px;
+        padding-bottom:60px;
+    }
+    .article .para{
+        margin-bottom:15px;
+    }
+    .article .editor{
+        font-size:14px;
+        margin-top:15px;
+    }
+    @keyframes load {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+}

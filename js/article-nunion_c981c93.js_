@@ -1,0 +1,318 @@
+define("article-n:widget/union/dom-ready/dom-ready.js",
+function(e, n) {
+    function o() {
+        function e() {
+            i.height() > o.height() && !a && (t.show(), a = !0)
+        }
+        var n = c(window).height() || 0,
+        o = c(".exp-content-container"),
+        i = c(".exp-whole-content"),
+        t = c(".read-whole-mask"),
+        a = !1;
+        n > 0 && (e(), r || (c(window).on("scroll", e), t.on("click",
+        function() {
+            o.removeClass("fold"),
+            t.hide(),
+            s = !0,
+            d.emit("SET-FEEDS-IFRAME-HEIGHT")
+        })), r = !0)
+    }
+    function i(e) {
+        var n = {
+            action: "resize",
+            height: e,
+            site: "jingyan.baidu.com"
+        };
+        document.referrer && window.parent.postMessage(n, document.referrer)
+    }
+    function t() {
+        window.addEventListener("pageshow",
+        function(e) {
+            e.persisted && window.location.reload()
+        }),
+        o(),
+        d.on("SET-FEEDS-IFRAME-HEIGHT",
+        function(e, n) {
+            var t = 0;
+            t = n ? n.height: c(".wrapper").height(),
+            r ? "none" === c(".read-whole-mask").css("display") && (c(".exp-content-container").removeClass("fold"), s = !0) : o(),
+            i(t)
+        }),
+        window.onload = function() {
+            d.emit("SET-FEEDS-IFRAME-HEIGHT")
+        },
+        setTimeout(function() {
+            d.emit("SET-FEEDS-IFRAME-HEIGHT")
+        },
+        1e3)
+    }
+    var c = e("common:widget/lib/gmu/zepto/zepto.js"),
+    d = (e("common:widget/js/util/cookie/cookie.js"), e("common:widget/ui/nslog/nslog.js"), e("common:widget/js/util/event/event.es").event),
+    s = !1,
+    r = !1;
+    n.init = t
+});;
+define("article-n:widget/union/exp-head/exp-head.js",
+function(e, t, i) {
+    function a() {
+        var e = s("#abstract-wp"),
+        t = s("#abstract"),
+        i = s("#arrow-wp");
+        s(".mask-img").height(s(".img-wrapper .img").height()),
+        t.height() > 96 && (t.addClass("small"), i.show()),
+        i.on("click",
+        function(a) {
+            a.preventDefault(),
+            e.addClass("big"),
+            t.removeClass("small"),
+            i.hide(),
+            s("#abstract").find("a").css("width", "100%"),
+            n.emit("SET-FEEDS-IFRAME-HEIGHT")
+        })
+    }
+    var s = e("common:widget/lib/gmu/zepto/zepto.js"),
+    n = e("common:widget/js/util/event/event.es").event;
+    i.exports.init = a
+});;
+define("article-n:widget/union/format-content/exp-need/exp-food.js",
+function(e, n, o) {
+    function t() {
+        var e = i("#wgt-union-exp-food"),
+        n = i(".wp", e),
+        o = i(".wp-inner", e),
+        t = i(".more", e);
+        o.height() > 60 && t.show(),
+        t.on("click",
+        function(e) {
+            e.preventDefault(),
+            t.hide(),
+            n.addClass("big"),
+            d.emit("SET-FEEDS-IFRAME-HEIGHT")
+        })
+    }
+    var i = e("common:widget/lib/gmu/zepto/zepto.js"),
+    d = (e("common:widget/ui/nslog/nslog.js"), e("common:widget/js/util/event/event.es").event);
+    o.exports.init = t
+});;
+define("article-n:widget/union/format-content/exp-need/exp-tool.js",
+function(e, n, t) {
+    function o() {
+        var e = i("#wgt-union-exp-tool"),
+        n = i(".wp", e),
+        t = i(".wp-inner", e),
+        o = i(".more", e);
+        t.height() > 32 && o.show(),
+        o.on("click",
+        function(e) {
+            e.preventDefault(),
+            o.hide(),
+            n.addClass("big"),
+            s.emit("SET-FEEDS-IFRAME-HEIGHT")
+        })
+    }
+    var i = e("common:widget/lib/gmu/zepto/zepto.js"),
+    s = (e("common:widget/ui/nslog/nslog.js"), e("common:widget/js/util/event/event.es").event);
+    t.exports.init = o
+});;
+define("article-n:widget/union/format-content/exp-notice/exp-notice.js",
+function(e, n, t) {
+    var i = e("common:widget/lib/gmu/zepto/zepto.js"),
+    o = (e("common:widget/ui/nslog/nslog.js"), e("common:widget/js/util/event/event.es").event),
+    c = {
+        init: function() {
+            var e = this;
+            e.eventHandler()
+        },
+        eventHandler: function() {
+            var e = i("#header"),
+            n = e.find(".more"),
+            t = i("#notice-container");
+            t.height() > 96 && (n.show(), t.addClass("notice-small"), e.on("click",
+            function() {
+                n.hide(),
+                t.removeClass("notice-small").addClass("notice-big"),
+                o.emit("SET-FEEDS-IFRAME-HEIGHT")
+            }))
+        }
+    };
+    t.exports = c
+});;
+define("article-n:widget/union/format-content/format-content.js",
+function(require, exports, module) {
+    function init() {
+        function e() {
+            var e = $(".wgt-union-exp-content .exp-img-opt"),
+            t = e.first().width(),
+            n = 6 * t / 5;
+            e.css("max-height", n + "px"),
+            ec.emit("SET-FEEDS-IFRAME-HEIGHT")
+        }
+        var t = $(".wgt-union-exp-content"),
+        n = $(".block-ol, .block-ul, .block-p", t);
+        $(".wgt-union-exp-content a").length && $(".wgt-union-exp-content a").on("click",
+        function(e) {
+            e.preventDefault()
+        }),
+        $("#abstract a").length && $("#abstract a").on("click",
+        function(e) {
+            e.preventDefault()
+        }),
+        n.each(function(e, t) {
+            var n = $(t),
+            o = [];
+            n.data("index", e),
+            n.find(".block-img").each(function() {
+                var e = $(this);
+                o.push({
+                    src: e.data("src"),
+                    osrc: e.data("osrc")
+                })
+            }).remove(),
+            imgMap[e] = o,
+            n.append(expImgSingleTpl({
+                list: o,
+                expImgTpl: expImgTpl
+            }))
+        });
+        $(".exp-img").attr("_src");
+        new $.Lazyload($(".exp-img-opt img", t), {
+            afterImgLoad: function() {
+                $.each($(".exp-img-opt img.isloaded").not(".hasUnfolded"),
+                function() {
+                    $(this).height() > +$(this).parent().css("max-height").replace("px", "") && ($(this).parent().next(".exp-img-mask").show(), $(this).parent().next().next(".unfold").css("display", "block"))
+                }),
+                ec.emit("SET-FEEDS-IFRAME-HEIGHT")
+            }
+        }),
+        t.on("click", ".more-img, .more-img-mask, .more-img-opt",
+        function(e) {
+            e.preventDefault();
+            var t = $(this),
+            n = t.closest(".exp-img-wp"),
+            o = t.closest(".block-ul, .block-ol, .block-p").data("index");
+            n.find(".exp-img-opt").css("max-height", "none"),
+            n.find(".exp-img-mask").hide(),
+            n.find(".more-img, .more-img-opt").hide(),
+            n.after(expImgTpl({
+                list: imgMap[o].slice(1),
+                lazy: !1
+            })),
+            ec.emit("SET-FEEDS-IFRAME-HEIGHT")
+        }),
+        t.on("click", ".unfold, .unfold-mask",
+        function(e) {
+            e.preventDefault();
+            var t = $(this),
+            n = t.closest(".block-ul, .block-ol, .block-p");
+            n.find(".exp-img-opt").css("max-height", "none"),
+            n.find("img").addClass("hasUnfolded"),
+            n.find(".exp-img-mask").hide(),
+            n.find(".unfold").hide(),
+            ec.emit("SET-FEEDS-IFRAME-HEIGHT")
+        }),
+        document.addEventListener("DOMContentLoaded", e),
+        window.addEventListener("orientationchange" in window ? "orientationchange": "resize", e)
+    }
+    var $ = require("common:widget/lib/gmu/zepto/zepto.js"),
+    lazyload = require("common:widget/ui/lazyload/lazyload.js"),
+    tp = require("common:widget/js/util/template/template.es"),
+    ec = require("common:widget/js/util/event/event.es").event,
+    expImgTpl = function render(data) {
+        "use strict";
+        var keyArr = [],
+        valArr = [];
+        data = data || {},
+        data.__encodeHTML__ = window.template.__encodeHTML;
+        for (var key in data) keyArr.push('"' + key + '"'),
+        valArr.push(data[key]);
+        var source = "new Function(" + keyArr.join(",") + ', "\\"use strict\\";var __code__ = \\"\\";;__code__ += (\\"\\");list.forEach(function(v) {;__code__ += (\\"     <div class=\\\\\\"exp-img-opt\\\\\\">         <img class=\\\\\\"exp-img-opt-img\\\\\\" data-osrc=\\\\\\"\\");__code__ += (__encodeHTML__(typeof (v.osrc) === \\"undefined\\" ? \\"\\" : v.osrc));__code__ += (\\"\\\\\\" \\");if (lazy) {;__code__ += (\\"_src=\\\\\\"\\");__code__ += (__encodeHTML__(typeof (v.src) === \\"undefined\\" ? \\"\\" : v.src));__code__ += (\\"\\\\\\"\\");} else {;__code__ += (\\"src=\\\\\\"\\");__code__ += (__encodeHTML__(typeof (v.src) === \\"undefined\\" ? \\"\\" : v.src));__code__ += (\\"\\\\\\"\\");};__code__ += (\\">     </div>     <div class=\\\\\\"exp-img-mask \\");__code__ += (__encodeHTML__(typeof (type) === \\"undefined\\" ? \\"\\" : type));__code__ += (\\"\\\\\\"></div> \\");});return __code__")';
+        try {
+            var fn = eval(source),
+            html = fn.apply(null, valArr)
+        } catch(e) {
+            return e.name = "RenderError",
+            e.tpl = "article-n:widget/union/format-content/exp-img.tmpl",
+            window.template.__handelError(e),
+            "template.js error"
+        }
+        return html
+    },
+    expImgSingleTpl = function render(data) {
+        "use strict";
+        var keyArr = [],
+        valArr = [];
+        data = data || {},
+        data.__encodeHTML__ = window.template.__encodeHTML;
+        for (var key in data) keyArr.push('"' + key + '"'),
+        valArr.push(data[key]);
+        var source = "new Function(" + keyArr.join(",") + ', "\\"use strict\\";var __code__ = \\"\\";;__code__ += (\\"\\");if (list.length > 1) {;__code__ += (\\"     \\");/* 多张图片情况 */;__code__ += (\\"     <div class=\\\\\\"exp-img-wp\\\\\\">         \\");__code__ += (typeof (expImgTpl({list: list.slice(0, 1), lazy: true, type: \'more-img-mask\'})) === \\"undefined\\" ? \\"\\" : expImgTpl({list: list.slice(0, 1), lazy: true, type: \'more-img-mask\'}));__code__ += (\\"         <a class=\\\\\\"more-img-opt\\\\\\"><span>查看剩余\\");__code__ += (typeof ((list.length-1)) === \\"undefined\\" ? \\"\\" : (list.length-1));__code__ += (\\"张图<b></b></span></a>     </div> \\");} else if (list.length === 1) {;__code__ += (\\"     \\");/* 一张图片情况 */;__code__ += (\\"     \\");__code__ += (typeof (expImgTpl({list: list, lazy: true, type: \'unfold-mask\'})) === \\"undefined\\" ? \\"\\" : expImgTpl({list: list, lazy: true, type: \'unfold-mask\'}));__code__ += (\\"     <a class=\\\\\\"unfold\\\\\\"><span>展开长图</span><b></b></a> \\");};__code__ += (\\" \\");return __code__")';
+        try {
+            var fn = eval(source),
+            html = fn.apply(null, valArr)
+        } catch(e) {
+            return e.name = "RenderError",
+            e.tpl = "article-n:widget/union/format-content/exp-img-single.tmpl",
+            window.template.__handelError(e),
+            "template.js error"
+        }
+        return html
+    },
+    imgMap = [];
+    module.exports.init = init
+});;
+define("article-n:widget/union/unformat-content/unformat-content.js",
+function(n, o, i) {
+    function t(n, o) {
+        return t.isloading ? 1 : (t.isloading = !0, void s.ajax({
+            url: "/article/asyn",
+            dataType: "html",
+            data: {
+                pn: n,
+                eidEnc: l
+            },
+            success: function(n) {
+                t.isloading = !1,
+                o(n)
+            },
+            error: function() {
+                t.isloading = !1
+            }
+        }))
+    }
+    function e(n, o) {
+        e.delaying = window.setTimeout(function() {
+            o(),
+            e.delaying = null
+        },
+        n)
+    }
+    function d(n) {
+        u.async && (n = u.async(n)),
+        s(".loading-wp").before("<section>" + n + "</section>"),
+        r += 1,
+        r >= f ? s(".loading-wp").hide() : t(r + 1, d)
+    }
+    function c() {
+        return r >= f ? (s(window).off("touchend"), s(window).off("scroll"), 1) : e.delaying ? 2 : void e(200,
+        function() {
+            return document.body.scrollTop + s(window).height() + 200 < s(".loading-wp").offset().top ? 1 : (s(".loading-wp").show(), void t(r + 1, d))
+        })
+    }
+    function a(n, o, i) {
+        n > 1 && (s(window).on("touchend",
+        function() {
+            c()
+        }), s(window).on("scroll",
+        function() {
+            c()
+        })),
+        f = n,
+        l = o,
+        u = i,
+        i.start && i.start()
+    }
+    var l, u, s = n("common:widget/lib/gmu/zepto/zepto.js"),
+    f = (n("common:widget/js/util/template/template.es"), 1),
+    r = 1;
+    i.exports.init = a
+});
