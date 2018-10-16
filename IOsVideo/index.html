@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title></title>
+    <meta name="keywords" content="乐趣头条">
+    <meta name="description" content="乐趣头条">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="share.js"></script>
+    <style>
+        .main-view{
+            padding:0 3%;
+        }
+        .tt-title{
+            font-size: 23px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom:16px;
+            padding-top:16px;
+        }
+        .main-view article{
+            font-size: 18px;
+            color: #282828;
+            line-height:1.7;
+        }
+        .main-view article>p{
+            padding:10px 0;
+        }
+        .main-view article .image{
+            display: block;
+        }
+        .main-view article .image>img{
+            display: block;
+            width:100%;
+        }
+        .main-view img{
+            width:100%;
+        }
+    </style>
+
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+<section class="article-section">
+    <div class="main-view" id="content">
+        <p></p>
+        <p></p>
+        <div class="custom-video" data-sp="0" data-vid="v020045a0000bemtltc81ukvm4cpgllg" data-width="640" data-height="360" data-poster="http://p1.pstatp.com/large/pgc-image/1538120532626e576e5a4b7" data-duration="223" data-video-size="{&quot;high&quot;: {&quot;duration&quot;: 223.0, &quot;h&quot;: 480, &quot;subjective_score&quot;: 0, &quot;w&quot;: 854, &quot;file_size&quot;: 9260836}, &quot;ultra&quot;: {&quot;duration&quot;: 223.0, &quot;h&quot;: 720, &quot;subjective_score&quot;: 0, &quot;w&quot;: 1280, &quot;file_size&quot;: 17653457}, &quot;1080p&quot;: {&quot;duration&quot;: 223.0, &quot;h&quot;: 1080, &quot;subjective_score&quot;: 0, &quot;w&quot;: 1920, &quot;file_size&quot;: 39210930}, &quot;normal&quot;: {&quot;duration&quot;: 223.0, &quot;h&quot;: 360, &quot;subjective_score&quot;: 0, &quot;w&quot;: 640, &quot;file_size&quot;: 6632330}}">
+            <video id="media" controls src="http://v11-tt.ixigua.com/2f9771bb6deea3b934f608a0340798ef/5bc56065/video/m/2201871d52c9f2e4681bde8bbdae09d0ac411435870000154bf65d0d62/" poster="http://p3.pstatp.com/large/1203001076cc9de88969" style="width:100%;"></video>
+        </div>
+        <p></p>
+        <p></p>
+        <p>鹿晗新歌《时间停了》，用最简单的钢琴配乐，最纯粹的嗓音，唱给所有想要记住的美好经过。歌曲MV抛却所有精心设计的情节和桥段，简单不加修饰，以最真实的状态呈现幕后点滴。关于时间与成长的命题，我们一样有曲折，有冒险，有来不及说，有迷路的时刻，“不善言辞”的鹿晗用最真诚又温暖的方式，唱给一起成长的你们。</p>
+    </div>
+    <div class="spread" id="spread" onclick="javacript:spread(this);">
+        <div class="spread-down">
+            <img src="data_image.png" alt="" >
+        </div>
+    </div>
+</section>
+<div class="recommend-wrap">
+    <div class="relate-recommend">
+        <b class="title-content element">相关推荐</b>
+    </div>
+    <div class="news-layout news-wrapper recommend-layout">
+        <ul class="news-list left-img-list">
+            <li class="n-item">
+                <a href="#" class="n-item-link clear" title="三个瑜伽动作助你养生活血通经提升代谢，让你身体倍儿棒！" target="_self">
+                    <div class="img-wrap fl">
+                        <div class="content">
+                            <img class="thumbnail-box" src="//publish-pic-cpu.baidu.com/b3901fc7-6cdc-4c02-a5e5-d24a7cbf5a04.jpeg@q_90|w_228|c_1,h_152|f_webp">
+                        </div>
+                    </div>
+                    <div class="desc-wrap fr">
+                        <div class="n-title element">
+                            <span>三个瑜伽动作助你养生活血通经提升代谢，让你身体倍儿棒！</span>
+                        </div>
+                        <div class="n-desc">
+                            <span class="info element">
+                                <span>91健身</span>
+                                <span class="n-ptime">刚刚</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="n-item video-item">
+                <a href="#" class="n-item-link clear" title="每天两个动作只需5分钟，气血传遍全身，颈部健康又轻松" target="_self">
+                    <div class="img-wrap fl size-16-9">
+                        <div class="content" data-duration="01:31">
+
+                            <img class="thumbnail-box" src="//publish-pic-cpu.baidu.com/d99f8772-6c7d-4d6e-8676-232a803817c3.jpeg@q_90|w_870,h_488|f_webp">
+                        </div>
+                    </div>
+                    <div class="desc-wrap fr">
+                        <div class="n-title element">
+                            <span>每天两个动作只需5分钟，气血传遍全身，颈部健康又轻松</span>
+                        </div>
+                        <div class="n-desc">
+                            <span class="info element">
+                                <span>侃侃养生</span>
+                                <span class="n-ptime">播放：6425</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="n-item">
+                <a href="#" class="n-item-link clear" title="上班累了？压力太大？练习这组体式让你每一天都元气满满！" target="_self">
+                    <div class="img-wrap fl">
+                        <div class="content">
+                            <img class="thumbnail-box" src="//publish-pic-cpu.baidu.com/aa6ce2df-418c-4c42-af9b-c1692cee30dd.jpeg@q_90|w_228,h_152|f_webp">
+                        </div>
+                    </div>
+                    <div class="desc-wrap fr">
+                        <div class="n-title element">
+                            <span>上班累了？压力太大？练习这组体式让你每一天都元气满满！</span>
+                        </div>
+                        <div class="n-desc">
+                            <span class="info element">
+                                <span>91健身</span>
+                                <span class="n-ptime">刚刚</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="n-item">
+                <a href="#" class="n-item-link clera" title="减脂塑形的最佳方式，坚持4周，就让你拥有马甲线，美丽一百分" target="_self">
+                    <div class="img-wrap fl">
+                        <div class="content">
+                            <img class="thumbnail-box" src="//publish-pic-cpu.baidu.com/de8945e7-0614-4b0b-8ad5-97ae479a7084.jpeg@q_90|w_228,h_152|f_webp">
+                        </div>
+                    </div>
+
+                    <div class="desc-wrap fr">
+                        <div class="n-title element">
+                            <span>减脂塑形的最佳方式，坚持4周，就让你拥有马甲线，美丽一百分</span>
+                        </div>
+                        <div class="n-desc">
+                            <span class="info element">
+                                <span>91健身</span>
+                                <span class="n-ptime">刚刚</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="n-item">
+                <a href="#" class="n-item-link clear" title="夏天手臂粗壮无法遮挡，3个动作助你摆脱肥肥手绽放秀气手臂！" target="_self">
+                    <div class="img-wrap fl">
+                        <div class="content">
+                            <img class="thumbnail-box" src="//publish-pic-cpu.baidu.com/ac91816e-246e-4c35-9c46-299e795e2ab3.jpeg@q_90|w_228,h_152|f_webp">
+                        </div>
+                    </div>
+                    <div class="desc-wrap fr">
+                        <div class="n-title element">
+                            <span>夏天手臂粗壮无法遮挡，3个动作助你摆脱肥肥手绽放秀气手臂！</span>
+                        </div>
+                        <div class="n-desc">
+                            <span class="info element">
+                                <span>91健身</span>
+                                <span class="n-ptime">刚刚</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="n-item">
+                <a href="#" class="n-item-link clear" title="陌生女子探班刘恺威，称杨幂为前妻，王鸥有苦说不出枉背骂名？" target="_self">
+                    <div class="img-wrap fl">
+                        <div class="content">
+                            <img class="thumbnail-box" src="//publish-pic-cpu.baidu.com/f68a146e-137a-43ab-b2ed-249934bba14e.jpeg@q_90|w_228|c_1,h_152|f_webp">
+                        </div>
+                    </div>
+                    <div class="desc-wrap fr">
+                        <div class="n-title element">
+                            <span>陌生女子探班刘恺威，称杨幂为前妻，王鸥有苦说不出枉背骂名？</span>
+                        </div>
+                        <div class="n-desc">
+                            <span class="info element">
+                                <span>冷眼娱乐圈</span>
+                                <span class="n-ptime">1分钟前</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
