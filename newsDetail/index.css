@@ -1,3 +1,297 @@
+/*详情页*/
+
+.header-shadow {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 6px 0px;
+}
+.header {
+    width: 100%;
+    padding: .3rem;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    background: #fff;
+    position: fixed;
+    z-index: 1;
+}
+.header .close {
+    display: inline-block;
+    float: left;
+    margin-top: 0.8rem;
+    margin-right: 0.5rem;
+}
+.header .close img {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.header .logo {
+    display: inline-block;
+    margin-right: 0.25rem;
+    float: left;
+}
+.header .logo img {
+    width: 3rem;
+}
+.header .share-copywriting {
+    /*height: 3rem;*/
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: PingFangSC-Regular,Sans-Serif;
+    margin-top: 5px;
+}
+.header .share-copywriting strong {
+    font-family: PingFangSC-Semibold,Sans-Serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+}
+.header .share-copywriting p {
+    color: #666;
+    font-size:0.35rem;
+}
+.open {
+    font-family: PingFangSC-Medium,Sans-Serif;
+    display: inline-block;
+    float: right;
+    text-align: center;
+    margin-right: 0.5rem;
+    width: 4rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: .25rem;
+    vertical-align: middle;
+    background-color: #f83030;
+    margin-top: 10px;
+}
+
+.article-section{
+    position: relative;
+    width: 25%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.main-view{
+    width:100%;
+    max-height:1250px;
+    overflow: hidden;
+    position: relative;
+}
+.tt-title{
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding-top: 16px;
+}
+article,.article-section p{
+    color: #282828;
+    line-height: 1.7;
+}
+article>p {
+    padding: 10px 0;
+}
+.spread{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 0;
+    background: #fff;
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(40%,#fff),to(hsla(0,0%,100%,0)));
+    background: -webkit-linear-gradient(bottom,#fff 40%,hsla(0,0%,100%,0));
+    background: -o-linear-gradient(bottom,#fff 40%,hsla(0,0%,100%,0) 100%);
+    background: linear-gradient(0deg,#fff 40%,hsla(0,0%,100%,0));
+}
+.spread:after{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    color: #3faaff;
+    text-align: center;
+}
+.spread .spread-down{
+    position: absolute;
+    left: 50%;
+    margin-left: -12px;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-color: #3faaff transparent transparent transparent;
+    border-style: solid;
+    border-width: 12px;
+}
+.spread:after{
+    content: "\70B9\51FB\9605\8BFB\5168\6587";
+    bottom: 34px;
+}
+/*.source{
+    font-size:13px;
+    color:#999;
+    padding:10px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.source>text{
+    margin-right:15px;
+}
+.article{
+    padding:15px 3%;
+    font-size:18px;
+    color:#282828;
+    line-height:24px;
+}
+.article .para{
+    margin-bottom:15px;
+    line-height:1.7;
+}
+.article .editor{
+    font-size:14px;
+    margin-top:15px;
+}*/
+
+
+
+.recommend-wrap{
+    width:25%;
+    margin:0 auto;
+}
+.relate-recommend{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color:#999;
+    position: relative;
+    padding:4px 3% ;
+
+}
+/*.relate-recommend:after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 72px;
+    background-color: #38f;
+    left: 3%;
+    bottom: 0;
+}*/
+.relate-recommend .element{
+    padding: 4px 0;
+    font-size: 18px;
+    font-weight: 100;
+    border-bottom:1px solid #38f;
+}
+.title-content{
+    border-left:none;
+}
+.n-item{
+    background:#fff;
+    padding:10px 0;
+    border-bottom:1px solid #e9e9e9;
+    float: none;
+    width: 100%;
+}
+.n-item .n-item-link{
+    display: inline-block;
+    width: 100%;
+}
+.n-item .img-wrap{
+    width: calc(33%);
+    position: relative;
+    float:left;
+    padding-left:2%;
+}
+.n-item .img-wrap .content{
+    width:100%;
+    height:100%;
+    position: relative;
+    overflow: hidden;
+    background: url("logo_gray.png") no-repeat center center;
+    background-size: 40%;
+}
+.n-item .img-wrap .content:after{
+    content: attr(data-duration);
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: block;
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 28px;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 15px;
+    -webkit-transform: scale(.75);
+    -ms-transform: scale(.75);
+    transform: scale(.75);
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+}
+.n-item .img-wrap img{
+    display: block;
+    width: 100%;
+    height:auto;
+}
+.n-item .desc-wrap{
+    width: calc(60%);
+    float:right;
+    padding-right:2%;
+}
+.n-item .n-title{
+    margin-bottom:4px;
+}
+.n-item .n-title span{
+    width: 100%;
+    max-height: 48px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #212121;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    word-break: break-all;
+}
+.n-desc{
+    display: block;
+}
+.n-desc .info span{
+    font-size:14px;
+    margin-right:7px;
+    color:#999;
+}
+.video-item .info:before{
+    content: "\89C6\9891";
+}
+.video-item .info:before{
+    display: inline-block;
+    margin-right: -4px;
+    margin-top:-3px;
+    padding: 2px 7px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #fff;
+    background-color: #fc3e6b;
+    border-radius: 6px;
+    -webkit-transform: scale(.75);
+    -ms-transform: scale(.75);
+    transform: scale(.75);
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+}
+.n-item .img-wrap.size-16-9 img{
+    width: 118%;
+    margin-left: -9%;
+}
+
 
 @media screen and (max-width: 768px){
     body{
@@ -42,7 +336,7 @@
     /*收入明细*/
     .income-wrap{
         padding:0 0.75rem;
-        background: url("../lequhaoyaru.github.com/img/bg.png");
+        background: url("../img/bg.png");
         color:#fff;
     }
     .title{
@@ -58,12 +352,12 @@
         display: inline-block;
         width: 0.75rem;
         height: 1.1rem;
-        background: url(../lequhaoyaru.github.com/img/return.png) no-repeat;
+        background: url(../img/return.png) no-repeat;
         background-size: 140%;
         margin-top:0.1rem;
     }
     .go-back.white{
-        background: url(../lequhaoyaru.github.com/img/back.png) no-repeat;
+        background: url(../img/back.png) no-repeat;
         background-size: 84%;
     }
     .income-wrap .income{
@@ -97,7 +391,7 @@
     .income .exchange .icon_1{
         width: 0.75rem;
         height:0.55rem;
-        background:url("../lequhaoyaru.github.com/img/mx_duihuan.png");
+        background:url("../img/mx_duihuan.png");
         background-size:cover;
         margin-left:0.475rem;
         margin-right:0.375rem;
@@ -106,7 +400,7 @@
     .income .exchange .icon_2{
         width: 0.325rem;
         height:0.6rem;
-        background:url("../lequhaoyaru.github.com/img/mx_more.png");
+        background:url("../img/mx_more.png");
         background-size:cover;
         margin-right:0.6rem;
         margin-top:0.44rem
@@ -222,7 +516,7 @@
         display: inline-block;
         width:3.4rem;
         height:3.4rem;
-        background: url("../lequhaoyaru.github.com/img/yj_add.png") no-repeat;
+        background: url("../img/yj_add.png") no-repeat;
         background-size: cover;
         margin-right:1.02rem;
         margin-bottom:0.7rem;
@@ -321,16 +615,16 @@
         margin-top:0.5rem;
     }
     .weixin .icon{
-        background: url("../lequhaoyaru.github.com/img/ya_weixin.png") no-repeat;
+        background: url("../img/ya_weixin.png") no-repeat;
         background-size: cover;
     }
     .share-container .qq .icon{
         height:2.63rem;
-        background: url("../lequhaoyaru.github.com/img/ya_qq.png") no-repeat;
+        background: url("../img/ya_qq.png") no-repeat;
         background-size: cover;
     }
     .link .icon{
-        background: url("../lequhaoyaru.github.com/img/ya_lianjie.png") no-repeat;
+        background: url("../img/ya_lianjie.png") no-repeat;
         background-size: cover;
     }
     .pengyouquan .icon{
@@ -338,11 +632,11 @@
         background-size: cover;
     }
     .qrcode .icon{
-        background: url("../lequhaoyaru.github.com/img/ya_erweima.png") no-repeat;
+        background: url("../img/ya_erweima.png") no-repeat;
         background-size: cover;
     }
     .duanxin .icon{
-        background: url("../lequhaoyaru.github.com/img/ya_duanxin.png") no-repeat;
+        background: url("../img/ya_duanxin.png") no-repeat;
         background-size: cover;
     }
     .invite-code{
@@ -367,7 +661,7 @@
         display: inline-block;
         width:5.075rem;
         height:0.95rem;
-        background: url("../lequhaoyaru.github.com/img/yq_yqdhc.png") no-repeat;
+        background: url("../img/yq_yqdhc.png") no-repeat;
         background-size: cover;
     }
     .invite-good p{
@@ -382,7 +676,7 @@
     .my-friend{
         width:100%;
         height:3.8rem;
-        background: url("../lequhaoyaru.github.com/img/mx_dh.png") repeat-y;
+        background: url("../img/mx_dh.png") repeat-y;
         border-top:1px solid #fff;
     }
     .friend-item{
@@ -441,20 +735,20 @@
         height:0.25rem;
     }
     .contribute-tab .tab-item .icon-wrap .up{
-        background: url("../lequhaoyaru.github.com/img/yq_on_unselected.png");
+        background: url("../img/yq_on_unselected.png");
         background-size: cover;
         margin-bottom:0.1rem;
     }
     .contribute-tab .tab-item .icon-wrap .up.selected{
-        background: url("../lequhaoyaru.github.com/img/yq_on_selected.png");
+        background: url("../img/yq_on_selected.png");
         background-size: cover;
     }
     .contribute-tab .tab-item .icon-wrap .down{
-        background: url("../lequhaoyaru.github.com/img/yq_under_unselected.png");
+        background: url("../img/yq_under_unselected.png");
         background-size: cover;
     }
     .contribute-tab .tab-item .icon-wrap .down.selected{
-        background: url("../lequhaoyaru.github.com/img/yq_under_selected.png");
+        background: url("../img/yq_under_selected.png");
         background-size: cover;
     }
     .contri-cont{
@@ -497,7 +791,7 @@
     .contri-item .more{
         width:0.325rem;
         height:0.6rem;
-        background:url("../lequhaoyaru.github.com/img/more.png");
+        background:url("../img/more.png");
         background-size: cover;
         margin-top:1.65rem;
     }
@@ -669,7 +963,7 @@
         background:#fff;
         border-radius: 0.35rem;
         overflow: hidden;
-        background: url("../lequhaoyaru.github.com/img/logo.png") no-repeat;
+        background: url("../img/logo.png") no-repeat;
         background-size: 100%;
     }
     .logo-wrap .txt{
@@ -714,7 +1008,7 @@
         display: inline-block;
         width:13.8rem;
         height:2.5rem;
-        background:url("../lequhaoyaru.github.com/img/share_btn_receive.png") no-repeat;
+        background:url("../img/share_btn_receive.png") no-repeat;
         background-size: 100%;
     }
 
@@ -742,7 +1036,7 @@
         padding-top:1rem;
         color:#fff;
         font-size:0.9rem;
-        background:url("../lequhaoyaru.github.com/img/invite_bj_1.png");
+        background:url("../img/invite_bj_1.png");
     }
     .invite-rule-wrap .txt>h3{
         font-size:1.2rem;
@@ -781,7 +1075,7 @@
     .hongbao-icon{
         width:0.775rem;
         height:0.925rem;
-        background: url("../lequhaoyaru.github.com/img/invite_icon_bag.png") no-repeat;
+        background: url("../img/invite_icon_bag.png") no-repeat;
         background-size: 100%;
         margin-right:0.3rem;
     }
@@ -795,7 +1089,7 @@
     .item-wrap .item{
         width:1.6rem;
         margin:0.35rem auto;
-        background:url("../lequhaoyaru.github.com/img/invite_reward_bg.png") repeat-y;
+        background:url("../img/invite_reward_bg.png") repeat-y;
     }
     .item-wrap .item00{
         height:2.8rem;
@@ -872,12 +1166,12 @@
         margin-right:1rem;
         width:1rem;
         height:0.8rem;
-        background: url("../lequhaoyaru.github.com/img/down.png");
+        background: url("../img/down.png");
         background-size: 100%;
         margin-top:0.5rem;
     }
     .problem-content li.show .icon{
-        background: url("../lequhaoyaru.github.com/img/up.png");
+        background: url("../img/up.png");
         background-size: 100%;
     }
     .problem-content .answer{
@@ -977,106 +1271,49 @@
         padding-top:1rem;
     }
 
-    /*详情页*/
-    .header-shadow {
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px;
+    .recommend-wrap,.article-section{
+        width:100%;
     }
-    .header {
-        width: 100%;
-        padding: .58333333rem;
-        box-sizing: border-box;
-        margin-bottom: 2px;
-        background: #fff;
-        position: fixed;
-    }
-    .header .close {
-        display: inline-block;
-        float: left;
-        margin-top: 0.8rem;
-        margin-right: 0.5rem;
-    }
-    .header .close img {
-        width: 32px;
-        height: 32px;
-    }
-    .header .logo {
-        display: inline-block;
-        margin-right: 10px;
-        float: left;
-    }
-    .header .logo img {
-        width: 4rem;
-    }
-    .header .share-copywriting {
-        height: 4rem;
-        display: inline-block;
-        line-height: 1.5;
-        font-size: 1.08333333rem;
-        font-weight: 200;
-        font-family: PingFangSC-Regular,Sans-Serif;
-        margin-top: 5px;
-    }
-    .header .share-copywriting strong {
-        font-family: PingFangSC-Semibold,Sans-Serif;
-        font-size: 1.33333333rem;
-        line-height: 1.83333333rem;
-        font-weight: 500;
-    }
-    .header .share-copywriting p {
-        color: #666;
-    }
-    .open {
-        font-family: PingFangSC-Medium,Sans-Serif;
-        display: inline-block;
-        float: right;
-        text-align: center;
-        margin-right: 1.08333333rem;
-        width: 6.66666667rem;
-        height: 2.91666667rem;
-        line-height: 2.91666667rem;
-        font-size: 1.33333333rem;
-        font-weight: 500;
-        color: #fff;
-        border-radius: .25rem;
-        vertical-align: middle;
-        background-color: #f83030;
-        margin-top: 10px;
-    }
-    .tt-title{
-        font-size:21px;
-        color:#333;
-        font-weight: bold;
-    }
-    .source{
-        font-size:13px;
-        color:#999;
-        padding:10px 0;
-        border-bottom: 1px solid #e5e5e5;
-    }
-    .source>text{
-        margin-right:15px;
-    }
-    .article{
-        padding:15px 3%;
-        font-size:17px;
-        color:#333;
-        line-height:24px;
-        padding-bottom:60px;
-    }
-    .article .para{
-        margin-bottom:15px;
-    }
-    .article .editor{
-        font-size:14px;
-        margin-top:15px;
-    }
-    @keyframes load {
-        0% {
-            -webkit-transform: rotate(0deg);
-        }
-        100% {
-            -webkit-transform: rotate(360deg);
-        }
+    .main-view{
+        width:94%;
+        padding:0 3%;
     }
 
 }
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes _3AudW{
+    0%{
+        -webkit-transform:translate3d(calc(-50% + 6px),5px,0);
+        transform:translate3d(calc(-50% + 6px),5px,0)
+    }
+    to{
+        -webkit-transform:translate3d(calc(-50% + 6px),0,0);
+        transform:translate3d(calc(-50% + 6px),0,0)
+    }
+}
+@keyframes _3AudW{
+    0%{
+        -webkit-transform:translate3d(calc(-50% + 6px),5px,0);
+        transform:translate3d(calc(-50% + 6px),5px,0)
+    }
+    to{
+        -webkit-transform:translate3d(calc(-50% + 6px),0,0);
+        transform:translate3d(calc(-50% + 6px),0,0)
+    }
+}
+
