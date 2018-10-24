@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c6ec11c-8ded-4588-8fd9-395aa02b52a3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgLoad/image_loadfail.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/iframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/offset.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sd-showData.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IOsVideo1/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IOsVideo1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IOsVideo1/jquery-1.11.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IOsVideo1/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IOsVideo1/share.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IOsVideo/index.html" afterPath="$PROJECT_DIR$/IOsVideo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imgLoad/index.html" afterPath="$PROJECT_DIR$/imgLoad/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IOsVideo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="380">
               <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
               <folding>
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -120,6 +121,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lequhaoyaru.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lequhaoyaru.github.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IOsVideo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -130,6 +145,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\lequhaoyaru.github.com\IOsVideo1" />
       <recent name="E:\lequhaoyaru.github.com\imgLoad" />
     </key>
   </component>
@@ -225,15 +241,16 @@
       <option name="presentableId" value="Default" />
       <updated>1540203775028</updated>
       <workItem from="1540203777224" duration="442000" />
-      <workItem from="1540365732648" duration="650000" />
+      <workItem from="1540365732648" duration="1314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1092000" />
+    <option name="totallyTimeSpent" value="1756000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1926" height="1040" extended-state="1" />
+    <frame x="0" y="0" width="1926" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -329,9 +346,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/IOsVideo1/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/IOsVideo/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="380">
           <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
           <folding>
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
