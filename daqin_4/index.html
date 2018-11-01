@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=320, initial-scale=1.125, maximum-scale=1.125, minimum-scale=1.125, user-scalable=no">
+    <title>大秦帝国</title>
+    <script type="text/javascript">var metaEl,wrap,w=screen.width,dp=1,scale=w/320;window.navigator.appVersion.match(/android/gi)&&(w=window.outerWidth,dp=window.devicePixelRatio,scale=w/320/devicePixelRatio),screen.width>320&&1>scale&&(scale=screen.width/320),metaEl=document.createElement("meta"),metaEl.setAttribute("name","viewport"),metaEl.setAttribute("content","width=320, initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no"),document.documentElement.firstElementChild?document.documentElement.firstElementChild.appendChild(metaEl):(wrap=document.createElement("div"),wrap.appendChild(metaEl),documen.write(wrap.innerHTML));</script>
+    <style>
+        body, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, p, ul {
+            margin: 0;
+            padding: 0;
+            list-style: outside none none;
+            vertical-align: middle;
+        }
+        a { text-decoration: none; }
+        img { border: 0; vertical-align: top}
+        body{
+            color: rgb(0, 27, 37);
+            background: rgb(0, 0, 0);
+        }
+        .wrap{
+            width: 320px;
+            overflow: hidden;
+            position: relative;
+            margin:0 auto;
+        }
+        .wrap img,.WeiXinPage img ,.footer img{
+            width: 100%;
+            border:0;
+            margin:0;
+            padding:0;
+        }
+        .WeiXinPage{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            display: none;
+        }
+        .banner-wrap{
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+        .nav{
+            width: 320px;
+            position: fixed;
+            top: 0;
+            left: 50%;z-index: 10;
+            background: #000;
+            -webkit-transform: translate(-50%,0%);
+            transform: translate(-50%,0%);
+        }
+        .btn-wrap{
+            text-align: center;
+            margin-top:30px;
+        }
+        .btn-wrap.pos{
+            width:100%;
+            position: absolute;
+            bottom:57px;
+        }
+        .download-btn,.start-btn{
+            width: 46%;
+            height: 46px;
+            display: inline-block;
+            /*margin-bottom:30px;*/
+        }
+        .download-btn{
+            background: url(./img/btn_down.png) no-repeat center center;
+            background-size: auto 100%;
+        }
+        .start-btn{
+            height:64px;
+            background: url(./img/start_btn.png) no-repeat center center;
+            background-size: auto 100%;
+            margin-bottom:30px;
+        }
+        .imgBox{
+            padding:20px 4%;
+        }
+        .commet{
+            padding:40px 8%;
+        }
+        .bg {
+            height: 175px;
+            width: 100%;
+            position: relative;
+
+        }
+        .bg .img-wrap{
+            position: absolute;
+            width: 70%;
+            top: 36px;
+
+        }
+        .bg_1 .img-wrap{
+            left: 6%;
+        }
+        .bg_2 .img-wrap{
+            left: 24.3%;
+        }
+        .bg_3 .img-wrap{
+            left: 6%;
+        }
+        .bg_1 {
+
+            background: url("img/frame_01.png") no-repeat 0 -40px;
+            background-size: 100%;
+        }
+        .bg_2 {
+
+            background: url("img/frame_02.png") no-repeat 0 -40px;
+            background-size: 100%;
+
+        }
+        .bg_3 {
+
+            background: url("img/frame_03.png") no-repeat 0 -40px;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" id="LandingPage">
+        <div class="top-bg"><img src="./img/top_bg.png" alt=""></div>
+        <section class="banner-wrap">
+            <img src="./img/banner.jpg" alt="">
+            <div class="btn-wrap pos"><a href="javascript:gourl();" class="download-btn"></a></div>
+        </section>
+        <section class="section">
+            <div class="imgBox"><a href="javascript:gourl();"><img src="./img/lunbo01.jpg" alt=""></a></div>
+            <div class="title"><img src="img/title01-1.png" alt=""></div>
+            <div class="imgBox">
+                <a href="javascript:gourl();">
+                    <div class="bg bg_1">
+                        <div class="img-wrap">
+                            <img src="img/jietu1.gif" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imgBox">
+                <a href="javascript:gourl();">
+                    <div class="bg bg_2">
+                        <div class="img-wrap">
+                            <img src="img/jietu2.gif" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="imgBox">
+                <a href="javascript:gourl();">
+                    <div class="bg bg_3">
+                        <div class="img-wrap">
+                            <img src="img/jietu3.gif" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="title"><img src="img/title02-1.png" alt=""></div>
+            <div class="commet"><img src="./img/commet.png" alt=""></div>
+            <div class="btn-wrap"><a href="javascript:gourl();" class="start-btn"></a></div>
+        </section>
+        <div class="nav"><a href="javascript:gourl();"><img src="./img/top_text.png" alt=""></a></div>
+        <div class="footer"></div>
+    </div>
+    <div id="WeiXinPage" class="WeiXinPage">
+        <img alt="" src="http://dl.ilequ.net/pic/01/weixin.png" style="height:100%;">
+    </div>
+    <script>
+        var _mtac = {"senseQuery":1};
+        (function() {
+            var mta = document.createElement("script");
+            mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
+            mta.setAttribute("name", "MTAH5");
+            mta.setAttribute("sid", "500603712");
+
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(mta, s);
+        })();
+    </script>
+    <script>
+        function gourl(){
+            if(isWeiXin()){
+                var LandingPage = document.getElementById("LandingPage");
+                var WeiXinPage = document.getElementById("WeiXinPage");
+                LandingPage.style.display = 'none';
+                WeiXinPage.style.display = 'block';
+                WeiXinPage.onclick = function(){
+                    LandingPage.style.display = 'block';
+                    WeiXinPage.style.display = 'none';
+                };
+                return false;
+            }else{
+                var system = getsystem();
+                if (system=='iphone'){
+                    document.location="https://itunes.apple.com/cn/app/id1328767441?mt=8";
+                }
+                if (system=='Android' || system=='windows'){
+                    document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
+                }
+
+            }
+
+
+        };
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        };
+        function getsystem() {
+            if(navigator.userAgent.indexOf("iPhone") != -1 || navigator.userAgent.indexOf("iPad") != -1 ){
+                return 'iphone';
+            }
+            else if( navigator.userAgent.indexOf("Android") != -1){
+                return 'Android';
+            }
+            else{
+                return 'windows';
+            }
+        };
+    </script>
+</body>
+</html>
