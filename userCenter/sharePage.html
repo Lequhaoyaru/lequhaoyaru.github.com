@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <script>window.lequ = window.lequ || {};</script>
+    <style>
+        img{
+            width:100%;
+            vertical-align: top;
+            pointer-events: none;
+        }
+        .br_container{
+            padding-top: 2rem;
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+        }
+        .br_container.br{
+            background: url("../img/br_bg.png");
+            background-size:cover;
+        }
+        .br_logo{
+            width:8.1rem;
+            margin:0 auto;
+        }
+        .br_name{
+            width:14rem;
+            margin:1.2rem auto 1rem;
+        }
+        .br_phone{
+            width:16.7rem;
+            margin:0 auto;
+        }
+        .br_download{
+            width:14.7rem;
+            margin:-2rem auto 0;
+        }
+    </style>
 </head>
 <body>
 <script>
@@ -52,29 +88,16 @@
 
 </script>
 
-<div class="container">
-    <img src="../img/share_bg.png" alt="" width="100%" style="vertical-align: top;">
-    <!--分享链接页面-->
-    <div class="share-wrap">
-        <div class="logo-wrap clear text-c">
-            <div class="logo"></div>
-            <div class="txt">
-                <h3>乐趣头条</h3>
-                <p>你的朋友都在用</p>
-            </div>
-        </div>
-        <div class="userInfo-wrap">
-            <div class="user-headImg"><img src="../img/ya_weixin.png" alt=""></div>
-            <div class="userInfo text-c">
-                <div class="username">郝亚茹:</div>
-                <div class="txt">送你最高<span class="htxt">19</span>元现金已到账，快来乐趣头条领钱！我已经赚了<span class="htxt">3.868</span>元了!</div>
-            </div>
-        </div>
-        <div class="btn-wrap text-c"><a href="javascript:;" class="receive-btn"></a></div>
-    </div>
 
-
+<div class="br_container br">
+    <div class="br_logo"><img src="../img/br_touban.png" alt=""></div>
+    <div class="br_name"><img src="../img/br_name.png" alt=""></div>
+    <div class="br_phone"><img src="../img/br_phone.png" alt=""></div>
+    <div class="br_download" id="loadApp" data-url="headline.lequ.net/download"><img src="../img/br_download.png" alt=""></div>
 </div>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="lqmain.js"></script>
+
 
 </body>
 </html>
