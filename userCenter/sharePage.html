@@ -18,12 +18,10 @@
             pointer-events: none;
         }
         .br_container{
-            padding-top: 2rem;
             position: absolute;
             left:0;
             right:0;
             top:0;
-            /*bottom:0;*/
         }
         .br_container.br{
             background: url("../img/br_bg.png");
@@ -43,7 +41,11 @@
         }
         .br_download{
             width:14.7rem;
-            margin:-2rem auto 3rem;
+            margin:-2rem auto 0;
+        }
+        .content{height:auto;padding:2rem 0 3rem;}
+        .bottom-0{
+            bottom:0;
         }
     </style>
 </head>
@@ -89,15 +91,26 @@
 </script>
 
 
+
 <div class="br_container br">
-    <div class="br_logo"><img src="../img/br_touban.png" alt=""></div>
-    <div class="br_name"><img src="../img/br_name.png" alt=""></div>
-    <div class="br_phone"><img src="../img/br_phone.png" alt=""></div>
-    <div class="br_download" id="loadApp" data-url="headline.lequ.net/download"><img src="../img/br_download.png" alt=""></div>
+    <div class="content">
+        <div class="br_logo"><img src="../img/br_touban.png" alt=""></div>
+        <div class="br_name"><img src="../img/br_name.png" alt=""></div>
+        <div class="br_phone"><img src="../img/br_phone.png" alt=""></div>
+        <div class="br_download" id="loadApp" data-url="headline.lequ.net/download"><img src="../img/br_download.png" alt=""></div>
+    </div>
 </div>
 <script src="jquery-1.11.3.min.js"></script>
 <script src="lqmain.js"></script>
-
+<script>
+    $(function(){
+        var viewH = $(window).height();
+        var realH = $(".content").outerHeight(true);
+        if(viewH>=realH){
+            $(".br_container").addClass("bottom-0");
+        }
+    });
+</script>
 
 </body>
 </html>
