@@ -3,6 +3,7 @@
  */
 window.lequ = window.lequ || {};
 lequ.control = function (){
+    var that = {};
     $(".invite-tab .tab").on('click',function(){
         var _this = $(this).index();
         $(this).addClass('cur').siblings().removeClass('cur');
@@ -26,4 +27,17 @@ lequ.control = function (){
         /*$(document).scroll(scrollTop);*/
         $("body,html").stop().animate({scrollTop:scrollTop},200);
     });
+
+    $("#loadApp").on("click",function(){
+        alert(1);
+        var url = $(this).data("url");
+        console.log(url);
+    })
+
+    /*that.loadApp = function(){
+        var url = $(this).data("url");
+        console.log(url);
+
+    };*/
+    return that;
 }();

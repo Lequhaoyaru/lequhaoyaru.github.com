@@ -122,7 +122,7 @@
         <div class="top-bg"><img src="./img/top_bg.png" alt=""></div>
         <section class="banner-wrap">
             <img src="./img/banner.jpg" alt="">
-            <div class="btn-wrap pos"><a href="javascript:" class="download-btn homebtn"></a></div>
+            <div class="btn-wrap pos"><a href="javascript:;" class="download-btn homebtn"></a></div>
         </section>
         <section class="section">
             <div class="title"><img src="./img/title01-1.png" alt=""></div>
@@ -184,25 +184,27 @@
             var loadBtn = document.getElementsByClassName("homebtn");
             for(var i=0;i<loadBtn.length;i++){
                 var _this = loadBtn[i];
-                loadBtn[i].onclick = function(){
-                    if(isWeiXin()){
-                        var LandingPage = document.getElementById("LandingPage");
-                        var WeiXinPage = document.getElementById("WeiXinPage");
-                        LandingPage.style.display = 'none';
-                        WeiXinPage.style.display = 'block';
-                        WeiXinPage.onclick = function(){
-                            LandingPage.style.display = 'block';
-                            WeiXinPage.style.display = 'none';
-                        };
-                        return false;
-                    }else{
-                        var system = getsystem();
-                        if (system=='Android' || system=='windows'){
-                            _this.setAttribute("href","http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk");
-                        }
-
-                    }
+                _this.addEventListener("click", goUrl(_this), false);
+                _this.removeEventListener("click", goUrl(_this), false);
+            }
+        };
+        function goUrl(obj){
+            if(isWeiXin()){
+                var LandingPage = document.getElementById("LandingPage");
+                var WeiXinPage = document.getElementById("WeiXinPage");
+                LandingPage.style.display = 'none';
+                WeiXinPage.style.display = 'block';
+                WeiXinPage.onclick = function(){
+                    LandingPage.style.display = 'block';
+                    WeiXinPage.style.display = 'none';
+                };
+                return false;
+            }else{
+                var system = getsystem();
+                if (system=='Android' || system=='windows'){
+                    obj.setAttribute("href","http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk");
                 }
+
             }
         };
         function isWeiXin(){
