@@ -122,7 +122,7 @@
         <div class="top-bg"><img src="./img/top_bg.png" alt=""></div>
         <section class="banner-wrap">
             <img src="./img/banner.jpg" alt="">
-            <div class="btn-wrap pos"><a href="javascript:gourl();" class="download-btn"></a></div>
+            <div class="btn-wrap pos"><a href="javascript:" class="download-btn homebtn"></a></div>
         </section>
         <section class="section">
             <div class="title"><img src="./img/title01-1.png" alt=""></div>
@@ -153,15 +153,15 @@
                     </div>
                 </a>
             </div>
-            <div class="imgBox"><a href="javascript:gourl();"><img src="./img/lunbo04.jpg" alt=""></a></div>
-            <div class="imgBox"><a href="javascript:gourl();"><img src="./img/lunbo02.jpg" alt=""></a></div>
+            <div class="imgBox"><a href="javascript:;" class="homebtn"><img src="./img/lunbo04.jpg" alt=""></a></div>
+            <div class="imgBox"><a href="javascript:;" class="homebtn"><img src="./img/lunbo02.jpg" alt=""></a></div>
             <div class="title"><img src="./img/title02-1.png" alt=""></div>
-            <div class="imgBox" style="width:68%;margin:0 auto;"><a href="javascript:gourl();"><img src="./img/jietu4.gif" alt=""></a></div>
+            <div class="imgBox" style="width:68%;margin:0 auto;"><a href="javascript:;" class="homebtn"><img src="./img/jietu4.gif" alt=""></a></div>
             <div class="title"><img src="./img/title03-1.png" alt=""></div>
             <div class="commet"><img src="./img/commet.png" alt=""></div>
-            <div class="btn-wrap"><a href="javascript:gourl();" class="download-btn" style="margin-bottom:30px;"></a></div>
+            <div class="btn-wrap"><a href="javascript:;" class="download-btn homebtn" style="margin-bottom:30px;"></a></div>
         </section>
-        <div class="nav"><a href="javascript:gourl();"><img src="./img/top_text.png" alt=""></a></div>
+        <div class="nav"><a href="javascript:;" class="homebtn"><img src="./img/top_text.png" alt=""></a></div>
         <div class="footer"></div>
     </div>
     <div id="WeiXinPage" class="WeiXinPage">
@@ -180,29 +180,30 @@
         })();
     </script>
     <script>
-        function gourl(){
-            if(isWeiXin()){
-                var LandingPage = document.getElementById("LandingPage");
-                var WeiXinPage = document.getElementById("WeiXinPage");
-                LandingPage.style.display = 'none';
-                WeiXinPage.style.display = 'block';
-                WeiXinPage.onclick = function(){
-                    LandingPage.style.display = 'block';
-                    WeiXinPage.style.display = 'none';
-                };
-                return false;
-            }else{
-                var system = getsystem();
-                if (system=='iphone'){
-                    document.location="https://itunes.apple.com/cn/app/id1328767441?mt=8";
-                }
-                if (system=='Android' || system=='windows'){
-                    document.location="http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk";
-                }
+        window.onload=function(){
+            var loadBtn = document.getElementsByClassName("homebtn");
+            for(var i=0;i<loadBtn.length;i++){
+                var _this = loadBtn[i];
+                loadBtn[i].onclick = function(){
+                    if(isWeiXin()){
+                        var LandingPage = document.getElementById("LandingPage");
+                        var WeiXinPage = document.getElementById("WeiXinPage");
+                        LandingPage.style.display = 'none';
+                        WeiXinPage.style.display = 'block';
+                        WeiXinPage.onclick = function(){
+                            LandingPage.style.display = 'block';
+                            WeiXinPage.style.display = 'none';
+                        };
+                        return false;
+                    }else{
+                        var system = getsystem();
+                        if (system=='Android' || system=='windows'){
+                            _this.setAttribute("href","http://dl.ilequ.net/mob/d/g/o/sanshengjianqingyuan.apk");
+                        }
 
+                    }
+                }
             }
-
-
         };
         function isWeiXin(){
             var ua = window.navigator.userAgent.toLowerCase();
