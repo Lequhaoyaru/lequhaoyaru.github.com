@@ -19,7 +19,18 @@
         }
         a { text-decoration: none; }
         img { width:100%;border: 0; vertical-align: top}
-
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .clear:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .clear{*zoom:1;}
         .wrap{
             width: 414px;
             overflow: hidden;
@@ -31,13 +42,13 @@
             font-size:26px;
             font-weight:bold;
             line-height:50px;
-           /* border-bottom: 1px solid #f0f0f6;*/
+            padding-top:14px;
         }
         .game-list,.game-item{
             width:100%;
         }
         .game-item{
-            padding:23px 0 33px;
+            padding:23px 0 20px;
             border-top: 1px solid #f0f0f6;
         }
         .game-title{
@@ -54,6 +65,14 @@
             border-radius: 6px;
             overflow: hidden;
         }
+        .game-data{
+            font-size:12px;
+            color:#BCBCC1;
+            margin-top:10px;
+        }
+        .view{
+            color:#33A6D0;
+        }
     </style>
 </head>
 
@@ -66,16 +85,19 @@
                     <h3 class="game-title">大秦王者</h3>
                     <p class="game-dec">大型策略游戏，真实还原身临其境</p>
                     <div class="game-img"><img src="./img/king.png" alt=""></div>
+                    <div class="game-data clear"><span class="fl player">1.2万人在玩儿</span><span class="fr view">查看详情&gt;</span></div>
                 </div>
                 <div class="game-item">
                     <h3 class="game-title">青云诀</h3>
                     <p class="game-dec">大型角色扮演游戏，界面更还原</p>
                     <div class="game-img"><img src="./img/rain.png" alt=""></div>
+                    <div class="game-data clear"><span class="fl player">1.2万人在玩儿</span><span class="fr view">查看详情&gt;</span></div>
                 </div>
                 <div class="game-item">
                     <h3 class="game-title">黑暗料理王</h3>
                     <p class="game-dec">新怪兽、社交系统及更多</p>
                     <div class="game-img"><img src="./img/cookie.png" alt=""></div>
+                    <div class="game-data clear"><span class="fl player">1.2万人在玩儿</span><span class="fr view">查看详情&gt;</span></div>
                 </div>
             </div>
         </div>
