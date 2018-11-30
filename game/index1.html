@@ -81,7 +81,7 @@
         <div class="" style="width:377px;margin:0 auto;">
             <h2 class="title" style="">游戏</h2>
             <div class="game-list">
-                <div class="game-item" onclick="javascript:toThirdPartners(this);" data-url="https://itunes.apple.com/cn/app/%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E7%9B%B4%E5%8D%96%E7%BD%91-%E4%BA%8C%E6%89%8B%E8%BD%A6%E5%8D%96%E8%BD%A6%E4%B9%B0%E8%BD%A6%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0/id990531994?mt=8" data-report-url="2">
+                <div class="game-item">
                     <h3 class="game-title">大秦王者</h3>
                     <p class="game-dec">大型策略游戏，真实还原身临其境</p>
                     <div class="game-img"><img src="./img/king.jpg" alt=""></div>
@@ -103,13 +103,4 @@
         </div>
     </div>
 </body>
-<script src="../js/jquery-1.11.3.min.js"></script>
-<script>
-    function toThirdPartners(obj){
-        var downloadUrl = obj.dataset.url;
-        var reportUrl = obj.dataset.reportUrl;
-        console.log("ios download url:",downloadUrl);
-        window.location = downloadUrl;
-    }
-</script>
 </html>
