@@ -28,11 +28,11 @@
             background-size:cover;
         }
         .br_logo{
-            width:8.1rem;
+            width:8.3rem;
             margin:0 auto;
         }
         .br_name{
-            width:14rem;
+            width:14.333333333rem;
             margin:1.2rem auto 1rem;
         }
         .br_phone{
@@ -40,10 +40,10 @@
             margin:0 auto;
         }
         .br_download{
-            width:14.7rem;
+            width:9.95rem;
             margin:-2rem auto 0;
         }
-        .content{height:auto;padding:2rem 0 3rem;}
+        .br_content{height:auto;padding:2rem 0 3rem;}
         .bottom-0{
             bottom:0;
         }
@@ -93,7 +93,7 @@
 
 
 <div class="br_container br">
-    <div class="content">
+    <div class="br_content">
         <div class="br_logo"><img src="../img/br_touban.png" alt=""></div>
         <div class="br_name"><img src="../img/br_name.png" alt=""></div>
         <div class="br_phone"><img src="../img/br_phone.png" alt=""></div>
@@ -105,7 +105,7 @@
 <script>
     $(function(){
         var viewH = $(window).height();
-        var realH = $(".content").outerHeight(true);
+        var realH = $(".br_content").outerHeight(true);
         if(viewH>=realH){
             $(".br_container").addClass("bottom-0");
         }
