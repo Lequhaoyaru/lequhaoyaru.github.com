@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>乐趣浏览器</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <!--<link rel="stylesheet" href="../css/index.css">-->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <script>window.lequ = window.lequ || {};</script>
+    <style>
+        .site{
+            background:#fff;
+        }
+        .section{
+            padding:0 18px;
+        }
+        .site .title{
+            padding:1rem 0 0.5rem;
+            font-size:0.9rem;
+        }
+        .site .content{
+            border-bottom:1px solid #ededed;
+        }
+        .site .cell-wrap{
+            margin:0 -18px;
+        }
+        .site .cell{
+            display: inline-block;
+            width:20%;
+            float: left;
+            text-align: center;
+            font-size:0.7rem;
+            line-height:1.5rem;
+            color:#333;
+        }
+        .site .btn-group{
+            margin:15px -4px;
+        }
+        .site .btn{
+            display: inline-block;
+            width:23%;
+            float: left;
+            text-align: center;
+            font-size:13px;
+            height:30px;
+            line-height:30px;
+            background:#ededed;
+            margin:0 1%;
+        }
+        .blue{
+            color:#4b94f7!important;
+        }
+        .site .img-wrap{
+            display: inline-block;
+            width:36px;
+            height:36px;
+            background:#4b94f7;
+            border-radius: 50%;
+            position: relative;
+        }
+        .site .img-wrap>img{
+            width:70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+<script>
+
+    !function(document,window) {
+        var setRem = function () {
+            var w = 0;
+            if(document.documentElement && document.documentElement.clientWidth){
+                w = document.documentElement.clientWidth;
+            } else if(document.body && document.body.clientWidth) {
+                w  = document.body.clientWidth;
+            } else if (document.innerHeight){
+                w = window.innerWidth;
+            }
+            if(w>750){
+                document.documentElement.style.width = '750px';
+                document.documentElement.style.fontSize = '100px';
+            }else{
+                document.documentElement.style.width = w + 'px';
+                document.documentElement.style.fontSize = 20*(w/375)+'px';
+            }
+        };
+        function check(callback){
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                try {
+                    if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                        if(typeof callback === "function"){
+                            callback();
+                        }
+                    }
+                }
+                catch (err){}
+            }
+        }
+        check(setRem);
+        window.onresize = function () {
+            check(setRem);
+        };
+    }(document,window);
+
+</script>
+<div class="container site">
+    <div class="section consult">
+        <div class="title">资讯阅读</div>
+        <div class="content">
+            <div class="cell-wrap clear">
+                <a class="cell blue">[新闻]</a>
+                <a class="cell">中新</a>
+                <a class="cell">凤凰网</a>
+                <a class="cell">聚看点</a>
+                <a class="cell">腾讯</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[体育]</a>
+                <a class="cell">比分</a>
+                <a class="cell">直播</a>
+                <a class="cell">社区</a>
+                <a class="cell">NBA</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[军事]</a>
+                <a class="cell">新军事</a>
+                <a class="cell">铁血</a>
+                <a class="cell">军事</a>
+                <a class="cell">头条</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[汽车]</a>
+                <a class="cell">太平洋</a>
+                <a class="cell">二手车</a>
+                <a class="cell">车讯</a>
+                <a class="cell">特价车</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[财经]</a>
+                <a class="cell">房产</a>
+                <a class="cell">高收益</a>
+                <a class="cell">东方</a>
+                <a class="cell">财经</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[科技]</a>
+                <a class="cell">果壳网</a>
+                <a class="cell">ZOL</a>
+                <a class="cell">虎嗅网</a>
+                <a class="cell">数码</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[社区]</a>
+                <a class="cell">豆瓣</a>
+                <a class="cell">贴吧</a>
+                <a class="cell">天涯</a>
+                <a class="cell">话题圈</a>
+            </div>
+            <div class="btn-group clear">
+                <a class="btn">充值</a>
+                <a class="btn">爆款</a>
+                <a class="btn">装修</a>
+                <a class="btn">健康</a>
+            </div>
+        </div>
+    </div>
+    <div class="section life">
+        <div class="title">生活服务</div>
+        <div class="content">
+            <div class="cell-wrap clear">
+                <a href="" class="cell">
+                    <div class="img-wrap"><img src="../img/train_ticket.png" alt=""></div>
+                    <p>火车票</p>
+                </a>
+                <a href="" class="cell">
+                    <div class="img-wrap"><img src="../img/plan_ticket.png" alt=""></div>
+                    <p>机票</p>
+                </a>
+                <a href="" class="cell">
+                    <div class="img-wrap"><img src="../img/lottery.png" alt=""></div>
+                    <p>彩票</p>
+                </a>
+                <a href="" class="cell">
+                    <div class="img-wrap"><img src="../img/shop_car.png" alt=""></div>
+                    <p>购物</p>
+                </a>
+                <a href="" class="cell">
+                    <div class="img-wrap"><img src="../img/whole.png" alt=""></div>
+                    <p>全部</p>
+                </a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[新闻]</a>
+                <a class="cell">中新</a>
+                <a class="cell">凤凰网</a>
+                <a class="cell">聚看点</a>
+                <a class="cell">腾讯</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[体育]</a>
+                <a class="cell">比分</a>
+                <a class="cell">直播</a>
+                <a class="cell">社区</a>
+                <a class="cell">NBA</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[军事]</a>
+                <a class="cell">新军事</a>
+                <a class="cell">铁血</a>
+                <a class="cell">军事</a>
+                <a class="cell">头条</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[汽车]</a>
+                <a class="cell">太平洋</a>
+                <a class="cell">二手车</a>
+                <a class="cell">车讯</a>
+                <a class="cell">特价车</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[财经]</a>
+                <a class="cell">房产</a>
+                <a class="cell">高收益</a>
+                <a class="cell">东方</a>
+                <a class="cell">财经</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[科技]</a>
+                <a class="cell">果壳网</a>
+                <a class="cell">ZOL</a>
+                <a class="cell">虎嗅网</a>
+                <a class="cell">数码</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[社区]</a>
+                <a class="cell">豆瓣</a>
+                <a class="cell">贴吧</a>
+                <a class="cell">天涯</a>
+                <a class="cell">话题圈</a>
+            </div>
+        </div>
+    </div>
+    <div class="section shop">
+        <div class="title">购物商城</div>
+        <div class="content">
+            <div class="cell-wrap clear">
+                <a class="cell blue">[新闻]</a>
+                <a class="cell">中新</a>
+                <a class="cell">凤凰网</a>
+                <a class="cell">聚看点</a>
+                <a class="cell">腾讯</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[体育]</a>
+                <a class="cell">比分</a>
+                <a class="cell">直播</a>
+                <a class="cell">社区</a>
+                <a class="cell">NBA</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[军事]</a>
+                <a class="cell">新军事</a>
+                <a class="cell">铁血</a>
+                <a class="cell">军事</a>
+                <a class="cell">头条</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[汽车]</a>
+                <a class="cell">太平洋</a>
+                <a class="cell">二手车</a>
+                <a class="cell">车讯</a>
+                <a class="cell">特价车</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[财经]</a>
+                <a class="cell">房产</a>
+                <a class="cell">高收益</a>
+                <a class="cell">东方</a>
+                <a class="cell">财经</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[科技]</a>
+                <a class="cell">果壳网</a>
+                <a class="cell">ZOL</a>
+                <a class="cell">虎嗅网</a>
+                <a class="cell">数码</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[社区]</a>
+                <a class="cell">豆瓣</a>
+                <a class="cell">贴吧</a>
+                <a class="cell">天涯</a>
+                <a class="cell">话题圈</a>
+            </div>
+        </div>
+    </div>
+    <div class="section entertainment">
+        <div class="title">休闲娱乐</div>
+        <div class="content">
+            <div class="cell-wrap clear">
+                <a class="cell blue">[新闻]</a>
+                <a class="cell">中新</a>
+                <a class="cell">凤凰网</a>
+                <a class="cell">聚看点</a>
+                <a class="cell">腾讯</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[体育]</a>
+                <a class="cell">比分</a>
+                <a class="cell">直播</a>
+                <a class="cell">社区</a>
+                <a class="cell">NBA</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[军事]</a>
+                <a class="cell">新军事</a>
+                <a class="cell">铁血</a>
+                <a class="cell">军事</a>
+                <a class="cell">头条</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[汽车]</a>
+                <a class="cell">太平洋</a>
+                <a class="cell">二手车</a>
+                <a class="cell">车讯</a>
+                <a class="cell">特价车</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[财经]</a>
+                <a class="cell">房产</a>
+                <a class="cell">高收益</a>
+                <a class="cell">东方</a>
+                <a class="cell">财经</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[科技]</a>
+                <a class="cell">果壳网</a>
+                <a class="cell">ZOL</a>
+                <a class="cell">虎嗅网</a>
+                <a class="cell">数码</a>
+            </div>
+            <div class="cell-wrap clear">
+                <a class="cell blue">[社区]</a>
+                <a class="cell">豆瓣</a>
+                <a class="cell">贴吧</a>
+                <a class="cell">天涯</a>
+                <a class="cell">话题圈</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="lqmain.js"></script>
+</html>
