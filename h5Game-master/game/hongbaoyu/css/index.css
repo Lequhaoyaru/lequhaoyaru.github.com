@@ -1,0 +1,114 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+    }
+}
+body {
+    background: #3e2b47 url(../image/moneybj.jpg) repeat top left;
+    color: #333;
+    font-size: 12px;
+    margin:0 auto;
+    font-family: "Microsoft YaHei"
+}
+.contant {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 32rem;
+    position: relative;
+}
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 13.45rem;
+    width: 100%;
+    background: url(../image/qianghongbao-1.png) no-repeat;
+    background-size: 100% 100%;
+}
+.titlegai {
+    position: absolute;
+    left: 0;
+    top: -0.15rem;
+    height: 13.68rem;
+    width: 100%;
+    background: url(../image/qianghongbao-2.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 3;
+}
+.guang {
+    position: absolute;
+    display: none;
+    top: 6rem;
+    left: 0;
+    width: 18.75rem;
+    height: 24rem;
+    z-index: 2;
+    background: url(https://hdggcdn.bayimob.com/hdggstatic/guang-1.png) no-repeat;
+    -webkit-animation: guang 1s linear 0s infinite;
+    -moz-animation: guang 1s linear 0s infinite;
+    animation: guang 1s linear 0s infinite;
+    background-size: 100% 100%;
+
+}
+.backward {
+    width: 100%;
+    opacity: 1;
+    position: absolute;
+    display: none;
+    z-index: 3;
+    top: 45%;
+    left: 0;
+}
+
+.backward span {
+    display: inline-block;
+    width: 5.0rem;
+    height: 5.0rem;
+    color: #fde624;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 10rem;
+    font-size: 6.0rem;
+}
+.hongbaoWrap {
+    position: absolute;
+    left: 1rem;
+    margin: 0 auto;
+    top: 7rem;
+    width: 90%;
+    height: 25rem;
+    overflow-y: hidden;
+    z-index: 2;
+}
+.hongbaoWrap li {
+    position: absolute;
+    animation: all 3s linear;
+    top: -100px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hongbaoWrap li a {
+    display: inline-block;
+}
+
+.hongbaoWrap li a img {
+    display: inline-block;
+}
+
+@-webkit-keyframes guang {
+    0%, 100% {
+        background: url(../image/guang-1.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    50% {
+        background: url(../image/guang-2.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}

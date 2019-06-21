@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="../../common/css/alertCommon.css">
+    <link rel="stylesheet" href="../../common/css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../common/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        function FZ(a, b) {
+            function getFZ() {
+                var width = document.documentElement.clientWidth || document.body.clientWidth;
+                if (width > 750) {
+                    width = 750;
+                }
+                var fontSize = (a / b) * width;
+                return fontSize;
+            };
+            document.documentElement.style.fontSize = getFZ() + "px";
+            window.onresize = function () {
+                setTimeout(function () {
+                    document.documentElement.style.fontSize = getFZ() + "px";
+                }, 100);
+            };
+        }
+        FZ(20, 375);
+    </script>
+    <style>
+        #dialog5 .showPrize-dialog {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            -webkit-animation: showModal .3s ease-in-out;
+            animation: showModal .3s ease-in-out;
+            margin-top: 5.5rem;
+        }
+        #dialog5 .showPrize-dialog .red-bg {
+            background-image: url(image/tanchuang.png);
+            background-size: 100%;
+            top:-9rem;
+        }
+        #dialog5 .showPrize-dialog .card-bg .resAd{
+            top:4.55rem;
+        }
+        #dialog5 .showPrize-dialog .detail{
+            top:10.66rem;
+        }
+        #dialog5 .showPrize-dialog .detail .topic {
+            width: 100%;
+            height: 1.8rem;
+            border-radius: 0.1rem;
+            text-align: center;
+            position: absolute;
+            top: 0rem;
+            color: #fff;
+            font-size: .8rem;
+            line-height: 1.8rem;
+        }
+        #dialog5 .showPrize-dialog .detail .goto {
+            width: 6.975rem;
+            height: 7.125rem;
+            background: url(image/btn2.png) no-repeat center;
+            background-size: 100%;
+            position: absolute;
+            left: 50%;
+            margin-left: -3.4875rem;
+            bottom: -1.5rem;
+            -webkit-animation: skip .3s linear infinite alternate;
+            animation: skip .3s linear infinite alternate;
+        }
+    </style>
+</head>
+<body style="position: relative">
+    <div id="contant">
+        <div class="rule"></div>
+        <div class="jiang"></div>
+        <div class="chuizi rotateInit"></div>
+
+        <div id="danlists">
+            <ul id="danlist" class="clear">
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+                <li class="full"><span class="tip"></span></li>
+            </ul>
+        </div>
+        <div class="clear" style="zoom:1;clear: both"></div>
+        <h3 style="height: 1rem;text-align: center;font-size: 0.7rem;color: #666;font-weight: normal;">
+            剩余免费<span id="countZa">7</span>次
+        </h3>
+
+        <div class="botBg">
+            <div class="przieLogo"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="imgf"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgf1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a id="hdgg-left-float-image" href="javascript:;" style="font-size:1rem;position:absolute;top:6.2em;left:0;z-index:99;width:3.5em;">
+            <img src="../../common/image/hdgg_zhifubao_entrance.gif" style="width:100%;">
+        </a>
+        <a id="hdgg-right-tixian-image" href="javascript:;" style="font-size:1rem;position:absolute;top:4rem;right:0.525rem;z-index:99;width:2.85rem;color:#eb3d01;">
+            <img src="../../common/image/tixian.png" style="width:100%;">
+            <div class="ti_xian" style="position: absolute;top:0.7rem;right:0rem;width:2.8rem;text-align:center;"><span style="font-size:0.7rem" class="txMoney">100</span><span style="font-size:0.5rem">元</span></div>
+        </a>
+    </div>
+</body>
+</html>

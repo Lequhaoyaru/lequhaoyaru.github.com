@@ -1,0 +1,113 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+    }
+}
+body {
+    background: #152c78;
+    color: #333;
+    font-size: 12px;
+    margin:0 auto;
+    font-family: "Microsoft YaHei"
+}
+#contant {
+    position: relative;
+    width: 18.75rem;
+    margin: 0 auto;
+    background: url(../image/laohujiBg.png) no-repeat;
+    background-size: 100%;
+    height: 32.46rem;
+    padding-bottom: 0.9rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.rule {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 3.0rem;
+    height: 1.1rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 1;
+    background: url(../../../common/image/rule.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jiang {
+    position: absolute;
+    line-height: 1.15rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 2;
+    right: .65rem;
+    top: .5rem;
+    width: 2.6rem;
+    height: 3.25rem;
+    background: url(../../../common/image/jiang.png) no-repeat;
+    background-size: 100% 100%;
+}
+.laohujiContainer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -7.75rem;
+    margin-top:-9rem;
+    width: 15.5rem;
+    height: 18rem;
+    /*background: #8f2c1b;*/
+}
+.laohujiBg{
+    width:100%;
+    height:100%;
+    background: url(../image/laohuji.png) no-repeat;
+    background-size: 100%;
+    z-index: 3;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.rewardsWrap{
+    width: 13rem;
+    height: 11rem;
+    background: #8f2c1b;
+    position: absolute;
+    left: 1.7rem;
+    top: 1rem;
+}
+.rewardWrap{
+    position: absolute;
+    width: 3rem;
+    height: 11rem;
+    overflow: hidden;
+    background:#fff;
+    padding:0 6px;
+}
+.rewardWrap.item1{
+    left: 0.4rem;
+    top: 0;
+}
+.rewardWrap.item2{
+    left: 4.27rem;
+    top: 0;
+}
+.rewardWrap.item3{
+    left: 8.15rem;
+    top: 0;
+}
+.rewardWrap ul{
+    position: relative;
+}
+.rewardWrap .reward{
+    padding:0.5rem 0;
+}
+.startBT{
+    width: 7rem;
+    height: 2.2rem;
+    background: url(../image/laohujiBt.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 3.3rem;
+    left: 50%;
+    margin-left: -3.5rem;
+    z-index: 4;
+}

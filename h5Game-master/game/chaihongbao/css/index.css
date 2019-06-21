@@ -1,0 +1,293 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+    }
+}
+body {
+    background: #996af4;
+    color: #333;
+    font-size: 12px;
+    margin:0 auto;
+    font-family: "Microsoft YaHei"
+}
+.bodydiv {
+    height: 23.3rem;
+    padding-top: 35%;
+    background: url(../image/bg.jpeg) no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+.rule {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 3.0rem;
+    height: 1.1rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 1;
+    background: url(../../../common/image/rule.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jiang {
+    position: absolute;
+    right: .65rem;
+    top: .5rem;
+    width: 2.6rem;
+    height: 3.25rem;
+    line-height: 1.15rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 2;
+    background: url(../../../common/image/jiang.png) no-repeat;
+    background-size: 100% 100%;
+}
+.counts {
+    position: absolute;
+    top: 26.25rem;
+    left: 33.3%;
+    width: 6.0rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+}
+.bot_line {
+    position: absolute;
+    width: 100%;
+    top: 26.35rem;
+    left: 0;
+    overflow: hidden;
+}
+.bot_line .wave {
+    background-image: url(../image/botline.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50rem;
+    height: 3.825rem;
+    -webkit-animation: sploosh 2.5s linear both infinite;
+    animation: sploosh 2.5s linear both infinite;
+}
+.xiangzi {
+    position: absolute;
+    left: 50%;
+    top: 9rem;
+    margin-left: -7.2rem;
+    width: 14.25rem;
+    height: 18.9rem;
+    background-image: url(../image/redbag1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 3;
+    -webkit-animation: beat .5s linear 0s infinite alternate;
+    animation: beat .5s linear 0s infinite alternate;
+}
+.add_chai_gif {
+    width: 100%;
+    height: 22.5rem;
+    margin-left: -50%;
+    top: 5rem;
+}
+.xiangzi .starta {
+    position: absolute;
+    left: 50%;
+    top: 7rem;
+    margin-left: -4.2rem;
+    width: 8.4rem;
+    height: 8.4rem;
+    background-image: url(../image/chai.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 3;
+    -webkit-animation: skip .3s linear infinite alternate;
+    animation: skip .3s linear infinite alternate;
+}
+.DB_guide {
+    position: absolute;
+    left: 38%;
+    top: 17.65rem;
+    z-index: 3;
+    pointer-events: none;
+}
+.DB_guide .DB_G_circle, .DB_guide .DB_G_hand{
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.DB_guide .DB_G_circle {
+    background-size: 100% 100%;
+    width: 1rem;
+    height: 1rem;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-animation: guidCircle 1.5s linear infinite normal;
+    animation: guidCircle 1.5s linear infinite normal;
+}
+.DB_guide .DB_G_hand {
+    width: 2.2rem;
+    height: 2.2rem;
+    left: 2.25rem;
+    top: 2.25rem;
+    background-image: url(../image/hand.png);
+    background-size: contain;
+    -webkit-animation: guideHand 1.5s linear infinite normal;
+    animation: guideHand 1.5s linear infinite normal;
+    opacity: 0;
+}
+
+#dialog5 .showPrize-dialog .detail {
+    width: 14.75rem;
+    height: 7.55rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6.05rem;
+    left: 50%;
+    margin-left: -7.3725rem;
+    z-index: 7;
+    animation: scale 0.2s linear forwards;
+    -webkit-animation: scale 0.2s linear forwards;
+}
+#dialog5 .showPrize-dialog .card-bg img {
+    width: 13.65rem;
+    height: 6.25rem;
+    display: block;
+    margin: 1.55rem auto 0;
+    margin-right: 0.65rem;
+}
+#dialog5 .showPrize-dialog .detail .goto{
+    background-image: url(../image/btn3.png);
+    background-size: 100%;
+}
+@keyframes scale {
+    from {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes scale {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes sploosh {
+    0% {
+        background-position: -18.75rem center;
+    }
+    100% {
+        background-position: 0 center;
+    }
+}
+
+@-webkit-keyframes sploosh {
+    0% {
+        background-position: -18.75rem center;
+    }
+    100% {
+        background-position: 0 center;
+    }
+}
+
+@keyframes beat {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-15px)
+    }
+}
+
+@-webkit-keyframes beat {
+    from {
+        -webkit-transform: translateY(0)
+    }
+    to {
+        -webkit-transform: translateY(-15px)
+    }
+}
+@keyframes skip {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes skip {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes guideHand {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    20%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+}
+@keyframes guideHand {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    20%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

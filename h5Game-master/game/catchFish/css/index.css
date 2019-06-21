@@ -1,0 +1,368 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+        margin:0 auto;
+    }
+}
+/*捞鱼*/
+#db-content{
+    background: #152c78;
+}
+#contant {
+    position: relative;
+    width: 18.75rem;
+    background: url(../image/bg4.png) no-repeat;
+    background-size: 100% 100%;
+    height: 33.35rem;
+    padding-bottom: 0.1rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.rule {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 3.0rem;
+    height: 1.1rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 1;
+    background: url(../../../common/image/rule.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jiang {
+    position: absolute;
+    right: .65rem;
+    top: .5rem;
+    width: 2.6rem;
+    height: 3.25rem;
+    line-height: 1.15rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 2;
+    background: url(../../../common/image/jiang.png) no-repeat;
+    background-size: 100% 100%;
+}
+.counts {
+    position: absolute;
+    top: 5.8rem;
+    left: 55.5%;
+    color: #fff;
+    font-size: 0.7rem;
+}
+.persons {
+    width: 5.825rem;
+    height: 5.35rem;
+    background: url(../image/person.png) no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    left: .85rem;
+    top: -3.2rem;
+}
+.contain{
+    margin-top: 6rem;
+    height: 21.45rem;
+    position: relative;
+}
+.person-container {
+    position: relative;
+    height: 10rem;
+}
+.fish-container {
+    -webkit-transform-origin: 5rem 0;
+    transform-origin: 5rem 0;
+}
+.ani-pole {
+    -webkit-animation: pole 1s forwards;
+    animation: pole 1s forwards;
+}
+.pole {
+    width: 10.75rem;
+    height: 3.425rem;
+    position: absolute;
+    left: 2.5rem;
+    top: -0.5rem;
+    transform: rotate(22deg);
+    background: url(../image/gan.png) no-repeat center;
+    background-size: 100%;
+}
+.fishnet {
+    width: 3rem;
+    height: 3.35rem;
+    background: url(../image/wang.png) no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 3.1rem;
+    top: 3rem;
+}
+.ani-pole .fishnet {
+    -webkit-animation: basket 1s step-end;
+    animation: basket 1s step-end
+}
+.sea {
+    width: 100%;
+    height: 12rem;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+}
+.sea .prize-container {
+    position: relative;
+    height: 12rem;
+    font-size: 0;
+}
+.sea .prize-container {
+    position: relative;
+    height: 12rem;
+    font-size: 0;
+}
+.sea .prize-container .float {
+    width: 3.25rem;
+    height: 3.25rem;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    display: inline-block;
+    -webkit-transform: translate3d(-.5rem, 0, 0);
+    transform: translate3d(-.5rem, 0, 0)
+}
+
+.sea .prize-container .float.row1 {
+    top: 3.3rem;
+}
+
+.sea .prize-container .float.row2 {
+    top: 4.6rem;
+}
+
+.sea .prize-container .float.row3 {
+    top: 7rem;
+}
+
+.sea .prize-container .float img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: floatXY 1s linear infinite alternate;
+    -webkit-animation: floatXY 1s linear infinite alternate;
+}
+.start {
+    width: 10.875rem;
+    height: 6.875rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    margin-left: -5.4375rem;
+    background: url(../image/btn.png) no-repeat center;
+    background-size: 100% 100%;
+}
+
+.DB_guide .DB_G_hand {
+    width: 5rem;
+    height: 5.25rem;
+    left: .1rem;
+    top: .05rem;
+    background-image: url(../image/Hands.png);
+    background-size: contain;
+    -webkit-animation: guideHand 1.5s linear infinite normal;
+    animation: guideHand 1.5s linear infinite normal;
+    opacity: 0;
+}
+@-webkit-keyframes guideHand {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    20%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+}
+@keyframes guideHand {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    20%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8);
+    }
+}
+@-webkit-keyframes floatXY {
+    0% {
+        -webkit-transform: translate(0, .075rem);
+        transform: translate(0, .075rem);
+    }
+
+    100% {
+        -webkit-transform: translate(0, -.075rem);
+        transform: translate(0, -.075rem);
+    }
+}
+
+@keyframes floatXY {
+    0% {
+        -webkit-transform: translate(0, .075rem);
+        transform: translate(0, .075rem);
+    }
+
+    100% {
+        -webkit-transform: translate(0, -.075rem);
+        transform: translate(0, -.075rem);
+    }
+}
+@-webkit-keyframes basket {
+    0%, 100% {
+        top: .575rem;
+        width: 3rem;
+        height: 3.35rem;
+        background: url(../image/wang.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    5% {
+        top: .4rem;
+        width: 3rem;
+        height: 2.875rem;
+        background: url(../image/wang2.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    10% {
+        top: 3.275rem;
+        width: 3rem;
+        height: 3.125rem;
+        background: url(../image/wang3.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    15% {
+        top: 2.575rem;
+        width: 3rem;
+        height: 2.9rem;
+        background: url(../image/wang4.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    20% {
+        top: 1.775rem;
+        width: 3rem;
+        height: 3.35rem;
+        background: url(../image/wang5.png) no-repeat;
+        background-size: 100% 100%
+    }
+}
+@keyframes basket {
+    0%, 100% {
+        top: .575rem;
+        width: 3rem;
+        height: 3.35rem;
+        background: url(../image/wang.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    5% {
+        top: .4rem;
+        width: 3rem;
+        height: 2.875rem;
+        background: url(../image/wang2.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    10% {
+        top: 3.275rem;
+        width: 3rem;
+        height: 3.125rem;
+        background: url(../image/wang3.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    15% {
+        top: 2.575rem;
+        width: 3rem;
+        height: 2.9rem;
+        background: url(../image/wang4.png) no-repeat;
+        background-size: 100% 100%
+    }
+
+    20% {
+        top: 1.775rem;
+        width: 3rem;
+        height: 3.35rem;
+        background: url(../image/wang5.png) no-repeat;
+        background-size: 100% 100%
+    }
+}
+@-webkit-keyframes pole {
+    0%, 100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    25% {
+
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg)
+    }
+
+    50% {
+
+        -webkit-transform: rotate(50deg);
+        transform: rotate(50deg)
+    }
+
+    75% {
+
+        -webkit-transform: rotate(90deg);
+        transform: rotate(60deg)
+    }
+}
+@keyframes pole {
+    0%, 100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    25% {
+
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg)
+    }
+
+    50% {
+
+        -webkit-transform: rotate(50deg);
+        transform: rotate(50deg)
+    }
+
+    75% {
+
+        -webkit-transform: rotate(90deg);
+        transform: rotate(60deg)
+    }
+}
+
+
+
+
+
+
+
+
+

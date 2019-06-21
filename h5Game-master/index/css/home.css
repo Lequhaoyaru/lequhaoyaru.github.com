@@ -1,0 +1,114 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+    }
+}
+body {
+    font-size: 16px;
+    line-height: 1;
+    margin: 0 auto;
+}
+#header {
+    position:relative;
+    left:0;
+    top:0;
+    z-index:999;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    background-color: rgb(224, 84, 75);
+    font: 16px/32px hiragino sans gb,microsoft yahei,simsun;
+    box-shadow:0 3px 3px rgba(0,0,0,0.2);
+}
+#header .swiper-slide {
+    padding: 0 10px;
+    color:#fff;
+    font-size:16px;
+    letter-spacing: 0;
+    transition: all .3s ease;
+    display: inline-block;
+    line-height: 44px;
+}
+#header .active{
+    transform: scale(1.1);
+    font-weight: 700;
+    letter-spacing: 0;
+}
+#newsList {
+    height: auto;
+}
+.content {
+    height: calc(100vh - 19px);
+    overflow: visible;
+    position: relative;
+    margin-top: -30px;
+}
+#newslist>li>a{
+    display: block;
+    width: 100%;
+    padding: 12px 15px 0;
+    box-sizing: border-box;
+}
+.news-wrap{
+    padding-bottom:12px;
+    border-bottom: 1px solid #ececec;
+    position: relative;
+}
+.news-wrap h3{
+    color: #151515;
+    font-size: 17px;
+    line-height: 24px;
+    overflow: hidden;
+    min-height: 24px;
+    max-height: 48px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    font-weight: normal;
+}
+.img-box {
+    overflow: hidden;
+    width: calc((100% - 8px)/3);
+    height: 1.6rem;
+}
+.img-box img{
+    width:100%;
+    height:100%;
+}
+.news-wrap .img-box {
+    width: calc((100% - 8px)/3);
+    margin-right: 4px;
+}
+.news-wrap .img-box:last-child{
+    margin-right:0;
+}
+.img-width {
+    width: 100%;
+    height: 100%;
+}
+.tags {
+    position: absolute;
+    margin-left: 12px;
+    bottom: 0;
+    margin-top: 7px;
+    color: #8d8d8d;
+    font-size: 12px;
+}
+.news-wrap .tags{
+    margin-top: 12px;
+    position: relative;
+    margin-left: 0;
+}
+.news-item.special h3{
+    width:66.6%;
+    float: left;
+}
+.news-item.special .tags{
+    position: absolute;
+    bottom: 12px;
+}
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}

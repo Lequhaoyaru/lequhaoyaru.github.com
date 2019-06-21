@@ -1,0 +1,321 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+    }
+}
+body {
+    background: #82b94d;
+    color: #333;
+    font-size: 12px;
+    margin:0 auto;
+    font-family: "Microsoft YaHei"
+}
+#contant {
+    position: relative;
+    width: 18.75rem;
+    margin: 0 auto;
+    background: url(../image/bg2.jpg) no-repeat;
+    background-size: 100%;
+    height: 33.15rem;
+    padding-bottom: 0.9rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.rule {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 3.0rem;
+    height: 1.1rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 1;
+    background: url(../../../common/image/rule.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jiang {
+    position: absolute;
+    right: .65rem;
+    top: .5rem;
+    width: 2.6rem;
+    height: 3.25rem;
+    line-height: 1.15rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 2;
+    background: url(../../../common/image/jiang.png) no-repeat;
+    background-size: 100% 100%;
+}
+.chuizi {
+    position: absolute;
+    right: 0.5rem;
+    top: 9.0rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    z-index: 2;
+    background-image: url(../image/chuizi2.png);
+    background-size: 100% 100%;
+}
+.rotateInit {
+    transform-origin: right bottom;
+    -webkit-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    -moz-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    -ms-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    -o-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+}
+#danlists {
+    height: 20rem;
+    padding-top: 7.5rem;
+}
+#danlists ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-left: 1.15rem;
+}
+#danlists ul li {
+    position: relative;
+    width: 5.25rem;
+    height: 5.25rem;
+    float: left;
+    background: url(../image/jindan1.png) no-repeat;
+    background-size: 100%;
+}
+#danlists ul li:nth-child(1) {
+    margin: 0.5rem 0 0.2rem -0.5rem;
+}
+
+#danlists ul li:nth-child(2) {
+    margin: 0.5rem 0 0.2rem 0.5rem;
+}
+
+#danlists ul li:nth-child(3) {
+    margin: 0.65rem 0 0.2rem 0.5rem;
+}
+
+#danlists ul li:nth-child(4) {
+    margin: 1.55rem 0 0.2rem -0.5rem;
+}
+
+#danlists ul li:nth-child(5) {
+    margin: 1.55rem 0 0.2rem 0.5rem;
+}
+
+#danlists ul li:nth-child(6) {
+    margin: 1.65rem 0 0.2rem 0.5rem;
+}
+
+#danlists ul li:nth-child(7) {
+    margin: 0.75rem 0 0.2rem -0.5rem;
+}
+
+#danlists ul li:nth-child(8) {
+    margin: 0.8rem 0 0.2rem 0.5rem;
+}
+
+#danlists ul li:nth-child(9) {
+    margin: 0.85rem 0 0.2rem 0.5rem;
+}
+
+#danlists ul li span {
+    width: 2.55rem;
+    height: 1.1rem;
+    display: block;
+    position: absolute;
+    left: 1.35rem;
+    bottom: 1.5rem;
+}
+.beat {
+    -webkit-animation: beat .5s linear 0s 2 alternate;
+    -moz-animation: beat .5s linear 0s 2 alternate;
+    -ms-animation: beat .5s linear 0s 2 alternate;
+    -o-animation: beat .5s linear 0s 2 alternate;
+    animation: beat .5s linear 0s 2 alternate
+}
+.beat .tip {
+    background-image: url(../image/zawoyouli.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9;
+    -webkit-animation: tipscale .6s linear .1s 2 alternate;
+    -moz-animation: tipscale .6s linear .1s 2 alternate;
+    -ms-animation: tipscale .6s linear .1s 2 alternate;
+    -o-animation: tipscale .6s linear .1s 2 alternate;
+    animation: tipscale .6s linear .1s 2 alternate
+}
+#danlists ul > li.eggbreak {
+    -webkit-animation: eggbreak .5s;
+    -moz-animation: eggbreak .5s;
+    -ms-animation: eggbreak .5s;
+    -o-animation: eggbreak .5s;
+    animation: eggbreak .5s;
+    animation-fill-mode: forwards;
+}
+
+.eggbreak {
+    -webkit-animation: eggbreak .5s;
+    -moz-animation: eggbreak .5s;
+    -ms-animation: eggbreak .5s;
+    -o-animation: eggbreak .5s;
+    animation: eggbreak .5s;
+    animation-fill-mode: forwards;
+}
+.botBg {
+    background-color: #84b84a;
+    background-size: 100%;
+    width: 100%;
+    height: 5.8rem;
+}
+.przieLogo {
+    position: absolute;
+    background: url(../image/prize.png) no-repeat center center;
+    background-size: 100%;
+    width: 2.1rem;
+    height: 2.1rem;
+    top: 29rem;
+    left: 0;
+    z-index: 2;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 4rem;
+}
+.swiper-slide:nth-child(1) {
+    margin-left: 0.5rem;
+}
+
+.swiper-slide .imgf {
+    width: 19.75rem;
+    height: 4rem;
+    margin: 0.55rem auto 0;
+    display: block;
+}
+.swiper-slide:nth-child(1) .imgf {
+    background: url(../image/libao.png) no-repeat;
+    background-size: 100%;
+}
+@keyframes hammerrotateinit {
+    100%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate3d(0, 0, 1, 15deg)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate3d(0, 0, 1, -15deg)
+    }
+}
+
+@-webkit-keyframes hammerrotateinit {
+    100%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate3d(0, 0, 1, 15deg)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate3d(0, 0, 1, -15deg)
+    }
+}
+
+@keyframes tipscale {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes tipscale {
+    from {
+        -webkit-transform: scale(1)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@-moz-keyframes tipscale {
+    from {
+        -moz-transform: scale(1)
+    }
+    to {
+        -moz-transform: scale(1)
+    }
+}
+@keyframes eggbreak {
+    0%,
+    10%,
+    20%,
+    30% {
+        background: url(../image/jindan1.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    40%,
+    50%,
+    60% {
+        background: url(../image/jindan2.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    70%,
+    80%,
+    90%,
+    100% {
+        background: url(../image/jindan3.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+@-webkit-keyframes eggbreak {
+    0%,
+    10%,
+    20%,
+    30% {
+        background: url(../image/jindan1.png) no-repeat;
+        background-size: 100%;
+    }
+    40%,
+    50%,
+    60% {
+        background: url(../image/jindan2.png) no-repeat;
+        background-size: 100%;
+    }
+    70%,
+    80%,
+    90%,
+    100% {
+        background: url(../image/jindan3.png) no-repeat;
+        background-size: 100%;
+    }
+}
+@keyframes beat {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-15px)
+    }
+}
+
+@-webkit-keyframes beat {
+    from {
+        -webkit-transform: translateY(0)
+    }
+    to {
+        -webkit-transform: translateY(-15px)
+    }
+}

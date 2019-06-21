@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../../common/css/alertCommon.css">
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function FZ(a, b) {
+            function getFZ() {
+                var width = document.documentElement.clientWidth || document.body.clientWidth;
+                if (width > 750) {
+                    width = 750;
+                }
+                var fontSize = (a / b) * width;
+                return fontSize;
+            };
+            document.documentElement.style.fontSize = getFZ() + "px";
+            window.onresize = function () {
+                setTimeout(function () {
+                    document.documentElement.style.fontSize = getFZ() + "px";
+                }, 100);
+            };
+        }
+        FZ(20, 375);
+    </script>
+</head>
+<body id="db-content">
+    <div class="content" id="contant">
+        <div class="rule"></div>
+        <div class="jiang"></div>
+        <div class="counts">剩余次数:<span id="countZa">5</span>次</div>
+        <div class="contain">
+            <div class="person-container">
+                <div class="fish-container">
+                    <div class="pole"></div>
+                    <div class="fishnet">
+                        <img id="showping" src="image/bi.png" style="display: none;">
+                    </div>
+                </div>
+                <div class="persons"></div>
+                <div class="plat"></div>
+            </div>
+            <div class="sea">
+                <div class="prize-container">
+                    <div class="floats"></div>
+                </div>
+            </div>
+            <div class="start" onclick="clickStart()"></div>
+        </div>
+        <a id="hdgg-left-float-image" href="javascript:;" style="font-size:1rem;position:absolute;top:6.2em;left:0;z-index:99;width:3.5em;">
+            <img src="../../common/image/hdgg_zhifubao_entrance.gif" style="width:100%;">
+        </a>
+        <a id="hdgg-right-tixian-image" href="javascript:;" style="font-size:1rem;position:absolute;top:4rem;right:0.525rem;z-index:99;width:2.85rem;color:#eb3d01;">
+            <img src="../../common/image/tixian.png" style="width:100%;">
+            <div class="ti_xian" style="position: absolute;top:0.7rem;right:0rem;width:2.8rem;text-align:center;"><span style="font-size:0.7rem" class="txMoney">100</span><span style="font-size:0.5rem">元</span></div>
+        </a>
+    </div>
+</body>
+</html>

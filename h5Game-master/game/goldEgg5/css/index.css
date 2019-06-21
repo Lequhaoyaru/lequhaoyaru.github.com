@@ -1,0 +1,376 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+    }
+}
+body {
+    background: #260750;
+    color: #333;
+    font-size: 12px;
+    margin:0 auto;
+    font-family: "Microsoft YaHei"
+}
+.bodydiv {
+    height: 23.3rem;
+    padding-top: 8%;
+    background: url(../image/zadanBg.png) no-repeat;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+.title{
+    width:11.6rem;
+    height:4.2rem;
+    background: url("../image/zajindanTitle.png") no-repeat;
+    background-size: 100%;
+    margin:0 auto;
+}
+.rule {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 3.0rem;
+    height: 1.1rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 1;
+    background: url(../../../common/image/rule.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jiang {
+    position: absolute;
+    right: .65rem;
+    top: .5rem;
+    width: 2.6rem;
+    height: 3.25rem;
+    line-height: 1.15rem;
+    text-align: center;
+    font-size: 0.65rem;
+    z-index: 2;
+    background: url(../../../common/image/jiang.png) no-repeat;
+    background-size: 100% 100%;
+}
+.chuizi {
+    position: absolute;
+    right: 0.5rem;
+    top: 9.0rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    z-index: 2;
+    background-image: url(../image/chuizi1.png);
+    background-size: 100% 100%;
+}
+.rotateInit {
+    transform-origin: right bottom;
+    -webkit-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    -moz-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    -ms-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    -o-animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+    animation: hammerrotateinit 3.5s ease-in-out 0s infinite alternate;
+}
+.counts {
+    position: absolute;
+    top: 6rem;
+    left: 33.3%;
+    width: 6.0rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    /* border: 1px solid #fff; */
+    border-radius: 1rem;
+    font-size: 0.7rem;
+}
+.xiangzi {
+    position: absolute;
+    left: 50%;
+    top: 13.2rem;
+    width: 8rem;
+    height: 10.5rem;
+    margin-left:-4rem;
+}
+.xiangzi2 {
+    position: absolute;
+    left: 1%;
+    top: 12.2rem;
+    width: 6.1rem;
+    height: 8rem;
+}
+.xiangzi3 {
+    position: absolute;
+    top: 12.2rem;
+    width: 6.1rem;
+    height: 8rem;
+    right: 1%;
+}
+.xiangzi .egg{
+    width: 6.2rem;
+    height: 8rem;
+    background: url(../image/jindanIcon.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left:-3.1rem;
+    z-index:1;
+}
+.xiangzi .dizuo{
+    width:8rem;
+    height:4rem;
+    background: url(../image/dizuo.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom:0;
+}
+.xiangzi2 .egg,.xiangzi3 .egg{
+    width: 4.6rem;
+    height: 6rem;
+    background: url(../image/jindanIcon.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left:-2.3rem;
+    z-index: 1;
+    top: 5px;
+}
+.xiangzi2 .dizuo,.xiangzi3 .dizuo{
+    width: 6.1rem;
+    height: 3rem;
+    background: url(../image/dizuo.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+.eggbreak .egg{
+    background: url("../image/brokeEgg.png") no-repeat;
+    background-size: 100%;
+}
+.ddong .egg{
+    animation: doudong 0.3s linear;
+}
+.xiangzi .egg.animation{
+    -webkit-animation: animation0 1.0s;
+    -moz-animation: animation0 1.0s;
+    -ms-animation: animation0 1.0s;
+    -o-animation: animation0 1.0s;
+    animation: animation0 1.0s;
+}
+.xiangzi2 .egg.animation{
+    -webkit-animation: animation1 .7s;
+    -moz-animation: animation1 .7s;
+    -ms-animation: animation1 .7s;
+    -o-animation: animation1 .7s;
+    animation: animation1 .7s;
+}
+.xiangzi3 .egg.animation{
+    -webkit-animation: animation2 1.3s;
+    -moz-animation: animation2 1.3s;
+    -ms-animation: animation2 1.3s;
+    -o-animation: animation2 1.3s;
+    animation: animation2 1.3s;
+}
+.starta {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left:-1.5rem;
+    background: url(../image/hit-egg.png) no-repeat center;
+    background-size: 100%;
+    z-index: 2;
+}
+.xiangzi2 .starta,.xiangzi3 .starta{
+    background-size: 80%;
+}
+.swiper-container {
+    position: relative;
+    width: 16.75rem;
+    height: 4rem;
+    color: #fff;
+    margin-top: 18.5rem;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 0.7rem;
+    height: 4.2rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+.swiper-slide:nth-child(1) {
+    margin-left: 0.8rem;
+}
+.swiper-slide div {
+    margin: 0 auto;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+}
+.swiper-slide:nth-child(1) div {
+    background: #fff url(../../goldEgg3/image/288.png) no-repeat center;
+    background-size: 2.8rem;
+}
+.swiper-slide:nth-child(2) div {
+    background: #fff url(../../goldEgg3/image/dzp2_bg2.png) no-repeat center;
+    background-size: 2.8rem;
+}
+.swiper-slide:nth-child(3) div {
+    background: #fff url(../../goldEgg3/image/dzp2_bg5.png) no-repeat center;
+    background-size: 2.8rem;
+}
+.swiper-slide:nth-child(4) div {
+    background: #fff url(../../goldEgg3/image/dzp2_bg3.png) no-repeat center;
+    background-size: 2.8rem;
+}
+.swiper-slide:nth-child(5) div {
+    background: #fff url(../../goldEgg3/image/dzp2_bg6.png) no-repeat center;
+    background-size: 2.8rem;
+}
+.swiper-slide:nth-child(6) div {
+    background: #fff url(../../goldEgg3/image/fudai.png) no-repeat center;
+    background-size: 2.8rem;
+}
+@keyframes hammerrotateinit {
+    100%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate3d(0, 0, 1, 15deg)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate3d(0, 0, 1, -15deg)
+    }
+}
+
+@-webkit-keyframes hammerrotateinit {
+    100%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate3d(0, 0, 1, 15deg)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate3d(0, 0, 1, -15deg)
+    }
+}
+@keyframes doudong {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+@-webkit-keyframes doudong {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+    }
+}
+
+@-moz-keyframes doudong {
+    0%, 100% {
+        -moz-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -moz-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -moz-transform: translateX(10px);
+    }
+}
+
+@-o-keyframes doudong {
+    0%, 100% {
+        -moz-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -o-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -o-transform: translateX(10px);
+    }
+}
+
+@-webkit-keyframes animation0 {
+    0%{
+        transform: rotate3d(1, 0, 0, 0deg) scale(1);
+        top:0;
+    }
+    50% {
+        transform: rotate3d(1, 0, 0, 65deg) scale(0);
+        top:-8rem;
+        background: url(../image/jindanIcon.png) no-repeat;
+        background-size: 100%;
+    }
+    100%{
+        transform: rotate3d(1, 0, 0, 0deg) scale(1);
+        top:0;
+        background: url(../image/jindanIcon.png) no-repeat;
+        background-size: 100%;
+    }
+}
+@-webkit-keyframes animation1 {
+    0%{
+        transform: rotate3d(1, 1, 1, 0deg) scale(1);
+        top:5px;
+        left:50%;
+    }
+    50% {
+        transform: rotate3d(1, 1, 1, 65deg) scale(0);
+        top:-6.3rem;
+        left: 9.4rem;
+        background: url(../image/jindanIcon.png) no-repeat;
+        background-size: 100%;
+    }
+    100%{
+        transform: rotate3d(1, 1, 1, 0deg) scale(1);
+        top:5px;
+        left:50%;
+        background: url(../image/jindanIcon.png) no-repeat;
+        background-size: 100%;
+    }
+}
+@-webkit-keyframes animation2 {
+    0%{
+        transform: rotate3d(1, 1, 1, 0deg) scale(1);
+        top:5px;
+        left:50%;
+    }
+    50% {
+        transform: rotate3d(1, 1, 1, -65deg) scale(0);
+        top:-6.3rem;
+        left: -2.7rem;
+        background: url(../image/jindanIcon.png) no-repeat;
+        background-size: 100%;
+    }
+    100%{
+        transform: rotate3d(1, 1, 1, 0deg) scale(1);
+        top:5px;
+        left:50%;
+        background: url(../image/jindanIcon.png) no-repeat;
+        background-size: 100%;
+    }
+}
