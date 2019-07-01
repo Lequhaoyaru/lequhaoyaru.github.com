@@ -1,0 +1,203 @@
+@media only screen and (min-width: 750px){
+    body {
+        width: 750px!important;
+        margin:0 auto;
+    }
+}
+body {
+    background-color: #feefab;
+}
+#wrap {
+    height:17.8rem;
+    background-image: url("../image/bg.png");
+}
+.title{
+    width:100%;
+    height:7.7rem;
+    background: url("../image/title.png") no-repeat center 0;
+    background-size: 100%;
+    position: relative;
+    z-index: 2;
+}
+.caidai{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:24rem;
+    background: url("../image/caidai.png") no-repeat;
+    background-size: 100%;
+    z-index:3;
+}
+.box{
+    width:100%;
+    position: relative;
+    height:19.6rem;
+    background: url("../image/box.png") no-repeat;
+    background-size: 100%;
+    margin-top:-2rem;
+}
+#hook{
+    position: absolute;
+    left: 50%;
+    top: -6.6rem;
+    z-index: 1;
+    margin-left: -2rem;
+    width: 3.5rem;
+    height: 7rem;
+}
+#hook .line {
+    margin: auto;
+    width: 1.6rem;
+    height: 9rem;
+    background: url(../image/line.png) no-repeat center 0;
+    background-size: contain;
+}
+#hook .left, #hook .right {
+    position: absolute;
+    bottom: -4.4rem;
+    width: 1.4rem;
+    height: 2.8rem;
+}
+#hook .left {
+    left: 0.1rem;
+    background: url(../image/left.png) no-repeat;
+    background-size:100%;
+    -o-transform-origin: right top;
+    -ms-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(-20deg);
+}
+#hook .right {
+    right: 0.1rem;
+    background: url(../image/right.png) no-repeat;
+    background-size:100%;
+    -o-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+#hook .up {
+    -o-animation: up .5s linear forwards;
+    -ms-animation: up .5s linear forwards;
+    -moz-animation: up .5s linear forwards;
+    -webkit-animation: up .5s linear forwards;
+    animation: up .5s linear forwards;
+}
+@keyframes up {
+    100% {
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+/*传送带*/
+.behind, .front {
+    overflow-x: hidden;
+    position: relative;
+    left: 8.5%;
+    top: 32%;
+    width: 83%;
+    height: 3.6rem;
+    background: url(../image/behind.png) no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
+.behind ul, .front ul{
+    width:25.4rem;
+}
+.behind li{
+    position: relative;
+    height:3rem;
+    /*width:162px;*/
+}
+.behind img{
+    position: absolute;
+    width:2.4rem;
+    height:2.7rem;
+}
+.front{
+    height:5rem;
+    background: url(../image/front.png) no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
+.front img{
+    position: absolute;
+    right:0;
+    width:3.2rem;
+    height:3.6rem;
+}
+.front ul{
+    position: absolute;
+    right:0;
+}
+.front li{
+    position: relative;
+    /*width:162px;*/
+    height:4rem;
+}
+.box-btn{
+    width: 100%;
+    position: absolute;
+    bottom: -0.7rem;
+}
+.box-btn #btn{
+    width: 8rem;
+    height: 2.8rem;
+    background: url(../image/start.png) no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.box h3 {
+    margin: 7rem auto 0.24rem;
+    width: 6rem;
+    height: 1.2rem;
+    background-color: #ff9d1b;
+    text-align: center;
+    line-height: 1.2rem;
+    font-size: 0.5rem;
+    font-weight: normal;
+    color: #bc5700;
+    border-radius: 1.2rem;
+}
+.awards {
+    position: static;
+    margin: 1.18rem auto;
+    width: 17.2rem;
+    padding:0.4rem 0;
+    background: url(../image/rect.png) no-repeat;
+    background-size: 100%;
+}
+.awards .swiper-slide {
+    margin: 0.26666667rem 0.26666667rem;
+    padding: 0.2rem;
+    width: 3.0rem;
+    height: 3.0rem;
+    background: url(../../../common/image/icon/drag/drag_box.png) no-repeat;
+    background-size: 100%;
+}
+.awards .swiper-container {
+    overflow: hidden;
+    padding: 0.3rem 0;
+    width: 95%;
+    height: 3.946667rem;
+    background-color: #f5ae4f;
+    box-shadow: 0 0.26666667rem 0.26666667rem rgba(248, 131, 23, 0.7) inset;
+    border-radius: 0.21333333rem;
+}

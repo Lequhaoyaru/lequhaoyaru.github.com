@@ -36,7 +36,7 @@ function win() {
 
 //此处可以在commonjs中合并
 function queryString(name) {
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");//[abcd]-->\[abcd\]
     var regexS = "[\\?&]" + name + "=([^&#]*)";
     var regex = new RegExp(regexS);
     var results = regex.exec(window.location.search);

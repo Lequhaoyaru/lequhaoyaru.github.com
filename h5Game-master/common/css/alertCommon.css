@@ -87,8 +87,8 @@
     left: 50%;
     margin-left: -3.3rem;
     bottom: -3.5rem;
-    -webkit-animation: skip .3s linear infinite alternate;
-    animation: skip .3s linear infinite alternate;
+    /*-webkit-animation: skip .3s linear infinite alternate;
+    animation: skip .3s linear infinite alternate;*/
 }
 #dialog5 .close-btn {
     text-align: center;

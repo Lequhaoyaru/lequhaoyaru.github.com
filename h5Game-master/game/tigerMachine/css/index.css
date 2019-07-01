@@ -47,7 +47,7 @@ body {
     background-size: 100% 100%;
 }
 .laohujiContainer{
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     margin-left: -7.75rem;
@@ -110,4 +110,127 @@ body {
     left: 50%;
     margin-left: -3.5rem;
     z-index: 4;
+}
+.showRewards{
+    width: 11rem;
+    height: 8rem;
+    background: url(../image/rewardsBg.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -6.1rem;
+    left:50%;
+    margin-left:-5.5rem;
+    z-index:3;
+}
+.showRewards .title{
+    color:#c71b0d;
+    font-size:20px;
+    font-weight: bold;
+    padding:0.4rem 0;
+}
+.showRewards ul li{
+    font-size:14px;
+    color:#5d5d5d;
+    padding-left:1rem;
+    line-height:20px;
+}
+
+/*遮罩*/
+.popShowPrize {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .85);
+    display: none;
+    cursor: pointer;
+}
+.showPrize-dialog{
+    position: absolute;
+    width:100%;
+    height:21rem;
+    top:16%;
+    -webkit-animation: showModal .5s ease-in-out;
+    animation: showModal .5s ease-in-out;
+}
+.cardBg{
+    width:18rem;
+    height:18rem;
+    background: url("../image/Coupon.png") no-repeat;
+    background-size: 100%;
+    margin:0 auto;
+}
+.receiveBtn{
+    width:11rem;
+    height:2.5rem;
+    background: url("../image/receiveBtn.png") no-repeat;
+    background-size: 100%;
+    margin:0.5rem auto;
+}
+.resAd{
+    position: absolute;
+    left: 4rem;
+    top: 7.2rem;
+    width: 63.2%;
+}
+.closeBtn{
+    opacity: 0;
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+    z-index: 10;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url(../image/close.png);
+    background-size: 100%;
+    -o-animation: fadein .5s .5s linear forwards;
+    -ms-animation: fadein .5s .5s linear forwards;
+    -moz-animation: fadein .5s .5s linear forwards;
+    -webkit-animation: fadein .5s .5s linear forwards;
+    animation: fadein .5s .5s linear forwards;
+}
+
+@-webkit-keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes fadein {
+    100% {
+        opacity: 1;
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadein {
+    100% {
+        opacity: 1;
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

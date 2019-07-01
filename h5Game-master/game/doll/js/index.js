@@ -52,7 +52,7 @@ $(function () {
         data.count--;
         $("#change").html(data.count);
 
-        var random = Math.floor(Math.random() * 490 + 130);//130 - 620之间随机，因为这两个值是左右边界
+        var random = Math.floor(Math.random() * 675 + 225);//225 - 900之间随机，因为这两个值是左右边界
         $(".left,.right").addClass("up");//张开钩子
 
         $hook.animate({left: random / rem + "rem"}, 1000);//左右值
