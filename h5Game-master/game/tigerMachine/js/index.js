@@ -23,9 +23,9 @@ $(function(){
         TextNum1=parseInt(Math.random()*4);//随机数
         TextNum2=parseInt(Math.random()*4);
         TextNum3=parseInt(Math.random()*4);
-        var num1=[-15,-105,-195,-295][TextNum1];//在这里随机
-        var num2=[-295,-15,-105,-195][TextNum2];
-        var num3=[-295,-15,-105,-195][TextNum3];
+        var num1=[-15,-105,-195,-290][TextNum1];//在这里随机
+        var num2=[-290,-15,-105,-195][TextNum2];
+        var num3=[-290,-15,-105,-195][TextNum3];
         $(".num-con1").animate({"top":-270},1000,"linear", function () {
             $(this).css("top",0).animate({"top":num1},1000,"linear");
         });
