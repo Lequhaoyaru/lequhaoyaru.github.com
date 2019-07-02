@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜拳</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../../common/css/alertCommon.css">
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function FZ(a, b) {
+            function getFZ() {
+                var width = document.documentElement.clientWidth || document.body.clientWidth;
+                if (width > 750) {
+                    width = 750;
+                }
+                var fontSize = (a / b) * width;
+                return fontSize;
+            };
+            document.documentElement.style.fontSize = getFZ() + "px";
+            window.onresize = function () {
+                setTimeout(function () {
+                    document.documentElement.style.fontSize = getFZ() + "px";
+                }, 100);
+            };
+        }
+        FZ(20, 375);
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="rule"></div>
+        <div class="jiang"></div>
+        <div class="count text-c">您还有<span id="countZa">8</span>次机会</div>
+        <div class="top">
+            <img src="./image/bu1.png" alt="">
+        </div>
+        <div class="time">00:<span id="time">10</span></div>
+        <div class="down">
+            <img src="./image/jianzi1.png" alt="">
+        </div>
+        <div class="mine">我方</div>
+        <div class="active">
+            <ul>
+                <li point="0">
+                    <div class="handsWrap shitou"></div>
+                </li>
+                <li point="1">
+                    <div class="handsWrap jianzi"></div>
+                </li>
+                <li point="2">
+                    <div class="handsWrap bu"></div>
+                </li>
+            </ul>
+        </div>
+
+        <a id="hdgg-left-float-image" href="javascript:;" style="font-size:1rem;position:absolute;top:6.2em;left:0;z-index:99;width:3.5em;">
+            <img src="../../common/image/hdgg_zhifubao_entrance.gif" style="width:100%;">
+        </a>
+        <a id="hdgg-right-tixian-image" href="javascript:;" style="font-size:1rem;position:absolute;top:4rem;right:0.525rem;z-index:99;width:2.85rem;color:#eb3d01;">
+            <img src="../../common/image/tixian.png" style="width:100%;">
+            <div class="ti_xian" style="position: absolute;top:0.7rem;right:0rem;width:2.8rem;text-align:center;"><span style="font-size:0.7rem" class="txMoney">100</span><span style="font-size:0.5rem">元</span></div>
+        </a>
+    </div>
+    <div id="mask">
+        <div class="winning reback">
+            <div class="winCon">
+                <div id="card">
+                    <div class="topic">
+                        <img src="https://hdggcdn.bayimob.com/base_img_path_hdggadv/5596/1556702467636_支付宝640-300.gif" alt="">
+                    </div>
+                </div>
+                <span id="close"></span>
+            </div>
+
+            <div class="loseCon">
+                <div class="faceWrap">
+                    <img src="./image/lost.png" alt="">
+                </div>
+                <div class="tip">很遗憾,您输了!</div>
+            </div>
+            <div class="pingCon">
+                <div class="faceWrap">
+                    <img src="./image/ping.png" alt="">
+                </div>
+                <div class="tip">平局，再接再厉!</div>
+            </div>
+
+            <div class="okBtn"></div>
+
+        </div>
+    </div>
+</body>
+</html>

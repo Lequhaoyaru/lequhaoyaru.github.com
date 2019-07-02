@@ -95,7 +95,7 @@ body {
 }
 #hook .right {
     right: 0.3rem;
-    background: url(../image/right.png) no-repeat -28px -5px;
+    background: url(../image/right.png) no-repeat -1.32rem -5px;
     background-size: 195%;
     -o-transform-origin: left top;
     -ms-transform-origin: left top;
