@@ -1,157 +1,189 @@
-@charset "utf-8";
+@media only screen and (min-width: 750px){
+  body {
+    width: 750px!important;
+    margin:0 auto;
+  }
+}
 body {
-  background: #ff605d;
+  background: #db290f;
+  color: #333;
+  font-size: 12px;
+  margin:0 auto;
+  font-family: "Microsoft YaHei"
 }
-#wrap {
-  margin-top: -0.01333333rem;
-  background-image: url("../image/bg.png");
+#wrap{
+  width:100%;
+  height: 33.333333rem;
+  overflow: hidden;
+  position: relative;
+  background: url("../image/Bg.png") no-repeat;
+  background-size: 100%;
 }
-/*三个不同的动画效果*/
-.caidai1,
-.caidai2,
-.caidai3 {
-  opacity: 1;
+.box{
+  width:100%;
+  height:20rem;
   position: absolute;
-  left: 0.53333333rem;
-  top: 3.2rem;
-  width: 1.02666667rem;
-  height: 0.98666667rem;
-  background-image: url("../image/hongbao1.png");
-  -o-animation: caidai1 1s ease-in-out infinite;
-  -ms-animation: caidai1 1s ease-in-out infinite;
-  -moz-animation: caidai1 1s ease-in-out infinite;
-  -webkit-animation: caidai1 1s ease-in-out infinite;
-  animation: caidai1 1s ease-in-out infinite;
+  left:0;
+  top:50%;
+  margin-top:-10rem;
 }
-@keyframes caidai1 {
-  100% {
-    opacity: 0;
-    left: 1.86666667rem;
-    top: 4.53333333rem;
-  }
-}
-.caidai2 {
-  left: 8rem;
-  top: 1.86666667rem;
-  width: 1.26666667rem;
-  height: 1.06666667rem;
-  background-image: url("../image/hongbao2.png");
-  -o-animation: caidai2 1s ease-in-out infinite;
-  -ms-animation: caidai2 1s ease-in-out infinite;
-  -moz-animation: caidai2 1s ease-in-out infinite;
-  -webkit-animation: caidai2 1s ease-in-out infinite;
-  animation: caidai2 1s ease-in-out infinite;
-}
-@keyframes caidai2 {
-  100% {
-    opacity: 0;
-    left: 6.66666667rem;
-    top: 3.2rem;
-  }
-}
-.caidai3 {
-  left: 0;
-  top: 11.46666667rem;
-  width: 1.30666667rem;
-  height: 1.17333333rem;
-  background-image: url("../image/gold.png");
-  -o-animation: caidai3 0.5s ease-in-out infinite alternate;
-  -ms-animation: caidai3 0.5s ease-in-out infinite alternate;
-  -moz-animation: caidai3 0.5s ease-in-out infinite alternate;
-  -webkit-animation: caidai3 0.5s ease-in-out infinite alternate;
-  animation: caidai3 0.5s ease-in-out infinite alternate;
-}
-@keyframes caidai3 {
-  100% {
-    top: 12rem;
-  }
-}
-/*主体*/
-.box {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 10.53333333rem;
-}
-.rule,
-.my {
-  position: absolute;
-  width: 2.2rem;
-  height: 0.66666667rem;
-  background-color: #e04b34;
-  text-align: center;
-  line-height: 0.66666667rem;
-  font-size: 0.29333333rem;
-  font-weight: bold;
-  color: #fff3f0;
-  border-radius: 0.26666667rem;
-}
-.rule {
-  left: 1.66666667rem;
-}
-.my {
-  right: 1.66666667rem;
-}
-/*刮刮乐图层*/
 .panel {
   position: absolute;
   left: 50%;
-  top: 1.8rem;
+  top: 5rem;
   z-index: 1;
-  margin-left: -4rem;
-  width: 8rem;
-  height: 4.66666667rem;
-  background-image: url("../image/panel.png");
+  margin-left: -7.5rem;
+  width: 15rem;
+  height: 9rem;
+  background-image: url(../image/panel.png);
+  background-size: 100% 100%;
 }
 #canvas {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -2.05333333rem 0 0 -3.74666667rem;
+  margin: -3.8rem 0 0 -7rem;
 }
-#canvas-mask {
+.tip{
+  font-size:18px;
+  color:#fff;
+  text-align: center;
+  margin-top:3rem;
+}
+#change{
+  font-size:120%;
+  margin:0 0.4rem;
+}
+#canvas-mask{
+  width: 14.2rem;
+  height: 7.8rem;
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1;
-  width: 7.49333333rem;
-  height: 4.10666667rem;
-  margin: -2.05333333rem 0 0 -3.74666667rem;
+  margin-left: -7.1rem;
+  margin-top: -3.9rem;
 }
 #canvas-mask #btn {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -0.33333333rem 0 0 -1.28rem;
-  width: 2.56rem;
-  height: 0.66666667rem;
-  background-image: url("../image/start.png");
+  margin: -0.75rem 0 0 -3rem;
+  width: 6rem;
+  height: 1.6rem;
+  background: url(../image/start.png) no-repeat;
+  background-size: 100%;
 }
-#canvas-mask p {
-  margin-top: 3.04rem;
-  height: 0.29333333rem;
-  text-align: center;
-  line-height: 0.29333333rem;
-  font-size: 0.29333333rem;
-  color: #fff;
+#mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-/*奖品展示*/
-.awards {
-  bottom: 0.32rem;
-  margin-left: -4.66666667rem;
-  width: 9.33333333rem;
-  height: 2.33333333rem;
-  background-color: #ee3c3a;
-  border-radius: 0.26666667rem;
+#mask .winning {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 17rem;
+  height: 18.4rem;
+  margin: -9.2rem 0 0 -8.5rem;
+  -o-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
 }
-.awards .swiper-slide {
-  margin: 0.26666667rem 0.4rem 0;
+#mask .reback {
+  -o-animation: reback .5s linear forwards;
+  -ms-animation: reback .5s linear forwards;
+  -moz-animation: reback .5s linear forwards;
+  -webkit-animation: reback .5s linear forwards;
+  animation: reback .5s linear forwards;
 }
-/*规则背景色*/
-#mask-rule .box-rule {
-  background-color: #fe5c51;
+@-webkit-keyframes reback {
+  100% {
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
-#mask-rule .box-rule .star {
-  background-image: url("../../../common/image/rule/star2.png");
+@keyframes reback {
+  100% {
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+#close {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: -2rem;
+  z-index: 10;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url(../image/close.png);
+  background-size: 100%;
+  -o-animation: fadein .5s .5s linear forwards;
+  -ms-animation: fadein .5s .5s linear forwards;
+  -moz-animation: fadein .5s .5s linear forwards;
+  -webkit-animation: fadein .5s .5s linear forwards;
+  animation: fadein .5s .5s linear forwards;
+}
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#card{
+  width:100%;
+  height:100%;
+  background: url("../image/redBag.png") no-repeat center;
+  background-size: 145%;
+  position: relative;
+}
+.topic{
+  width:11rem;
+  margin:0 auto;
+}
+.topic>img{
+  margin-top:1rem;
+}
+.okBtn{
+  width: 11rem;
+  height: 2.4rem;
+  background: url(../image/okBtn.png) no-repeat;
+  background-size: 100%;
+  margin: -5rem auto 0;
+  position: relative;
+}
+#dialog5 .caiguang{
+  width:16rem;
+  height:16rem;
+  top:-4rem;
+  left:0.4rem;
 }

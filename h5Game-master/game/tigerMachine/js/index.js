@@ -45,15 +45,7 @@ $(function(){
     }
     function alertCommon(imageUrl) {
         var strs =
-            `<div class="popShowPrize" id="dialog" style="display: block; transform-origin:0 0 0; opacity: 1; transform: scale(1, 1);">
-            <div class="showPrize-dialog">
-            <div class="cardBg">
-            <img src="`+imageUrl+`" alt="" class="resAd">
-            </div>
-            <div class="receiveBtn"></div>
-            <div class="closeBtn"></div>
-            </div>
-            </div>`;
+            '<div class="popShowPrize" id="dialog" style="display: block; transform-origin:0 0 0; opacity: 1; transform: scale(1, 1);"><div class="showPrize-dialog"><div class="cardBg"><img src="`+imageUrl+`" alt="" class="resAd"></div><div class="receiveBtn"></div><div class="closeBtn"></div></div></div>';
         $('body').append(strs);
     }
 

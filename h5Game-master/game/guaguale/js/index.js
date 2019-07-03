@@ -9,7 +9,9 @@ $(function () {
         $change = $("#change"),//剩余次数
         data = {count: 5},//次数
         empty = false,
-        bool = false;//判断是否按下去，true为按下，false未按下
+        bool = false,//判断是否按下去，true为按下，false未按下
+        $mask = $("#mask"),
+        $winning = $(".winning");
 
     //canvas初始化
     init();
@@ -41,7 +43,10 @@ $(function () {
     $btn.click(function () {
         if (data.count > 0) {
             data.count--;//设定中奖的图片
-            $canvas.css("background-image", "url('../../common/image/prize/prize2.png')");
+            $canvas.css({
+                "background-image": "url('https://hdggcdn.bayimob.com/base_img_path_hdggadv/5596/1556702467636_支付宝640-300.gif')",
+                "background-size":"100%"
+            });
             $canvasMask.hide();
         } else {
             alert("没有次数了");
@@ -123,17 +128,16 @@ $(function () {
         }
     }
 
-    //中奖信息提示
-    $("#close,.win,.btn").click(function () {
-        empty = false;
-        init();
-    });
+    function win(){
+        $mask.show();
+        $winning.addClass("reback");
+        //关闭弹出层
+        $("#close,.okBtn").click(function () {
+            $mask.hide();
+            empty = false;
+            init();
+        });
+    }
 
-    //奖品展示
-    var show = new Swiper(".swiper-container", {
-        direction: "horizontal",//水平方向滑动。 vertical为垂直方向滑动
-        loop: false,//是否循环
-        slidesPerView: "auto"//自动根据slides的宽度来设定数量
-    });
 });
 
