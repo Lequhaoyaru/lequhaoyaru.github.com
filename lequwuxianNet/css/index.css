@@ -47,6 +47,10 @@ body{
     min-width: 1200px;
     z-index: 99;
 }
+.header{
+    background:#fff;
+    box-shadow: 0 0 10px #dcdcdc;
+}
 .c-wrapper{
     width:1200px;
     margin:0 auto;
