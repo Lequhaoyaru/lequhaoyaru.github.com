@@ -19,12 +19,17 @@ $(function(){
     });
     $('.parallax-window').parallax();
 
+
     var $services = $(".service li");
     var $partners = $(".partner ul li");
-    $(document).on("scroll",function(){
+    var $servicesTop = $(".service").offset().top;
+    var $partnersTop = $(".partner ul").offset().top;
+    var $Height = $(window).height();
+    $(document).on("scroll",slide);
+    slide();
+    function slide(){
         var scrollTop = $(document).scrollTop();
-        console.log(scrollTop);
-        if(scrollTop >= 900){
+        if($servicesTop - scrollTop <= $Height){
             if(!$services.hasClass("animated")){
                 $services.addClass("animated");
                 $services.eq(0).addClass("fadeInDown");
@@ -33,10 +38,10 @@ $(function(){
 
             }
         }
-        if(scrollTop >= 3400){
+        if($partnersTop - scrollTop <= $Height){
             if(!$partners.hasClass("animated")){
                 $partners.addClass("animated").addClass("fadeInUp");
             }
         }
-    })
+    }
 });
