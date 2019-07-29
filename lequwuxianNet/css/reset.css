@@ -39,10 +39,10 @@ input{
     border:0;
 }
 .fl{
-    float: left;
+    float: left!important;
 }
 .fr{
-    float: right;
+    float: right!important;
 }
 .clear:after {
     display: block;

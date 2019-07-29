@@ -3,6 +3,9 @@ body{
     color:#333;
     font-family: '微软雅黑';
 }
+.pad0{
+    padding:0!important;
+}
 .m-t-60{
     margin-top: 60px !important;
 }
@@ -35,9 +38,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    min-width: 1200px;
     z-index: 99;
-    height: 70px;
 }
 .bottom{
     position: fixed;
@@ -50,10 +51,32 @@ body{
 .header{
     background:#fff;
     box-shadow: 0 0 10px #dcdcdc;
+    height: 70px;
 }
 .c-wrapper{
     width:1200px;
     margin:0 auto;
+}
+.navbar{
+    margin-bottom:0;
+    border: 0;
+    background: rgba(255,255,255,.5);
+}
+.navbar-brand{
+    padding:0;
+    /*height:70px;*/
+}
+.navbar-nav{
+    margin:0;
+}
+.navbar-toggle{
+    height: 56px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.navbar-theme .navbar-toggle .icon-bar{
+    background:#f67c46;
 }
 .logo{
     display: inline-block;
@@ -69,6 +92,7 @@ body{
 .nav li a{
     padding:0;
     color:#333;
+    line-height: 70px;
 }
 .nav li a:hover{
     background-color: transparent;
@@ -93,11 +117,12 @@ body{
     position: relative;
 }*/
 .banner-swiper {
-    height: 614px;
+    /*height: 614px;*/
     position: relative;
     z-index: 2;
+    margin-top:70px;
 }
-.banner-swiper .swiper-pagination{
+/*.banner-swiper .swiper-pagination{
     position: absolute;
     z-index: 3;
     bottom: 40px;
@@ -127,7 +152,7 @@ body{
 .banner-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
     opacity: 1;
     width: 20px;
-}
+}*/
 .classical li{
     float: left;
     width:33.33%;
@@ -233,8 +258,8 @@ body{
     margin-bottom: 200px;
 }
 .service li{
-    width:33.33%;
-    float: left;
+    /*width:33.33%;
+    float: left;*/
     opacity: 0;
 }
 .service .img-wrap{
@@ -308,6 +333,13 @@ body{
     top:50%;
     margin-left:-90px;
     margin-top:-90px;
+}
+.partner .title{
+    margin-top:60px;
+    margin-bottom:50px;
+}
+.partner ul{
+    margin-bottom:100px;
 }
 .partner li{
     width:130px;
@@ -448,7 +480,7 @@ body{
 /*登录*/
 .login-content{
     background:#f1f2f3;
-    padding-bottom:50px;
+    padding-top:102px;
 }
 .login{
     width: 872px;
@@ -512,5 +544,94 @@ body{
     text-align: center;
     margin-top: 30px;
     border-radius: 4px;
+}
+@media (max-width: 768px){
+    .header{
+        height:56px;
+    }
+    .logo{
+        width:130px;
+    }
+    .c-wrapper{
+        width:100%;
+    }
+    .navbar-brand-wrap {
+        display: flex;
+        height: 56px;
+    }
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+    }
+    .navbar-header {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block !important;
+    }
+    .nav li{
+        float: none;
+        font-size:14px;
+    }
+    .nav li a{
+        line-height: 32px;
+    }
+    .nav li a>span{
+        display: none!important;
+    }
+    .banner-swiper{
+        margin-top:56px;
+    }
+    .slogan-wrap .name{
+        font-size:28px;
+    }
+    .slogan-wrap .slogan, .slogan2-wrap .slogan {
+        font-size: 12px;
+    }
+    .title{
+        font-size:20px;
+        padding-top:0;
+    }
+    .title span{
+        font-size:12px;
+        margin-top:10px;
+    }
+    .service{
+        margin-bottom:0;
+    }
+    .service li{
+        margin:50px 0;
+    }
+    .service li .item{
+        padding:0;
+    }
+    .service li .item h2{
+        font-size:18px;
+        margin:0;
+        margin-bottom:10px;
+    }
+    .parallax-window{
+        height:140px;
+        min-width:100%;
+    }
+    .partner li{
+        width:auto!important;
+        margin:10px;
+    }
+    .partner li>img{
+        width:50px;
+        height:50px;
+    }
+    .partner .title {
+        margin-top: 54px;
+        margin-bottom: 14px;
+    }
+    .partner ul{
+        margin-bottom:36px;
+    }
+    .lq_links_box p,.lq_links_box a{
+        font-size:12px;
+        padding:0 4px;
+    }
 }
 

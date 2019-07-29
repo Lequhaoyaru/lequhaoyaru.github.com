@@ -1,5 +1,5 @@
 $(function(){
-    var mySwiper = new Swiper('#banner',{
+    /*var mySwiper = new Swiper('#banner',{
         loop: true,
         speed:600,
         grabCursor : true,
@@ -12,11 +12,11 @@ $(function(){
             el:'.swiper-pagination',
             clickable :true,
         },
-        /*navigation: {
+        /!*navigation: {
             nextEl: '.arrow-right',
             prevEl: '.arrow-left',
-        },*/
-    });
+        },*!/
+    });*/
     $('.parallax-window').parallax();
 
 
@@ -25,6 +25,8 @@ $(function(){
     var $servicesTop = $(".service").offset().top;
     var $partnersTop = $(".partner ul").offset().top;
     var $Height = $(window).height();
+    var $Width = $(window).width();
+
     $(document).on("scroll",slide);
     slide();
     function slide(){
