@@ -1615,6 +1615,7 @@ body{
     border-radius: 0;
     font-size: 14px;
     color:#1c1c1c;
+    background: transparent;
 }
 #inputAddress input::-webkit-input-placeholder{
     font-size: 14px;
@@ -1683,5 +1684,33 @@ body{
     height:20px;
     line-height: 20px;
     font-size: 16px;
+}
+.common-btn-op {
+    height: 24px;
+    border: 1px solid #f60;
+    font-size: 13px;
+    color: #f60;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 3px;
+    margin-right: 3px;
+    padding: 1px 6px;
+}
+#textareaDiv{
+    width: 100%;
+    padding-top: 10px;
+    display:none;
+    border-top: 0.8rem solid #ededed;
+}
+#textareaDiv textarea{
+    border:none;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    width: 96%;
+    font-size: 14px;
+    color: gray;
+    resize: none;
+    outline: none;
+    line-height:20px;
 }
 

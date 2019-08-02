@@ -89,6 +89,13 @@
                 <textarea id="addrInput" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="粘贴地址信息，自动拆分姓名，电话和地址" class="weui-textarea" onchange="smart()"></textarea>
             </div>
         </div>
+        <div id="textareaDiv" class="text-c">
+            <textarea id="orderInfo" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="" class="weui-textarea" rows="10"></textarea>
+        </div>
+        <div style="width: 70px; position: absolute; right: 10px; top: 9.5rem; height:20px;vertical-align:middle;" class="common-btn-op" onclick="exportImport()">
+            <img alt="" src="img/export_import.png" class="fl " style="width:16px;height:16px;">
+            <font size="2" class="fl" id="export_import_type" data-selected="0">批量导入</font>
+        </div>
 
         <div class="clear" id="footer">
             <button class="fl" onclick="history.go(-1)" id="cancelOrder">取消</button>
@@ -106,6 +113,23 @@
         /*console.log(parse('河北省石家庄市藁城区南董镇西洼村郝亚茹15801458335'));*/
     </script>
     <script>
+        var placeholder = '内容格式\n广东省深圳市龙岗区坂田街道雅园路101号，张三，13912345678，2\n提示:\n1.一条记录一行\n2.订单信息要按照【地址+逗号+姓名+逗号+电话号码+逗号+数量】的顺序排列\n3.地址的格式为：xx省xx市xx区xxx';
+        $('#orderInfo').val(placeholder);
+        $('#orderInfo').focus(function() {
+            if ($(this).val() == placeholder){
+                $(this).val('');
+            }
+        });
+        $('#orderInfo').blur(function() {
+            if ($(this).val() == '') {
+                $(this).val(placeholder);
+            }
+        });
+
+        function place(){
+            return '内容格式\n广东省深圳市龙岗区坂田街道雅园路101号，张三，13912345678，2\n提示:\n1.一条记录一行\n2.订单信息要按照【地址+逗号+姓名+逗号+电话号码+逗号+数量】的顺序排列\n3.地址的格式为：xx省xx市xx区xxx';
+        }
+
         $(".container").height($(window).height());
         parseArea(areaList);
         areaList.forEach(province=>{
@@ -160,7 +184,7 @@
                     $("#province").val(userAdress.province)
                 };
                 if(userAdress.city!=""){
-                    $("#city").css({
+                    $("#city").html('<option value="请选择">—请选择—</option>').css({
                         "display":"block",
                         "width":"33%"
                     });
@@ -170,7 +194,7 @@
                     });
                 }
                 if(userAdress.district!=""){
-                    $("#district").css("display","block");
+                    $("#district").html('<option value="请选择">—请选择—</option>').css("display","block");
                     userAdress["distList"].forEach(dist=>{
                         var option = '<option value="'+dist+'" '+(dist==userAdress.district?"selected":"")+'>'+dist+'</option>';
                         $("#district").append(option);
@@ -232,6 +256,21 @@
                 $('#num').val(num_min);
             }
 
+        }
+        function exportImport(){
+            var isSelected = $("#export_import_type").attr("data-selected");
+            if (isSelected != '2') {//单个导入
+                isSelected = 2;
+                $("#textareaDiv").show();
+                $("#inputAddress").hide();
+                $("#export_import_type").text("单个导入");
+            }else{
+                isSelected = 1;
+                $("#inputAddress").show();
+                $("#textareaDiv").hide();
+                $("#export_import_type").text("批量导入");
+            }
+            $("#export_import_type").attr("data-selected", isSelected);
         }
     </script>
 
