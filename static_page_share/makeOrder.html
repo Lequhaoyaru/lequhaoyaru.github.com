@@ -115,7 +115,7 @@
         $("#province").unbind('chnage').on('change',function(){
             $("#province").css("width","34%");
             $("#district").css("display","none");
-            $("#city").css("display","block");
+            $("#city").html('<option value="请选择">—请选择—</option>').css("display","block");
 
             var province = $("#province option:selected").val();
             var index = $("#province option:selected").index();
@@ -127,8 +127,7 @@
         $("#city").unbind('chnage').on('change',function(){
 
             $("#city").css("width","33%");
-            $("#district").css("display","block");
-            /*$("#district").html('<option value="请选择">—请选择—</option>');*/
+            $("#district").html('<option value="请选择">—请选择—</option>').css("display","block");
             var province = $("#province option:selected").val();
             var city = $("#city option:selected").val();
             var pindex = $("#province option:selected").index();
