@@ -127,17 +127,19 @@
         $("#city").unbind('chnage').on('change',function(){
 
             $("#city").css("width","33%");
-            /*$("#district").html('<option value="请选择">—请选择—</option>').css("display","block");*/
+            $("#district").html('<option value="请选择">—请选择—</option>');
             var province = $("#province option:selected").val();
             var city = $("#city option:selected").val();
             var pindex = $("#province option:selected").index();
             var cindex = $("#city option:selected").index();
             if(areaList[pindex-1]["city"][cindex-1]["area"].length){
-                $("#district").html('<option value="请选择">—请选择—</option>').css("display","block");
+                $("#district").css("display","block");
                 areaList[pindex-1]["city"][cindex-1]["area"].forEach(district=>{
                     var option = '<option value="'+district+'">'+district+'</option>';
                     $("#district").append(option);
                 })
+            }else{
+                $("#district").css("display","none");
             }
 
 
