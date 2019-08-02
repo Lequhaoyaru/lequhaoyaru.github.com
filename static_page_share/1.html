@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+        <title>WECHAT_EMPTY_TITLE</title>
+        <link rel="stylesheet" type="text/css" href="css/page/style.css">
+        <link rel="stylesheet" type="text/css" href="css/page/liebiaoye.css">
+        <link rel="stylesheet" type="text/css" href="css/page/shoujisc.css">
+        <link rel="stylesheet" type="text/css" href="css/page/gxhz.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <style id="__WXWORK_INNER_SCROLLBAR_CSS">
+            ::-webkit-scrollbar {width: 12px !important; height: 12px !important;}
+            ::-webkit-scrollbar-track:vertical {  }
+            ::-webkit-scrollbar-thumb:vertical { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip:content-box !important; border:2px solid transparent !important; }
+            ::-webkit-scrollbar-track:horizontal {  }
+            ::-webkit-scrollbar-thumb:horizontal { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important;background-clip: content-box !important; border:2px solid transparent !important; }
+            ::-webkit-resizer { display: none !important; }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/page/showTip.css">
+        <script type="text/javascript" src="js/showTip.js"></script>
+        <script type="text/javascript" src="js/gxhz.js"></script>
+        <script type="text/javascript" src="js/layer.js"></script>
+        <link rel="stylesheet" href="css/page/layer.css" id="layui_layer_skinlayercss">
+        <script src="js/area-list.js"></script>
+        <script src="js/address-parse.js"></script>
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .hlong * {
+                display: inline-block;
+                vertical-align: middle
+            }
+
+            .tooltip-icon {
+                width:17px;
+                height: 17px;
+                background: url(img/xxxx.png) no-repeat 0 center;
+                background-size: 17px;
+            }
+
+            .xq_box {
+
+                width: 70%;
+                min-height: 200px;
+                background: #ffffff;
+                z-index: 2;
+                position: absolute;
+                left: 15%;
+
+                margin-top: 5px;
+                display: none;
+                font-size: 14px;
+                padding: 10px;
+                height: 270px;
+                overflow: scroll;
+            }
+
+            #bj {
+
+                display: none;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.1);
+                z-index: 1;
+            }
+
+            .lists {
+                width: 94%;
+                margin-left: 3%;
+                height: 66px;
+                overflow-y: scroll;
+                position: absolute;
+            }
+
+            .lists p {
+                height: 22px;
+                float: left;
+            }
+
+            .lists p:hover {
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .listImg
+            {
+                width: 10%;
+            }
+
+            .listImg img {
+                float: right;
+                width: 18px;
+                height: 18px;
+            }
+
+            #tips {
+                position: absolute;
+
+                height: 68px;
+                width: 98%;
+                left: 1%;
+                font-size: 12px;
+                color: gray;
+                display: none;
+                top: 68px;
+
+                background: #ffffff;
+            }
+
+            #tips p {
+                line-height: 14px;
+            }
+        </style>
+    </head>
+    <body id="wrap">
+        <div class="order" style="width: 100%; height: 138px; overflow: hidden;">
+            <ul class="order-right" style="overflow: hidden">
+                <input type="hidden" id="goods_id" value="153">
+                <li class="order-con-right-con">
+
+                    <div class="order-right-con-img" id="goods_img">
+                        <img src="img/1564054861097.png">
+                    </div>
+                    <div class="order-right-con-p" id="goods_info" style="width: 316px; height: 130px;">
+                        <p class="p1 p-txt"><a>贵州-安龙小米蕉</a></p>
+                        <p class="p2 p-txt">零售：<span>23.9</span>&nbsp;分销商：<span>20.0</span>&nbsp;&nbsp;规格：约5斤&nbsp;&nbsp;库存：1317</p>
+                        <p class="p3 p-txt f-l hlong">
+                            <font>运费：包邮</font>
+                            <a href="javascript:;" style="color: #bfbfbf" class="xq"><i class="tooltip-icon"></i><span style="height: 17px; line-height: 17px;">详情</span></a>
+                        </p>
+
+                        <p class="p3 p-txt" style="clear:both; color: #f60">
+                            <span class="price-2"> 不可到：甘肃省，黑龙江省，吉林省，辽宁省，内蒙古自治区，宁夏回族自治区，青海省，西藏自治区，新疆维吾尔自治区</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="xq_box">
+            <p class="p3 p-txt f-l">运费：包邮</p>
+            <p class="p3 p-txt" style="clear: both; color: #f60"><span class="price-2"> 不可到：甘肃省，黑龙江省，吉林省，辽宁省，内蒙古自治区，宁夏回族自治区，青海省，西藏自治区，新疆维吾尔自治区</span></p>
+        </div>
+
+        <div id="tips" style="padding-top: 2px">
+            <div class="f-l" style="width: 94%;">
+                <p>内容格式 : 广东省深圳市龙岗区坂田街道雅园路101号，张三，13912345678，2</p>
+                <p>1、订单信息要按照【地址+逗号+姓名+逗号电话+逗号数量】 的顺序排列；</p>
+                <p>2、亲，多条订单请换行哦！</p>
+            </div>
+            <div class="f-r" style="width: 6%;">
+                <a href="javascript:tips()"><img alt="" src="img/qc.png" style="width: 20px; height: 20px;"></a>
+            </div>
+        </div>
+
+        <div id="inputDiv">
+            <input placeholder="姓名" id="name" class="keyword"><br>
+            <input placeholder="电话" id="tel" class="keyword"><br>
+            <div style="border-bottom: 1px solid #d6d6d6; height: 44px">
+                <select id="province" name="province" class="input-text" style="padding-left: 5px; width: 100%;">
+                    <option value="0">请选择省</option>
+                    <option value="34">安徽省 </option>
+                    <option value="11">北京市</option>
+                    <option value="35">福建省</option>
+                    <option value="62">甘肃省</option>
+                    <option value="44">广东省</option>
+                    <option value="45">广西壮族自治区</option>
+                    <option value="52">贵州省</option>
+                    <option value="46">海南省</option>
+                    <option value="13">河北省</option>
+                    <option value="41">河南省</option>
+                    <option value="23">黑龙江省</option>
+                    <option value="42">湖北省</option>
+                    <option value="43">湖南省</option>
+                    <option value="22">吉林省</option>
+                    <option value="32">江苏省</option>
+                    <option value="36">江西省</option>
+                    <option value="21">辽宁省</option>
+                    <option value="15">内蒙古自治区</option>
+                    <option value="64">宁夏回族自治区</option>
+                    <option value="63">青海省</option>
+                    <option value="37">山东省</option>
+                    <option value="14">山西省</option>
+                    <option value="61">陕西省</option>
+                    <option value="31">上海市</option>
+                    <option value="51">四川省</option>
+                    <option value="12">天津市</option>
+                    <option value="54">西藏自治区</option>
+                    <option value="65">新疆维吾尔自治区</option>
+                    <option value="53">云南省</option>
+                    <option value="33">浙江省</option>
+                    <option value="50">重庆市</option>
+                </select>
+                <select id="city" name="city" class="input-text" style="display:none"></select>
+                <select id="district" name="district" class="input-text" style="display:none"></select>
+            </div>
+            <input placeholder="详细地址" id="area"><br>
+            <div style="width: 100%;float: left; padding: 12px 0px 0px 5px;height: 30px;border-bottom: 1px solid #d6d6d6;">
+                <a href="javascript:;" onclick="min()" style="float: left"> <img src="img/22.png" style="width: 20px; height:20px">
+                </a>
+                <input type="text" value="1" id="num" style="height: 22px; width: 15%; border: 0; float:
+        left; line-height: 22px; text-align: center; padding: 0 5px;">
+                <a href="javascript:;" onclick="plus()" style="float: left"> <img src="img/11.png" style="width: 20px; height: 20px"></a>
+            </div>
+
+            <div style="clear: left;"></div>
+            <div id="addrDiv" style="padding-top: 5px;height: 45px;position:
+        absolute;width: 94%;">
+                    <textarea id="addrInput" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="粘贴地址信息，自动拆分姓名，电话和地址" class="weui-textarea" onchange="smart()" style="overflow: scroll; overflow-wrap: break-word; width: 100%;height: 42px;font-size:14px;"></textarea>
+            </div>
+        </div>
+
+        <div style="width: 100%; text-align: center; margin-top: 5px; display:none;" id="textareaDiv">
+                <textarea id="orderInfo" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="" class="weui-textarea" style="overflow: scroll; overflow-wrap: break-word; width: 96%; font-size: 14px; color: gray; height: 382px;"></textarea>
+        </div>
+
+        <div class="lists" id="list"></div>
+        <div style="width: 70px; position: absolute; right: 10px; top: 115px; height:20px;vertical-align:middle;" class="common-btn-op" onclick="exportImport()">
+            <img alt="" src="img/export_import.png" class="f-l " width="16px">
+            <font size="2" class="f-l" id="export_import_type" data-selected="0">批量导入</font>
+        </div>
+
+        <div class="order-info3" id="footer" style="top: 627px;">
+            <button class="if3-btnn if3-btn2 f-l" onclick="history.go(-1)">取消</button>
+            <button class="if3-btnn if3-btn1 f-l" onclick="upload()" id="sendOrder">下单</button>
+        </div>
+        <div id="bj" style=""></div>
+
+        <script type="text/javascript">
+
+            $('.order-info3').css('top', ($(window).height() - 60) + "px");
+            var placeholder = '内容格式\n广东省深圳市龙岗区坂田街道雅园路101号，张三，13912345678，2\n提示:\n1.一条记录一行\n2.订单信息要按照【地址+逗号+姓名+逗号+电话号码+逗号+数量】的顺序排列\n3.地址的格式为：xx省xx市xx区xxx';
+            $('#orderInfo').val(placeholder);
+            $('#orderInfo').css("color","gray");
+
+            var h=0;
+            var divH = 0;
+            var top = 0;
+            $('#orderInfo').focus(function() {
+                if ($(this).val() == placeholder){
+                    $(this).val('');
+                    $(this).css("color","initial");
+                    h=$(this).height();
+
+                }
+                $(window).scrollTop($('#orderInfo').offset().top-$('#tips').height()-5);
+                $(this).css("height",(h-$(window).height()/3.5));
+                $("#tips").show();
+                $(".lists").css("top",150 + $("textarea#orderInfo").height() + "px");
+            });
+            $('#orderInfo').blur(function() {
+                if ($(this).val() == '') {
+                    $(this).val(placeholder);
+                    $(this).css("color","gray");
+                    $(this).css("height",h);
+                }
+                if($("#list").html() == '') {
+                    $("#orderInfo").css("height",h);
+                }
+
+                $(window).scrollTop(0);
+                $("#tips").hide();
+            });
+
+            $('.keyword').focus(function() {
+                $("#inputDiv").animate({top:"-110px"});
+                $(".lists").animate({top:"270px"});
+            });
+
+
+            $('.keyword').blur(function() {
+                $("#inputDiv").animate({top:"0"});
+                $(".lists").animate({top:"425px"});
+                setTimeout(function() {
+                    $("#addrDiv").css("display", "block");
+
+                }, 100);
+
+            });
+
+            function resize() {
+                var width = $(window).width();
+
+                var height = $(window).height();
+                $("#goods_info").css("width", (width - 160) + "px");
+
+                $("#goods_info").css("height", 130 + "px");
+                var textHeight = height - 145 - 60 - 20 -80;
+
+                $("#orderInfo").css("height", textHeight);
+            }
+
+            $('.keyword').bind('input', function () {
+
+                $("#addrDiv").css("display", "none");
+                $('.lists').empty();
+                var name = $('#name').val();
+                var tel = $('#tel').val();
+                var keyword;
+                if(name!=null && name!=""){
+                    keyword = name;
+
+                }else if(tel!=null && tel!=""){
+                    keyword = tel;
+                }
+                $.ajax({
+
+                    type: 'GET',
+                    url: '/page/gxhz/queryContact.html?keyword='+ encodeURIComponent(encodeURIComponent(keyword)),
+
+                    success: function(jsonStr){
+                        $('.lists').empty();
+
+                        var result = '';
+                        var data = eval('(' + jsonStr + ')');
+                        if(data!="" && data.length>0){
+                            for(var i=0; i<data.length; i++){
+
+                                var addr = data[i].name+','+data[i].tel+','+data [i].address
+                                addr = addr.replace(/\s*/g, '');
+                                result +='<p onclick=pclick("","'+addr+'") style="width: 90%;" id="'+data[i].id+'">'+data[i].name+'&nbsp;'+data[i].tel+'</p><p class="listImg" id="img'+data[i].id+'" onclick=del('+data[i].id+')><img src="/page/images/sjsc-10.gif" /></p><div style="clear: both;"></div>'
+                            }
+
+                        }
+                        $('.lists').append(result);
+
+                    },
+                    error: function(xhr, type){
+                        showTip("系统错误，请稍后再试！");
+                    }
+
+                });
+            });
+
+            $('textarea#orderInfo').bind('input', function () {
+
+                $('.lists').empty();
+                var orderInfo = $('#orderInfo').val();
+                var orderInfos = orderInfo.split('\n');
+
+                var correctLength = 0;
+                var index = 0;
+                var totalnum = 0;
+                for (var i = 0; i < orderInfos.length; i++) {
+                    index++;
+
+                    var orderInfoStr = orderInfos[i];
+                    var orderInfoStr = orderInfoStr.replace('\r', '');
+
+                    if (orderInfoStr.length == 0) {
+                        continue;
+                    }
+
+                    orderInfoStr = orderInfoStr.replace(new RegExp('，', 'g'), ',');
+
+                    var orders = orderInfoStr.split(',');
+                    var time = 2000;
+                    if (orders.length == 1) {
+
+                        var keyword = orders[0];
+
+                        $.ajax({
+                            type: 'GET',
+                            url: '/page/gxhz/queryContact.html?keyword='+
+                            encodeURIComponent(encodeURIComponent(keyword)),
+
+                            success: function(jsonStr){
+                                $('.lists').empty();
+                                var result = '';
+                                var data = eval('(' + jsonStr + ')');
+
+                                if(data!="" && data.length>0){
+
+                                    for(var i=0; i<data.length; i++){
+
+                                        var addr = data[i].address+','+data[i].name+','+data[i].tel+','
+
+                                        addr = addr.replace(/\s*/g, '');
+                                        result +='<p onclick=pclick('+index+',"'+addr+'") style="width: 90%;" id="'+data[i].id+'">'+data[i].name+'&nbsp;'+data[i].tel+'</p><p class="listImg" id="img'+data[i].id+'" onclick=del('+data[i].id+')><img src="/page/images/sjsc-10.gif" /></p><div style="clear: both;"></div>'
+                                    }
+
+                                }
+                                $('.lists').append(result);
+                            },
+
+                            error: function(xhr, type){
+                                showTip("系统错误，请稍后再试！");
+
+                            }
+                        });
+
+                    }
+                }
+            });
+
+
+            function upload() {
+                time = 2000;
+                var goods_id = $('#goods_id').val();
+                var orderInfo = $('#orderInfo').val();
+                var isSelected = $("#export_import_type").attr("data-selected");
+                if (isSelected == '2'){//批量导入
+                    var orderInfos = orderInfo.split('\n');
+                    if (orderInfo == '' || orderInfos.length == 0 || orderInfo==placeholder) {
+                        showTipWithTime('请输入订单信息',2000);
+                        return;
+                    }
+                    var correctLength = 0;
+
+                    var index = 0;
+                    var totalnum = 0;
+                    orderInfo = "";
+                    for (var i = 0; i< orderInfos.length; i++) {
+                        index++;
+                        var orderInfoStr =orderInfos[i];
+
+                        orderInfo +=orderInfoStr.replace(/\s*/g, '') + '\n';
+
+                        var orderInfoStr = orderInfoStr.replace('\r', '');
+                        if (orderInfoStr.length == 0) {
+                            continue;
+                        }
+                        orderInfoStr = orderInfoStr.replace(new RegExp('，', 'g'), ',');
+                        orderInfoStr = orderInfoStr.replace(/\s*/g, '');
+
+                        var orders = orderInfoStr.split(',');
+                        var time = 2000;
+                        if(orders.length != 4) {
+                            if (orders.length == 1) {
+                                showTipWithTime('第' + index + '行缺少收件人，手机号和数量', time);
+                                return;
+
+                            } else if (orders.length == 2) {
+                                showTipWithTime('第' + index + '行缺少手机号和数量', time);
+                                return;
+
+                            } else if (orders.length == 3) {
+                                showTipWithTime('第' + index + '行缺少数量', time);
+                                return;
+                            }else {
+                                showTipWithTime('第' + index + '行的格式不对', time);
+                                return;
+
+                            }
+                        } else {
+                            var address = orders[0];
+                            if (address.length < 8) {
+                                showTipWithTime('第' + index + '行的地址不正确,地址格式为[xx]省 [xx]市 [xx]区 [xx]', time);
+                                return;
+                            }
+
+
+                            var excludeRegionLabel="甘肃省，黑龙江省，吉林省，辽宁省，内蒙古自治区，宁夏回族自治区，青海省，西藏自治区，新疆维吾尔自治区";
+                            excludeRegionLabel = excludeRegionLabel.replace(new RegExp('，', 'g'),',');
+                            if(excludeRegionLabel!="" && excludeRegionLabel!=null){
+
+                                var labels = excludeRegionLabel.split(",");
+                                for(var m=0;m<labels.length;m++){
+                                    var label = labels[m];
+
+                                    if(label.length>2){
+                                        label = label.substr(0,2);
+                                    }
+                                    if(address.indexOf(label)==0){
+                                        showTipWithTime('第' + index + '行的地址不配送', time);
+                                        return;
+                                    }
+                                }
+
+                            }
+                            var name = orders[1];
+                            if (name.length == 0) {
+                                showTipWithTime('第' + index + '行的收件人不正确', time);
+                                return;
+
+                            }
+                            var tel = orders[2];
+                            tel = tel.dbc2sbc()
+                            tel = tel.replace(/[^\d]/g, "");
+
+                            if (!checkPhone(tel) && !checkTel(tel)) {
+                                showTipWithTime('第' + index + '行的电话号码不正确, 如果是手机号必须为11位的数字',time);
+                                return;
+
+                            }
+
+                            var num = orders[3];
+                            num = num.dbc2sbc();
+                            num = num.replace(/[^0-9]/g,'');
+
+                            if (num.length == 0) {
+                                showTipWithTime('第' + index + '行的数量不对', time);
+
+                                return;
+                            } else {
+
+                                if (!checkNum(num)) {
+                                    showTipWithTime('第' + index + '行的数量必须为数字', time);
+                                    return;
+                                }
+
+                                totalnum+=parseInt(num);
+                            }
+
+                        }
+                    }
+                    $("#sendOrder").attr("disabled",true);
+
+                }else{
+                    var name = $("#name").val();
+                    if (name.trim()=="") {
+                        showTip('收件人不正确', time);
+                        return;
+                    }
+
+
+                    var tel = $("#tel").val();
+                    /* tel = tel.dbc2sbc() */
+
+                    tel = tel.replace(/[^0-9]/g,'');
+                    if (!checkPhone(tel) && !checkTel(tel)) {
+
+                        showTipWithTime('电话号码不正确, 如果是手机号必须为11位的数字',time);
+                        return;
+                    }
+
+                    var province = $("#province option:selected").text();
+                    var city = $("#city option:selected").text();
+                    var district = $("#district option:selected").text();
+
+                    if($("#province option:selected").val()==0){
+                        showTipWithTime('请选择省份',time);
+
+                        return;
+                    }else if($("#city option:selected").val()==0){
+                        showTipWithTime('请选择城市',time);
+                        return;
+                    }
+                    else if($("#district option:selected").val()==0){
+                    showTipWithTime('请选择区县',time);
+
+                    return;
+                }
+                var area = $("#area").val();
+                if(area==null ||
+                    area==""){
+                    showTipWithTime('请填写详细地址',time);
+                    return;
+
+                }
+                var num = $("#num").val();
+                var totalnum = num;
+                orderInfo = province+city+district+area+","+name+","+tel+","+num
+                orderInfo = orderInfo.replace(/\s*/g, '');
+
+            }
+
+            $.ajax(
+                {
+                    url : '/page/gxhz/orderUpload.html',
+                    type : 'post',
+                    data : 'goods_id=' + goods_id + "&orderInfo=" + encodeURIComponent(orderInfo)+ "&totalnum=" + totalnum + "&import_type=" + isSelected,
+                    success : function(jsonStr){
+
+                        $("#sendOrder").attr("disabled",false);
+                        var data = eval('(' + jsonStr +')');
+                        console.log(data);
+                        if (data.success==1) {
+                            if (confirm("一共创建了" + data.messege + "条记录，现在是否要查看？")) {
+                            window.location.href = '/page/gxhz/orderList.html?type=1&whose=self';
+                        }
+                        }else if(data.success==0){
+                            if (data.messege!=null) {
+
+                                confirm(data.messege);
+                            }
+                        }else {
+                            showTip("创建失败，请重试！");
+                        }
+
+                    },
+                    error : function(){
+                        $("#sendOrder").attr("disabled",false);
+
+                    }
+            });
+            setTimeout( function(){
+                $("#sendOrder").attr("disabled",false);
+            }, 10000);
+            }
+
+            function checkPhone(phone){
+                if(!(/^1(3|4|5|6|7|8|9)\d{9}$/.test(phone))){
+                    return false;
+                }
+                return true;
+            }
+
+
+            function checkTel(tel){
+                if(!/^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test(tel)){
+                    return false;
+
+                }
+                return true;
+            }
+
+            function checkNum(input) {
+                //判断正整数
+
+                var re = /^\d+$/;
+                if (re.test(input)) {
+                    return true;
+                } else {
+
+                    return false;
+                }
+            }
+            resize();
+
+            function pclick(index,addr){
+
+                $("#province").css("width","34%");
+                if(index!=""){
+                    var orderInfo = $('#orderInfo').val();
+
+                    var orderInfos = orderInfo.split('\n');
+                    orderInfos[index-1]=addr;
+                    var
+                        newinfo =  orderInfos[index-1];
+                    var replace = orderInfos.splice((index-1),1,newinfo);
+
+                    var sub = orderInfos.join("\n");
+                    $('#orderInfo').val('')
+                    $('#orderInfo').val(sub);
+                }else{
+                    $("#city").css("display","none");
+
+                    $("#district").css("display","none");
+                    getRelationByAddress(addr);
+                }
+            }
+
+
+            String.prototype.dbc2sbc = function (){
+                var result = '';
+                var str =this;
+
+                for(var i=0;i<str.length;i++){
+                    var code = str.charCodeAt(i);
+                    if(code >= 65281
+                        && code <= 65373){
+                        result += String.fromCharCode(str.charCodeAt(i) - 65248);
+                    }
+
+                    else if(code == 12288){
+                        result += String.fromCharCode(str.charCodeAt(i) - 12288 + 32);
+
+                    }else if(code<=128) {
+                        result += str.charAt(i);
+                    }
+
+
+                }
+                return result;
+            }
+
+            $(function(){
+                var tips;
+
+                $('i.tooltip-icon').on({
+                    mouseenter:function(){
+                        var that = this;
+                        tips =layer.tips("运费详情",that,{tips:[3,'#ff5202'],time:3000,});
+                    }
+                });
+                var isSelected =
+                    $("#export_import_type").attr("data-selected");
+                if (isSelected == '2') {//批量导入
+                    $("#textareaDiv").show();
+                    $("#inputDiv").hide();
+                }else{
+
+                    $("#inputDiv").show();
+                    $("#textareaDiv").hide();
+                }
+
+                if($("#province option:selected").val()==0){
+                    $("#province").css("width","100%");
+                }
+                $("#province").change(function(){
+                    $("#province").css("width","34%");
+                    $("#city").css("display","block");
+                    $("#district").css("display","none");
+
+                    $("#city").html("");
+                    var parentRefCodeDomain = "PROVINCE";
+
+                    var childRefCodeDomain = "CITY";
+                    var refCode = $("#province option:selected").val();
+
+                    if(refCode!=0){
+                        getParentRelation(parentRefCodeDomain,childRefCodeDomain,refCode,"city");
+
+                    }else{
+                        $("#province").css("width","100%");
+
+                        $("#city").css("display","none");
+                        $("#district").css("display","none");
+                    }
+
+
+                })
+
+                $("#city").change(function(){
+
+                    $("#city").css("width","33%");
+                    $("#district").css("display","block");
+
+                    $("#district").html("");
+                    var result = '';
+                    var
+                        parentRefCodeDomain = "CITY";
+                    var childRefCodeDomain = "AREA";
+                    var refCode =
+                        $("#city option:selected").val();
+                    getParentRelation(parentRefCodeDomain,childRefCodeDomain,refCode,"district");
+                })
+            })
+
+            $(".xq").click(function(){
+                $(".xq_box").css("display", "block");
+                $("#bj").show();
+            });
+            $("#bj").click(function(){
+                $(".xq_box").css("display", "none");
+                $("#bj").hide();
+            });
+
+
+
+
+            function del(id){
+                if(confirm("是否确定删除这条记录？")){
+                    $.ajax({
+
+                        type: 'POST',
+                        url: '/page/gxhz/delete.html?id='+id,
+                        success: function(jsonStr){
+                            var result = '';
+
+                            var data = eval('(' + jsonStr + ')');
+                            if(data!=""){
+
+                                if(data.result>0){
+                                    showTip("删除成功！");
+
+                                    $("#"+id).remove();
+                                    $("#img"+id).remove();
+
+                                }else {
+                                    showTip("失败，请联系客服！");
+                                }
+
+                            }
+                        },
+
+                        error: function(xhr, type){
+                            showTip("系统错误，请稍后再试！");
+
+                        }
+                    });
+                }
+
+            }
+
+            //商品数量增加事件
+            function plus(){
+                var num=$('#num').val();
+
+                var num_plus=parseInt(num)+1;
+                $('#num').val(num_plus);
+            }
+            //商品数量减少事件
+            function min(){
+
+                var num=$('#num').val();
+                var num_min=parseInt(num)-1;
+                if(num==1||num<1){
+
+                    $('#num').val(1);
+                }else if(num>1){
+                    $('#num').val(num_min);
+                }
+
+            }
+
+            function exportImport(){
+                $('.lists').empty();
+                var isSelected =
+                    $("#export_import_type").attr("data-selected");
+                if (isSelected != '2') {//单个导入
+
+                    isSelected = 2;
+                    $("#textareaDiv").show();
+                    $("#inputDiv").hide();
+
+                    $("#export_import_type").text("单个导入");
+                }else{
+                    isSelected = 1;
+
+                    $("#inputDiv").show();
+                    $("#textareaDiv").hide();
+                    $("#export_import_type").text("批量导入");
+                }
+                $("#export_import_type").attr("data-selected", isSelected);
+            }
+
+
+            function stopPropagation(e) {
+                if (e.stopPropagation)e.stopPropagation();
+                elsee.cancelBubble = true;
+            }
+
+            $("#addrInput").focus(function() {
+                $('.lists').empty();
+            });
+
+            parseArea(areaList);
+            function smart(){
+                let address = $('#addrInput').val();
+                if(address!=""){
+                    $("#province").css("width","34%");
+                    $("#city").css("display","none");
+                    $("#district").css("display","none");
+                    getRelationByAddress(address);
+                }
+            }
+
+            var userAdress = null;
+            function getParentRelation(parentRefCodeDomain,childRefCodeDomain,refCode,obj){
+                var result = '';
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://gzh.guoxianghezi.com/getParentRelation.html',
+                    data:"parentRefCodeDomain="+parentRefCodeDomain+"&childRefCodeDomain="+childRefCodeDomain+"&refCode="+refCode,
+                    success: function(jsonStr){
+
+                        var data = eval('(' + jsonStr + ')');
+
+                        if(data!="" && data.list!=null){
+                            if(data.list.length>0){
+
+                                result +='<option value="">----请选择----</option>'
+                            }
+
+                            for(var i=0;i<data.list.length;i++){
+                                result +='<option value="'+data.list[i].refCode+'">'+data.list[i].refCodeDesc+'</option>'
+                            }
+
+                        }
+
+                        $("#"+obj).append(result);
+                        if(parentRefCodeDomain == "PROVINCE"){
+                            $("#city").change();
+                        }
+                    },
+
+                    error: function(xhr, type){
+                        //showTip("系统错误，请稍后再试！");
+
+                    }
+                });
+            }
+
+            function getRelationByAddress(address){
+                var result = '';
+                $("#city").html("");
+                $("#district").html("");
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/getParentRelation.html',
+
+                    data: "address="+encodeURIComponent(address),
+                    success: function(jsonStr){
+                        var data = eval('(' + jsonStr + ')');
+                        userAdress = data;
+
+                        /* console.log(data); */
+                        if(data!=null){
+
+                            var cityList = data.cityList;
+                            var districtList = data.districtList;
+
+                            var addressInfo = data.addressInfo;
+                            if(addressInfo!=null){
+
+                                $("#name").val(addressInfo.name);
+                                $("#tel").val(addressInfo.phone);
+
+                                $("#area").val(addressInfo.address);
+                            }
+
+                            if(data.province!=null){
+                                $("#province").val(data.province.refCode);
+
+                            }
+                            $("#province").css("width","34%");
+
+
+                            if(cityList!=null){
+
+                                $("#city").css("width","66%");
+                                $("#city").css("display","block");
+
+                                for(var i=0;i<cityList.length;i++){
+                                    result+='<option value="'+cityList[i].refCode+'">'+cityList[i].refCodeDesc+'</option>'
+
+                                }
+                                $("#city").append(result);
+
+                                if(data.city!=null){
+                                    $("#city").val(data.city.refCode);
+
+                                }
+                            }
+
+
+                            result = "";
+                            if(districtList!=null){
+                                $("#city").css("width","33%");
+
+                                $("#district").css("display","block");
+                                for(var i=0;i<districtList.length;i++){
+                                    result +='<option value="'+districtList[i].refCode+'">'+districtList[i].refCodeDesc+'</option>'
+                                }
+
+                                $("#district").append(result);
+                                if(data.distinct!=null){
+                                    $("#district").val(data.distinct.refCode);
+
+                                }
+                            }
+
+                        }
+
+                    },
+                    error: function(xhr, type){
+                        //showTip("系统错误，请稍后再试！");
+
+                    }
+                });
+            }
+
+        </script>
+
+
+    </body>
+</html>

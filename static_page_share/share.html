@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="csrf-token" content="">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <title>果园商城</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+
+        !function(document,window) {
+            var setRem = function () {
+                var w = 0;
+                if(document.documentElement && document.documentElement.clientWidth){
+                    w = document.documentElement.clientWidth;
+                } else if(document.body && document.body.clientWidth) {
+                    w  = document.body.clientWidth;
+                } else if (document.innerHeight){
+                    w = window.innerWidth;
+                }
+                if(w>750){
+                    document.documentElement.style.width = '750px';
+                    document.documentElement.style.fontSize = '100px';
+                }else{
+                    document.documentElement.style.width = w + 'px';
+                    document.documentElement.style.fontSize = 12*(w/375)+'px';
+                }
+            };
+            function check(callback){
+                if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                    try {
+                        if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                            if(typeof callback === "function"){
+                                callback();
+                            }
+                        }
+                    }
+                    catch (err){}
+                }
+            }
+            check(setRem);
+            window.onresize = function () {
+                check(setRem);
+            };
+        }(document,window);
+
+    </script>
+    <div class="container bg_white">
+        <div class="commodity-img-wrap clear">
+            <img src="img/commodity_big.png" alt="" class="commodity-big">
+            <img src="img/commodity_small.png" alt="" class="commodity-small fl">
+            <img src="img/commodity_small.png" alt="" class="commodity-small fr">
+        </div>
+        <div class="commodity-des">
+            <p><span class="name">晨暮优选</span>四季草莓新鲜当季现摘水果 顺丰包邮 坏果必赔</p>
+            <div class="commodity-price">￥39.9 <span>原价 ￥49.9</span></div>
+        </div>
+        <div class="commodity-code clear">
+            <div class="qrcode fl text-c"><img src="img/qrcode.jpg" alt=""></div>
+            <div class="finger fr text-c">
+                <img src="img/finger.png" alt="">
+                <p>长安识别二维码购买</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

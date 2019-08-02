@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="csrf-token" content="">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <title>果园商城</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script>
+
+        !function(document,window) {
+            var setRem = function () {
+                var w = 0;
+                if(document.documentElement && document.documentElement.clientWidth){
+                    w = document.documentElement.clientWidth;
+                } else if(document.body && document.body.clientWidth) {
+                    w  = document.body.clientWidth;
+                } else if (document.innerHeight){
+                    w = window.innerWidth;
+                }
+                if(w>750){
+                    document.documentElement.style.width = '750px';
+                    document.documentElement.style.fontSize = '100px';
+                }else{
+                    document.documentElement.style.width = w + 'px';
+                    document.documentElement.style.fontSize = 12*(w/375)+'px';
+                }
+            };
+            function check(callback){
+                if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+                    try {
+                        if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                            if(typeof callback === "function"){
+                                callback();
+                            }
+                        }
+                    }
+                    catch (err){}
+                }
+            }
+            check(setRem);
+            window.onresize = function () {
+                check(setRem);
+            };
+        }(document,window);
+
+    </script>
+    <div class="container bg_white">
+        <div class="goods-wrap order" style="margin:0;border-radius:0">
+            <div class="goods-info clear" style="border-bottom: none;">
+                <div class="goods-img fl">
+                    <img src="img/commodity_small.png" alt="">
+                </div>
+                <div class="goods-tip fl">
+                    <div class="goods-name">奶油香草莓</div>
+                    <p class="clear"><span class="fl left-cell text-r">分销商成本价: </span><span class="txt-gray fl right-cell">49.9元/件</span></p>
+                    <p class="clear"><span class="fl left-cell text-r">默认运费: </span><span class="txt-gray fl right-cell">1件内0元，每增加1件，增加运费0元</span></p>
+                    <p class="tip">不可到：台湾省、香港特别行政区</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="inputAddress">
+            <input placeholder="姓名" id="name" class="keyword"><br>
+            <input placeholder="电话" id="tel" class="keyword"><br>
+            <div style="border-bottom: 1px solid #d6d6d6; height: 44px">
+                <select id="province" name="province" class="input-text" style="width: 100%;">
+                    <option value="请选择省">请选择省</option>
+                </select>
+                <select id="city" name="city" class="input-text" style="display:none"><option value="请选择">—请选择—</option></select>
+                <select id="district" name="district" class="input-text" style="display:none"><option value="请选择">—请选择—</option></select>
+            </div>
+            <input placeholder="详细地址" id="area"><br>
+            <div class="amountCtr clear">
+                <span class="reduce fl text-c">-</span>
+                <input type="text" value="1" id="num" class="fl">
+                <span class="add fl text-c">+</span>
+            </div>
+
+            <div id="addrDiv">
+                <textarea id="addrInput" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="粘贴地址信息，自动拆分姓名，电话和地址" class="weui-textarea" onchange="smart()"></textarea>
+            </div>
+        </div>
+
+        <div class="clear" id="footer">
+            <button class="fl" onclick="history.go(-1)" id="cancelOrder">取消</button>
+            <button class="fl" onclick="upload()" id="sendOrder">下单</button>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <!--<script src="districtPicker/jQueryDistpicker20160621/js/distpicker.data.js"></script>
+    <script src="districtPicker/jQueryDistpicker20160621/js/distpicker.js"></script>-->
+    <script src="districtPicker/jQueryDistpicker20160621/js/area-list.js"></script>
+    <script src="districtPicker/jQueryDistpicker20160621/js/address-parse.js"></script>
+
+    <script>
+        /*console.log(parse('河北省石家庄市藁城区南董镇西洼村郝亚茹15801458335'));*/
+    </script>
+    <script>
+        $(".container").height($(window).height());
+        parseArea(areaList);
+        areaList.forEach(province=>{
+            var option = '<option value="'+province.name+'">'+province.name+'</option>';
+            $("#province").append(option);
+        });
+
+        $("#province").unbind('chnage').on('change',function(){
+            $("#province").css("width","34%");
+            $("#district").css("display","none");
+            $("#city").css("display","block");
+
+            var province = $("#province option:selected").val();
+            var index = $("#province option:selected").index();
+            areaList[index-1].city.forEach(city=>{
+                var option = '<option value="'+city.name+'">'+city.name+'</option>';
+                $("#city").append(option);
+            });
+        });
+        $("#city").unbind('chnage').on('change',function(){
+
+            $("#city").css("width","33%");
+            $("#district").css("display","block");
+            /*$("#district").html('<option value="请选择">—请选择—</option>');*/
+            var province = $("#province option:selected").val();
+            var city = $("#city option:selected").val();
+            var pindex = $("#province option:selected").index();
+            var cindex = $("#city option:selected").index();
+            areaList[pindex-1]["city"][cindex-1]["area"].forEach(district=>{
+                var option = '<option value="'+district+'">'+district+'</option>';
+                $("#district").append(option);
+            })
+
+        });
+
+        function smart(){
+            let address = $('#addrInput').val();
+            if(address!=""){
+                $("#province").css("width","34%");
+                $("#city").css("display","none");
+                $("#district").css("display","none");
+                var userAdress = getRelationByAddress(address);
+                console.log(userAdress);
+                if(userAdress.detail != "")$("#area").val(userAdress.detail);
+                if(userAdress.mobile != "")$("#tel").val(userAdress.mobile);
+                if(userAdress.name != "")$("#name").val(userAdress.name);
+                if(userAdress.province!=""){
+                    $("#province").val(userAdress.province)
+                };
+                if(userAdress.city!=""){
+                    $("#city").css({
+                        "display":"block",
+                        "width":"33%"
+                    });
+                    userAdress["cityList"].forEach(city=>{
+                        var option = '<option value="'+city+'" '+(city==userAdress.city?"selected":"")+'>'+city+'</option>';
+                        $("#city").append(option);
+                    });
+                }
+                if(userAdress.district!=""){
+                    $("#district").css("display","block");
+                    userAdress["distList"].forEach(dist=>{
+                        var option = '<option value="'+dist+'" '+(dist==userAdress.district?"selected":"")+'>'+dist+'</option>';
+                        $("#district").append(option);
+                    });
+                }
+
+
+            }
+        }
+
+        function getRelationByAddress(address){
+            let addrObj = {
+                name: '',
+                mobile: '',
+                province:'',
+                city:'',
+                district:'',
+                detail: '',
+                cityList:[],
+                distList:[]
+            };
+
+            let userAdress = parse(address);
+            if(userAdress!=null){
+                if(userAdress.addr != "")addrObj.detail = userAdress.addr;//地址详情
+                if(userAdress.mobile != "")addrObj.mobile = userAdress.mobile;//联系方式
+                if(userAdress.name != "")addrObj.name = userAdress.name;//用户名
+                if(userAdress.province != "")addrObj.province = userAdress.province;//省份
+                if(userAdress.city != "")addrObj.city = userAdress.city;//城市
+                if(userAdress.district != "")addrObj.district = userAdress.area;//区
+
+                var provinceObj = areaList.find((value, index, arr) => {
+                    return value.name == userAdress.province;
+                });
+                provinceObj.city.forEach(item=>{
+                    addrObj.cityList.push(item.name);
+                    if(item.name == userAdress.city){
+                        addrObj.distList = item.area;
+                    }
+                });
+            }
+
+            return addrObj;
+        }
+    </script>
+
+</body>
+</html>
