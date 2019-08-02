@@ -80,9 +80,9 @@
             </div>
             <input placeholder="详细地址" id="area"><br>
             <div class="amountCtr clear">
-                <span class="reduce fl text-c">-</span>
+                <span class="reduce fl text-c" onclick="reduce()">-</span>
                 <input type="text" value="1" id="num" class="fl">
-                <span class="add fl text-c">+</span>
+                <span class="add fl text-c" onclick="add()">+</span>
             </div>
 
             <div id="addrDiv">
@@ -96,6 +96,7 @@
         </div>
     </div>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
     <!--<script src="districtPicker/jQueryDistpicker20160621/js/distpicker.data.js"></script>
     <script src="districtPicker/jQueryDistpicker20160621/js/distpicker.js"></script>-->
     <script src="districtPicker/jQueryDistpicker20160621/js/area-list.js"></script>
@@ -144,7 +145,6 @@
 
 
         });
-
         function smart(){
             let address = $('#addrInput').val();
             if(address!=""){
@@ -215,6 +215,23 @@
             }
 
             return addrObj;
+        }
+        //商品数量增加事件
+        function add(){
+            var num = $('#num').val();
+            $('#num').val(parseInt(num)+1);
+        }
+        //商品数量减少事件
+        function reduce(){
+
+            var num = $('#num').val();
+            var num_min = parseInt(num)-1;
+            if(num == 1 || num < 1){
+                $('#num').val(1);
+            }else if(num > 1){
+                $('#num').val(num_min);
+            }
+
         }
     </script>
 

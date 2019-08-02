@@ -53,7 +53,7 @@
         }(document,window);
 
     </script>
-    <div class="container bg_white">
+    <div class="container bg_white" style="padding-bottom:10px;">
         <div class="commodity-img-wrap clear">
             <img src="img/commodity_big.png" alt="" class="commodity-big">
             <img src="img/commodity_small.png" alt="" class="commodity-small fl">
@@ -64,12 +64,24 @@
             <div class="commodity-price">￥39.9 <span>原价 ￥49.9</span></div>
         </div>
         <div class="commodity-code clear">
-            <div class="qrcode fl text-c"><img src="img/qrcode.jpg" alt=""></div>
+            <div class="qrcode fl text-c">
+                <div id="qrcode"></div>
+            </div>
             <div class="finger fr text-c">
                 <img src="img/finger.png" alt="">
                 <p>长安识别二维码购买</p>
             </div>
         </div>
     </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script>
+        $("#qrcode").qrcode({
+            render: "canvas", //也可以替换为table
+            width: 150,
+            height: 150,
+            text: window.location.origin+'/static_page_share/share.html?uuid=10010&cid=1001011'
+        });
+    </script>
 </body>
 </html>
