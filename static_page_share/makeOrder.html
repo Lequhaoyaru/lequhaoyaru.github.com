@@ -127,15 +127,19 @@
         $("#city").unbind('chnage').on('change',function(){
 
             $("#city").css("width","33%");
-            $("#district").html('<option value="请选择">—请选择—</option>').css("display","block");
+            /*$("#district").html('<option value="请选择">—请选择—</option>').css("display","block");*/
             var province = $("#province option:selected").val();
             var city = $("#city option:selected").val();
             var pindex = $("#province option:selected").index();
             var cindex = $("#city option:selected").index();
-            areaList[pindex-1]["city"][cindex-1]["area"].forEach(district=>{
-                var option = '<option value="'+district+'">'+district+'</option>';
-                $("#district").append(option);
-            })
+            if(areaList[pindex-1]["city"][cindex-1]["area"].length){
+                $("#district").html('<option value="请选择">—请选择—</option>').css("display","block");
+                areaList[pindex-1]["city"][cindex-1]["area"].forEach(district=>{
+                    var option = '<option value="'+district+'">'+district+'</option>';
+                    $("#district").append(option);
+                })
+            }
+
 
         });
 
@@ -188,6 +192,7 @@
             };
 
             let userAdress = parse(address);
+            console.log(userAdress);
             if(userAdress!=null){
                 if(userAdress.addr != "")addrObj.detail = userAdress.addr;//地址详情
                 if(userAdress.mobile != "")addrObj.mobile = userAdress.mobile;//联系方式
