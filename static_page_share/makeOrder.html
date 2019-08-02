@@ -92,7 +92,7 @@
         <div id="textareaDiv" class="text-c">
             <textarea id="orderInfo" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="" class="weui-textarea" rows="10"></textarea>
         </div>
-        <div style="width: 70px; position: absolute; right: 10px; top: 9.5rem; height:20px;vertical-align:middle;" class="common-btn-op" onclick="exportImport()">
+        <div style="" class="common-btn-op" onclick="exportImport()">
             <img alt="" src="img/export_import.png" class="fl " style="width:16px;height:16px;">
             <font size="2" class="fl" id="export_import_type" data-selected="0">批量导入</font>
         </div>
@@ -104,14 +104,8 @@
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.qrcode.min.js"></script>
-    <!--<script src="districtPicker/jQueryDistpicker20160621/js/distpicker.data.js"></script>
-    <script src="districtPicker/jQueryDistpicker20160621/js/distpicker.js"></script>-->
     <script src="districtPicker/jQueryDistpicker20160621/js/area-list.js"></script>
     <script src="districtPicker/jQueryDistpicker20160621/js/address-parse.js"></script>
-
-    <script>
-        /*console.log(parse('河北省石家庄市藁城区南董镇西洼村郝亚茹15801458335'));*/
-    </script>
     <script>
         var placeholder = '内容格式\n广东省深圳市龙岗区坂田街道雅园路101号，张三，13912345678，2\n提示:\n1.一条记录一行\n2.订单信息要按照【地址+逗号+姓名+逗号+电话号码+逗号+数量】的顺序排列\n3.地址的格式为：xx省xx市xx区xxx';
         $('#orderInfo').val(placeholder);
