@@ -3,11 +3,11 @@ $(function(){
 
 
     var $services = $(".service li");
-    var $partners = $(".partner ul li");
+    // var $partners = $(".partner ul li");
     var $servicesTop = $(".service").offset().top;
-    var $partnersTop = $(".partner ul").offset().top;
+    // var $partnersTop = $(".partner ul").offset().top;
     var $Height = $(window).height();
-    var $Width = $(window).width();
+    // var $Width = $(window).width();
 
     $(document).on("scroll",slide);
     slide();
@@ -23,10 +23,10 @@ $(function(){
 
             }
         }
-        if($partnersTop - scrollTop <= $Height){
-            if(!$partners.hasClass("animated")){
-                $partners.addClass("animated").addClass("fadeInUp");
-            }
-        }
+        // if($partnersTop - scrollTop <= $Height){
+        //     if(!$partners.hasClass("animated")){
+        //         $partners.addClass("animated").addClass("fadeInUp");
+        //     }
+        // }
     }
 });
