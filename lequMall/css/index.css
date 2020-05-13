@@ -233,6 +233,14 @@ body{
     margin-top: 20px;
     font-weight: normal;
 }
+.desc{
+    font-size: 1.7vw;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(128, 128, 128, 1);
+    text-align: center;
+    padding-bottom:40px
+}
 .slogan-wrap,.slogan2-wrap{
     color:#fff;
     position: absolute;
@@ -705,7 +713,7 @@ body{
         height:50px;
     }
     .partner .title {
-        margin-top: 54px;
+        margin-top: 14px;
         margin-bottom: 14px;
     }
     .partner ul{
